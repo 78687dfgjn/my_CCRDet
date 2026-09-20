@@ -1,0 +1,223 @@
+{
+  "status": "PASS",
+  "configs": {
+    "disabled": "configs_local/gfl_ccrdet_fpn_1x_rgbtdroneperson_local.py",
+    "enabled": "configs_local/exp_spdi_seed0.py"
+  },
+  "checkpoint": "/root/CCRDet/weights/weight_rgbt.pth",
+  "state_dict_compatibility": {
+    "disabled_strict_load": {
+      "missing_keys": [],
+      "unexpected_keys": [],
+      "checkpoint_keys": 830,
+      "model_keys": 830
+    },
+    "enabled_load": {
+      "missing_keys": [
+        "p2_detail_injection.alpha",
+        "p2_detail_injection.p2_fusion.weight",
+        "p2_detail_injection.p2_fusion.bias",
+        "p2_detail_injection.depthwise.weight",
+        "p2_detail_injection.depthwise.bias",
+        "p2_detail_injection.pointwise.weight",
+        "p2_detail_injection.pointwise.bias",
+        "p2_detail_injection.gate.weight",
+        "p2_detail_injection.gate.bias"
+      ],
+      "unexpected_keys": [],
+      "checkpoint_keys": 830,
+      "model_keys": 839
+    },
+    "enabled_only_missing_keys": [
+      "p2_detail_injection.alpha",
+      "p2_detail_injection.p2_fusion.weight",
+      "p2_detail_injection.p2_fusion.bias",
+      "p2_detail_injection.depthwise.weight",
+      "p2_detail_injection.depthwise.bias",
+      "p2_detail_injection.pointwise.weight",
+      "p2_detail_injection.pointwise.bias",
+      "p2_detail_injection.gate.weight",
+      "p2_detail_injection.gate.bias"
+    ],
+    "smoke_load": {
+      "missing_keys": [
+        "p2_detail_injection.alpha",
+        "p2_detail_injection.p2_fusion.weight",
+        "p2_detail_injection.p2_fusion.bias",
+        "p2_detail_injection.depthwise.weight",
+        "p2_detail_injection.depthwise.bias",
+        "p2_detail_injection.pointwise.weight",
+        "p2_detail_injection.pointwise.bias",
+        "p2_detail_injection.gate.weight",
+        "p2_detail_injection.gate.bias"
+      ],
+      "unexpected_keys": [],
+      "checkpoint_keys": 830,
+      "model_keys": 839
+    }
+  },
+  "zero_init_equivalence": {
+    "max_abs_diff": 0.0,
+    "torch_equal_all_levels": true,
+    "detector_level_count": 5
+  },
+  "gradient_test": {
+    "alpha_nonzero_finite": true,
+    "depthwise_nonzero_finite": true,
+    "pointwise_nonzero_finite": true,
+    "gate_nonzero_finite": true,
+    "baseline_fusion_nonzero_finite": true,
+    "loss_finite": true,
+    "alpha_at_config_init": 0.0,
+    "gradient_test_alpha": 0.1
+  },
+  "shapes": {
+    "backbone_c2_rgb": [
+      1,
+      256,
+      128,
+      160
+    ],
+    "backbone_c2_thermal": [
+      1,
+      256,
+      128,
+      160
+    ],
+    "p2_detail": [
+      1,
+      256,
+      64,
+      80
+    ],
+    "detector_levels": [
+      [
+        1,
+        256,
+        64,
+        80
+      ],
+      [
+        1,
+        256,
+        32,
+        40
+      ],
+      [
+        1,
+        256,
+        16,
+        20
+      ],
+      [
+        1,
+        256,
+        8,
+        10
+      ],
+      [
+        1,
+        256,
+        4,
+        5
+      ]
+    ],
+    "detector_level_count": 5,
+    "expected_detector_level_count": 5
+  },
+  "parameters": {
+    "p2_fusion": 131328,
+    "depthwise_conv": 2560,
+    "pointwise_conv": 65792,
+    "gate_conv": 513,
+    "alpha": 1,
+    "total": 200194
+  },
+  "approx_flops": {
+    "p2_fusion": 5368709120,
+    "depthwise_conv": 23592960,
+    "pointwise_conv": 671088640,
+    "gate_conv": 5242880,
+    "total": 6068633600,
+    "counting": "2 FLOPs per multiply-add"
+  },
+  "memory_smoke": {
+    "status": "PASS",
+    "iterations_requested": 5,
+    "iterations_completed": 5,
+    "batch_size": 8,
+    "input_resolution": [
+      512,
+      640
+    ],
+    "amp": false,
+    "gradient_accumulation": false,
+    "metrics": [
+      {
+        "iteration": 1,
+        "loss": 1.361600637435913,
+        "log_vars": {
+          "loss_cls": 0.46795782446861267,
+          "loss_bbox": 0.7234674096107483,
+          "loss_dfl": 0.17017541825771332,
+          "loss": 1.361600637435913
+        },
+        "seconds": 2.2256298065185547,
+        "driver_used_mb": 19539
+      },
+      {
+        "iteration": 2,
+        "loss": 1.3383041620254517,
+        "log_vars": {
+          "loss_cls": 0.31957337260246277,
+          "loss_bbox": 0.8225696086883545,
+          "loss_dfl": 0.196161150932312,
+          "loss": 1.3383041620254517
+        },
+        "seconds": 1.8018815517425537,
+        "driver_used_mb": 21147
+      },
+      {
+        "iteration": 3,
+        "loss": 1.255091667175293,
+        "log_vars": {
+          "loss_cls": 0.28760045766830444,
+          "loss_bbox": 0.7939425110816956,
+          "loss_dfl": 0.17354869842529297,
+          "loss": 1.255091667175293
+        },
+        "seconds": 1.7751424312591553,
+        "driver_used_mb": 21147
+      },
+      {
+        "iteration": 4,
+        "loss": 1.1115269660949707,
+        "log_vars": {
+          "loss_cls": 0.28918102383613586,
+          "loss_bbox": 0.6599874496459961,
+          "loss_dfl": 0.16235846281051636,
+          "loss": 1.1115269660949707
+        },
+        "seconds": 1.7885024547576904,
+        "driver_used_mb": 21147
+      },
+      {
+        "iteration": 5,
+        "loss": 1.1146368980407715,
+        "log_vars": {
+          "loss_cls": 0.19932933151721954,
+          "loss_bbox": 0.7496595978736877,
+          "loss_dfl": 0.165647953748703,
+          "loss": 1.1146368980407715
+        },
+        "seconds": 1.7807166576385498,
+        "driver_used_mb": 21147
+      }
+    ],
+    "peak_allocated_bytes": 19099830784,
+    "peak_reserved_bytes": 21086863360,
+    "peak_driver_used_mb": 21147,
+    "error": null
+  },
+  "ready_for_training": true
+}

@@ -1,6 +1,7 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from ..builder import DETECTORS, build_backbone, build_neck
 from ..utils.global_shift import GlobalThermalShift
+from ..utils.p2_detail_injection import P2DetailInjection
 from .single_stage import SingleStageDetector
 import torch
 import torch.nn as nn
@@ -28,7 +29,8 @@ class GFLAF(SingleStageDetector):
                  fusion_types=None,
                  global_shift=None,
                  attention_mode=None,
-                 attention_hw_threshold=4096):
+                 attention_hw_threshold=4096,
+                 p2_detail=None):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
         self.tanh = tanh
@@ -42,6 +44,13 @@ class GFLAF(SingleStageDetector):
             raise ValueError('attention_hw_threshold must be positive')
         self.global_thermal_shift = GlobalThermalShift(
             **(global_shift or dict(mode='off')))
+        p2_detail = p2_detail or {}
+        self.p2_detail_injection = None
+        if p2_detail.get('enabled', False):
+            self.p2_detail_injection = P2DetailInjection(
+                in_channels=256,
+                gate_channels=p2_detail.get('gate_channels', 1),
+                zero_init=p2_detail.get('zero_init', True))
         self.nect_t = build_neck(neck)
         self.fusion_types = list(fusion_types or
                                  ['fusion', 'fusion', 'fusion',
@@ -67,6 +76,14 @@ class GFLAF(SingleStageDetector):
         v_img, t_img = img
         t_img = self.global_thermal_shift(t_img)
         x, y = self.backbone(v_img, t_img)
+
+        # The released FPN starts at backbone C3/P3.  SPDI reads C2/P2 before
+        # the unchanged neck and uses it only as a detail branch.
+        p2_rgb = p2_thermal = None
+        if self.p2_detail_injection is not None:
+            if len(x) == 0 or len(y) == 0:
+                raise RuntimeError('SPDI requires backbone C2/P2 features')
+            p2_rgb, p2_thermal = x[0], y[0]
         
         if self.with_neck:
             x = self.neck(x)
@@ -83,6 +100,8 @@ class GFLAF(SingleStageDetector):
         # Fusion
         for i in range(len(x)):
             feat = self.fuse[i](x[i], y[i])
+            if i == 0 and self.p2_detail_injection is not None:
+                feat = self.p2_detail_injection(feat, p2_rgb, p2_thermal)
             features.append(feat)
      
         return features

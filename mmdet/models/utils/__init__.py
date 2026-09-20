@@ -21,6 +21,7 @@ from .transformer import (DetrTransformerDecoder, DetrTransformerDecoderLayer,
                           nlc_to_nchw, nlc2nchw2nlc)
 from .conv_module import ConvModule
 from .global_shift import GlobalThermalShift
+from .p2_detail_injection import P2DetailInjection
 
 __all__ = [
     'ResLayer', 'gaussian_radius', 'gen_gaussian_target',
@@ -33,5 +34,6 @@ __all__ = [
     'nlc_to_nchw', 'pvt_convert', 'sigmoid_geometric_mean',
     'preprocess_panoptic_gt', 'DyReLU',
     'get_uncertain_point_coords_with_randomness', 'get_uncertainty',
-    'ConvModule', 'nlc2nchw2nlc', 'GlobalThermalShift'
+    'ConvModule', 'nlc2nchw2nlc', 'GlobalThermalShift',
+    'P2DetailInjection'
 ]
