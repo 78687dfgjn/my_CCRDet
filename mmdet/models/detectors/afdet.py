@@ -1,5 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from ..builder import DETECTORS, build_backbone, build_neck
+from ..utils.global_shift import GlobalThermalShift
 from .single_stage import SingleStageDetector
 import torch
 import torch.nn as nn
@@ -23,16 +24,34 @@ class GFLAF(SingleStageDetector):
                  test_cfg=None,
                  pretrained=None,
                  init_cfg=None,
-                 tanh=None):
+                 tanh=None,
+                 fusion_types=None,
+                 global_shift=None):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
-        self.tanh = tanh                       
+        self.tanh = tanh
+        self.global_thermal_shift = GlobalThermalShift(
+            **(global_shift or dict(mode='off')))
         self.nect_t = build_neck(neck)
-        self.fuse = nn.ModuleList([Fusion(256, tanh=self.tanh) for i in range(3)]+[Fusion_CAT(256) for i in range(2)])
+        self.fusion_types = list(fusion_types or
+                                 ['fusion', 'fusion', 'fusion',
+                                  'fusion_cat', 'fusion_cat'])
+        self.fuse = nn.ModuleList([
+            self._build_fusion(fusion_type) for fusion_type in self.fusion_types
+        ])
+
+    def _build_fusion(self, fusion_type):
+        fusion_type = str(fusion_type).lower()
+        if fusion_type == 'fusion':
+            return Fusion(256, tanh=self.tanh)
+        if fusion_type == 'fusion_cat':
+            return Fusion_CAT(256)
+        raise ValueError('Unsupported fusion type: {}'.format(fusion_type))
       
     def extract_feat(self, img):
         """Directly extract features from the backbone+neck."""
         v_img, t_img = img
+        t_img = self.global_thermal_shift(t_img)
         x, y = self.backbone(v_img, t_img)
         
         if self.with_neck:

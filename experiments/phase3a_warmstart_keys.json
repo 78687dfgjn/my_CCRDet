@@ -1,0 +1,119 @@
+{
+  "config": "configs_local/exp_p2p6_seed0.py",
+  "source": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+  "output": "/hy-tmp/CCRDet_assets/phase3a_p2p6_warmstart_seed0.pth",
+  "source_keys": 830,
+  "target_keys": 834,
+  "compatible_keys": 824,
+  "missing_keys": [
+    "neck.lateral_convs.3.conv.bias",
+    "neck.lateral_convs.3.conv.weight",
+    "nect_t.lateral_convs.3.conv.bias",
+    "nect_t.lateral_convs.3.conv.weight"
+  ],
+  "shape_mismatch": [
+    {
+      "key": "neck.lateral_convs.0.conv.weight",
+      "source_shape": [
+        256,
+        512,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "neck.lateral_convs.1.conv.weight",
+      "source_shape": [
+        256,
+        1024,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "neck.lateral_convs.2.conv.weight",
+      "source_shape": [
+        256,
+        2048,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        1024,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "nect_t.lateral_convs.0.conv.weight",
+      "source_shape": [
+        256,
+        512,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "nect_t.lateral_convs.1.conv.weight",
+      "source_shape": [
+        256,
+        1024,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "key": "nect_t.lateral_convs.2.conv.weight",
+      "source_shape": [
+        256,
+        2048,
+        1,
+        1
+      ],
+      "target_shape": [
+        256,
+        1024,
+        1,
+        1
+      ]
+    }
+  ],
+  "unexpected_keys": [],
+  "newly_initialized_keys": [
+    "neck.lateral_convs.0.conv.weight",
+    "neck.lateral_convs.1.conv.weight",
+    "neck.lateral_convs.2.conv.weight",
+    "neck.lateral_convs.3.conv.bias",
+    "neck.lateral_convs.3.conv.weight",
+    "nect_t.lateral_convs.0.conv.weight",
+    "nect_t.lateral_convs.1.conv.weight",
+    "nect_t.lateral_convs.2.conv.weight",
+    "nect_t.lateral_convs.3.conv.bias",
+    "nect_t.lateral_convs.3.conv.weight"
+  ]
+}

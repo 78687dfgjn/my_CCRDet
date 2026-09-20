@@ -1,0 +1,15 @@
+{
+  "gpu": "NVIDIA GeForce RTX 2080 Ti",
+  "gpu_count": 1,
+  "vram_total_gib": 21.67,
+  "C_peak_observed_gib": {
+    "allocated": 13.36,
+    "reserved": 13.38
+  },
+  "D_peak_observed_gib": {
+    "allocated": 13.39,
+    "reserved": 13.41
+  },
+  "C_wall_time_seconds_to_oom": 28.42,
+  "D_wall_time_seconds_to_oom": 27.26
+}

@@ -1,0 +1,117 @@
+{
+  "protocol": {
+    "seed": 0,
+    "deterministic": true,
+    "input": "640x512",
+    "batch_size": 8,
+    "proxy_epochs": 3,
+    "optimizer": "SGD",
+    "proxy_lr": 0.001,
+    "nms_iou": 0.3,
+    "note": "screening only; not formal paper results"
+  },
+  "A_baseline_seed0": {
+    "checkpoint": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "status": "available_existing_result",
+    "mAP25": 57.12,
+    "mAP50": 40.32,
+    "mAP75": 3.49,
+    "tiny": 41.94,
+    "tiny1": 13.44,
+    "tiny2": 29.81,
+    "tiny3": 48.18,
+    "small": 26.23
+  },
+  "B_global_fixed_seed0": {
+    "checkpoint": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "config": "configs_local/exp_global_fixed_seed0.py",
+    "mode": "fixed",
+    "dx": -1.0,
+    "dy": 0.0,
+    "status": "completed",
+    "mAP25": 57.01,
+    "mAP50": 42.17,
+    "mAP75": 4.74,
+    "tiny": 43.85,
+    "tiny1": 21.53,
+    "tiny2": 32.58,
+    "tiny3": 49.26,
+    "small": 26.24,
+    "delta_vs_A_pp": {
+      "mAP25": -0.11,
+      "mAP50": 1.85,
+      "mAP75": 1.25,
+      "tiny": 1.91,
+      "tiny1": 8.09,
+      "tiny2": 2.77,
+      "tiny3": 1.08,
+      "small": 0.01
+    },
+    "log": "experiments/phase3a_global_fixed_seed0/eval.log"
+  },
+  "B_global_fixed_official": {
+    "checkpoint": "/root/CCRDet/weights/weight_rgbt.pth",
+    "config": "configs_local/exp_global_fixed_seed0.py",
+    "mode": "fixed",
+    "dx": -1.0,
+    "dy": 0.0,
+    "status": "completed",
+    "mAP25": 58.28,
+    "mAP50": 44.07,
+    "mAP75": 5.53,
+    "tiny": 45.34,
+    "tiny1": 18.68,
+    "tiny2": 35.68,
+    "tiny3": 50.36,
+    "small": 30.45,
+    "log": "experiments/phase3a_global_fixed_inference/eval.log"
+  },
+  "C_p2p6_seed0": {
+    "config": "configs_local/exp_p2p6_seed0.py",
+    "status": "OOM_before_first_training_iteration",
+    "mAP": null,
+    "oom": {
+      "requested_gib": 12.5,
+      "allocated_gib": 13.36,
+      "reserved_gib": 13.38,
+      "free_gib": 6.87,
+      "total_gib": 21.67
+    },
+    "log": "experiments/phase3a_p2p6_seed0/train.log",
+    "wall_time_seconds_to_oom": 28.42
+  },
+  "D_global_p2p6_seed0": {
+    "config": "configs_local/exp_global_p2p6_seed0.py",
+    "status": "OOM_before_first_training_iteration",
+    "mAP": null,
+    "oom": {
+      "requested_gib": 12.5,
+      "allocated_gib": 13.39,
+      "reserved_gib": 13.41,
+      "free_gib": 6.83,
+      "total_gib": 21.67
+    },
+    "log": "experiments/phase3a_global_p2p6_seed0/train.log",
+    "wall_time_seconds_to_oom": 27.26
+  },
+  "decisions": {
+    "global_fixed": "GO_for_next_gated_formal_seed0_if_authorized",
+    "p2p6": "NO-GO_under_current_fusion_mapping",
+    "global_p2p6": "NO-GO_under_current_fusion_mapping"
+  },
+  "resource_usage": {
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "vram_total_gib": 21.67,
+    "C_peak_observed_gib": {
+      "allocated": 13.36,
+      "reserved": 13.38
+    },
+    "D_peak_observed_gib": {
+      "allocated": 13.39,
+      "reserved": 13.41
+    },
+    "C_wall_time_seconds_to_oom": 28.42,
+    "D_wall_time_seconds_to_oom": 27.26
+  }
+}

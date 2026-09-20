@@ -20,6 +20,7 @@ from .transformer import (DetrTransformerDecoder, DetrTransformerDecoderLayer,
                           DynamicConv, PatchEmbed, Transformer, nchw_to_nlc,
                           nlc_to_nchw, nlc2nchw2nlc)
 from .conv_module import ConvModule
+from .global_shift import GlobalThermalShift
 
 __all__ = [
     'ResLayer', 'gaussian_radius', 'gen_gaussian_target',
@@ -32,5 +33,5 @@ __all__ = [
     'nlc_to_nchw', 'pvt_convert', 'sigmoid_geometric_mean',
     'preprocess_panoptic_gt', 'DyReLU',
     'get_uncertain_point_coords_with_randomness', 'get_uncertainty',
-    'ConvModule', 'nlc2nchw2nlc'
+    'ConvModule', 'nlc2nchw2nlc', 'GlobalThermalShift'
 ]
