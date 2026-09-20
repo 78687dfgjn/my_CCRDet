@@ -31,6 +31,10 @@ made.
 
 Thermal-only integer shifts were evaluated with the same released protocol;
 `dx=-1` means the thermal content is shifted one network-input pixel left.
+For efficiency, the already verified official/historical `dx=0,-1,+1` rows
+were reused from the prior exact-protocol shift run; their missing `dx=-2,+2`
+rows were freshly evaluated. All five rows for the two seed checkpoints were
+freshly evaluated in this phase.
 
 | checkpoint | dx=-2 | dx=-1 | dx=0 | dx=+1 | dx=+2 | best dx |
 |---|---:|---:|---:|---:|---:|---:|
