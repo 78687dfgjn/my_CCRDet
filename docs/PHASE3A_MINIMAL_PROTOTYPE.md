@@ -46,12 +46,16 @@ P3/P4/P5 -> Fusion
 P6/P7    -> Fusion_CAT
 ```
 
-The P2–P6 prototype uses:
+The P2–P6 prototype uses the corrected candidate mapping:
 
 ```text
-P2/P3/P4 -> Fusion
-P5/P6    -> Fusion_CAT
+P2       -> Fusion_CAT
+P3/P4/P5 -> Fusion
+P6       -> Fusion_CAT
 ```
+
+For candidate screening, `attention_mode='skip'` with a 4096 spatial-element
+threshold protects the full-attention Fusion path at high-resolution P2.
 
 With the official checkpoint and fixed random input, the official config and `exp_baseline_seed0.py` produced:
 
@@ -80,17 +84,19 @@ The configured detection strides are `[4,8,16,32,64]`; P7 is not retained.
 
 Source: `/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth`.
 
-The candidate has 834 state keys versus 830 in the source. Shape-compatible filtering produced:
+The semantic remapper does not copy same-named FPN/fusion tensors blindly.
+It maps old level indices `0→1`, `1→2`, `2→3`, `3→4`, and drops old index 4
+(P7). Candidate index 0 (P2) is fresh.
 
 | item | count |
 |---|---:|
-| compatible loaded keys | 824 |
-| missing/new candidate keys | 4 |
-| same-name shape mismatches | 6 |
-| unexpected source keys | 0 |
-| newly initialized keys total | 10 |
+| semantically loaded keys | 824 |
+| newly initialized keys | 10 |
+| P2 newly initialized keys | 10 |
+| discarded source keys (P7) | 6 |
 
-The six mismatches are the RGB/T FPN lateral convolution weights whose input channel semantics change when `start_level` moves from 1 to 0. They were intentionally reinitialized. Full details are in `experiments/phase3a_warmstart_keys.json`.
+The generated JSON report lists every source→target key pair and is checked by
+`tools/check_phase3a_semantic_warmstart.py`.
 
 ## 6. Screening metrics
 
@@ -115,11 +121,11 @@ No C/D AP is reported because no training iteration completed. Batch size, AMP, 
 
 ## 8. Decisions
 
-- Global fixed shift: `GO` for a separately gated formal seed=0 12-epoch run, if explicitly authorized. The current evidence is still a prototype result, not a paper claim.
-- P2–P6: `NO-GO` under the current fusion mapping because the required protocol OOMs before training.
-- Global fixed + P2–P6: `NO-GO` for the same reason.
-
-The P2 rejection is an engineering/protocol decision for this implementation, not evidence that every possible P2 design is ineffective. Reviving P2 would require a separately approved memory-safe fusion design, which was not implemented in Phase 3A.
+The earlier C/D OOM is retained as historical screening evidence for the old
+P2 Fusion mapping. After this report, the candidate mapping is corrected to
+`[Fusion_CAT, Fusion, Fusion, Fusion, Fusion_CAT]` and the high-resolution
+attention guard is enabled. No new C/D training was started; therefore no new
+GO/NO-GO decision is made here.
 
 ## 9. Unresolved issues
 
