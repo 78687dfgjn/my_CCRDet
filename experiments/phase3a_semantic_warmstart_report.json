@@ -1,0 +1,4195 @@
+{
+  "source_checkpoint": "work_dirs/baseline_seed_0/epoch_12.pth",
+  "candidate_config": "configs_local/exp_p2p6_seed0.py",
+  "candidate_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "mapping": {
+    "P3_old_to_P3_new": true,
+    "P4_old_to_P4_new": true,
+    "P5_old_to_P5_new": true,
+    "P6_old_to_P6_new": true,
+    "P7_discard": true,
+    "P2_initialized": true
+  },
+  "level_index_mapping": {
+    "old_0_to_new_1": true,
+    "old_1_to_new_2": true,
+    "old_2_to_new_3": true,
+    "old_3_to_new_4": true,
+    "old_4_dropped": true
+  },
+  "fusion_index_mapping": {
+    "old_0_to_new_1": true,
+    "old_1_to_new_2": true,
+    "old_2_to_new_3": true,
+    "old_3_to_new_4": true,
+    "old_4_dropped": true
+  },
+  "loaded_keys": 824,
+  "new_initialized_keys": 10,
+  "discarded_keys": 6,
+  "p2_initialized_parameter_count": 1443072,
+  "discarded_parameter_count": 1311488,
+  "p2_new_initialized": true,
+  "p2_initialized_keys": [
+    "fuse.0.conv1x1.bias",
+    "fuse.0.conv1x1.weight",
+    "neck.fpn_convs.0.conv.bias",
+    "neck.fpn_convs.0.conv.weight",
+    "neck.lateral_convs.0.conv.bias",
+    "neck.lateral_convs.0.conv.weight",
+    "nect_t.fpn_convs.0.conv.bias",
+    "nect_t.fpn_convs.0.conv.weight",
+    "nect_t.lateral_convs.0.conv.bias",
+    "nect_t.lateral_convs.0.conv.weight"
+  ],
+  "p7_discarded_keys": [
+    "fuse.4.conv1x1.bias",
+    "fuse.4.conv1x1.weight",
+    "neck.fpn_convs.4.conv.bias",
+    "neck.fpn_convs.4.conv.weight",
+    "nect_t.fpn_convs.4.conv.bias",
+    "nect_t.fpn_convs.4.conv.weight"
+  ],
+  "loaded_key_map": [
+    {
+      "target_key": "backbone.vis_conv1.weight",
+      "source_key": "backbone.vis_conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnvis.weight",
+      "source_key": "backbone.bnvis.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnvis.bias",
+      "source_key": "backbone.bnvis.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnvis.running_mean",
+      "source_key": "backbone.bnvis.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnvis.running_var",
+      "source_key": "backbone.bnvis.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnvis.num_batches_tracked",
+      "source_key": "backbone.bnvis.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_conv1.weight",
+      "source_key": "backbone.lwir_conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnlwir.weight",
+      "source_key": "backbone.bnlwir.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnlwir.bias",
+      "source_key": "backbone.bnlwir.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnlwir.running_mean",
+      "source_key": "backbone.bnlwir.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnlwir.running_var",
+      "source_key": "backbone.bnlwir.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.bnlwir.num_batches_tracked",
+      "source_key": "backbone.bnlwir.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.conv1.weight",
+      "source_key": "backbone.vis_layer1.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn1.weight",
+      "source_key": "backbone.vis_layer1.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn1.bias",
+      "source_key": "backbone.vis_layer1.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn1.running_mean",
+      "source_key": "backbone.vis_layer1.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn1.running_var",
+      "source_key": "backbone.vis_layer1.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.conv2.weight",
+      "source_key": "backbone.vis_layer1.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn2.weight",
+      "source_key": "backbone.vis_layer1.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn2.bias",
+      "source_key": "backbone.vis_layer1.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn2.running_mean",
+      "source_key": "backbone.vis_layer1.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn2.running_var",
+      "source_key": "backbone.vis_layer1.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.conv3.weight",
+      "source_key": "backbone.vis_layer1.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn3.weight",
+      "source_key": "backbone.vis_layer1.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn3.bias",
+      "source_key": "backbone.vis_layer1.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn3.running_mean",
+      "source_key": "backbone.vis_layer1.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn3.running_var",
+      "source_key": "backbone.vis_layer1.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.0.weight",
+      "source_key": "backbone.vis_layer1.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.1.weight",
+      "source_key": "backbone.vis_layer1.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.1.bias",
+      "source_key": "backbone.vis_layer1.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.1.running_mean",
+      "source_key": "backbone.vis_layer1.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.1.running_var",
+      "source_key": "backbone.vis_layer1.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.conv1.weight",
+      "source_key": "backbone.vis_layer1.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn1.weight",
+      "source_key": "backbone.vis_layer1.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn1.bias",
+      "source_key": "backbone.vis_layer1.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn1.running_mean",
+      "source_key": "backbone.vis_layer1.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn1.running_var",
+      "source_key": "backbone.vis_layer1.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.conv2.weight",
+      "source_key": "backbone.vis_layer1.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn2.weight",
+      "source_key": "backbone.vis_layer1.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn2.bias",
+      "source_key": "backbone.vis_layer1.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn2.running_mean",
+      "source_key": "backbone.vis_layer1.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn2.running_var",
+      "source_key": "backbone.vis_layer1.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.conv3.weight",
+      "source_key": "backbone.vis_layer1.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn3.weight",
+      "source_key": "backbone.vis_layer1.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn3.bias",
+      "source_key": "backbone.vis_layer1.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn3.running_mean",
+      "source_key": "backbone.vis_layer1.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn3.running_var",
+      "source_key": "backbone.vis_layer1.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.1.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.conv1.weight",
+      "source_key": "backbone.vis_layer1.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn1.weight",
+      "source_key": "backbone.vis_layer1.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn1.bias",
+      "source_key": "backbone.vis_layer1.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn1.running_mean",
+      "source_key": "backbone.vis_layer1.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn1.running_var",
+      "source_key": "backbone.vis_layer1.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.conv2.weight",
+      "source_key": "backbone.vis_layer1.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn2.weight",
+      "source_key": "backbone.vis_layer1.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn2.bias",
+      "source_key": "backbone.vis_layer1.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn2.running_mean",
+      "source_key": "backbone.vis_layer1.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn2.running_var",
+      "source_key": "backbone.vis_layer1.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.conv3.weight",
+      "source_key": "backbone.vis_layer1.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn3.weight",
+      "source_key": "backbone.vis_layer1.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn3.bias",
+      "source_key": "backbone.vis_layer1.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn3.running_mean",
+      "source_key": "backbone.vis_layer1.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn3.running_var",
+      "source_key": "backbone.vis_layer1.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer1.2.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer1.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.conv1.weight",
+      "source_key": "backbone.lwir_layer1.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn1.weight",
+      "source_key": "backbone.lwir_layer1.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn1.bias",
+      "source_key": "backbone.lwir_layer1.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn1.running_mean",
+      "source_key": "backbone.lwir_layer1.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn1.running_var",
+      "source_key": "backbone.lwir_layer1.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.conv2.weight",
+      "source_key": "backbone.lwir_layer1.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn2.weight",
+      "source_key": "backbone.lwir_layer1.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn2.bias",
+      "source_key": "backbone.lwir_layer1.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn2.running_mean",
+      "source_key": "backbone.lwir_layer1.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn2.running_var",
+      "source_key": "backbone.lwir_layer1.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.conv3.weight",
+      "source_key": "backbone.lwir_layer1.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn3.weight",
+      "source_key": "backbone.lwir_layer1.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn3.bias",
+      "source_key": "backbone.lwir_layer1.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn3.running_mean",
+      "source_key": "backbone.lwir_layer1.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn3.running_var",
+      "source_key": "backbone.lwir_layer1.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.0.weight",
+      "source_key": "backbone.lwir_layer1.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.1.weight",
+      "source_key": "backbone.lwir_layer1.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.1.bias",
+      "source_key": "backbone.lwir_layer1.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.1.running_mean",
+      "source_key": "backbone.lwir_layer1.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.1.running_var",
+      "source_key": "backbone.lwir_layer1.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.conv1.weight",
+      "source_key": "backbone.lwir_layer1.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn1.weight",
+      "source_key": "backbone.lwir_layer1.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn1.bias",
+      "source_key": "backbone.lwir_layer1.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn1.running_mean",
+      "source_key": "backbone.lwir_layer1.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn1.running_var",
+      "source_key": "backbone.lwir_layer1.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.conv2.weight",
+      "source_key": "backbone.lwir_layer1.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn2.weight",
+      "source_key": "backbone.lwir_layer1.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn2.bias",
+      "source_key": "backbone.lwir_layer1.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn2.running_mean",
+      "source_key": "backbone.lwir_layer1.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn2.running_var",
+      "source_key": "backbone.lwir_layer1.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.conv3.weight",
+      "source_key": "backbone.lwir_layer1.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn3.weight",
+      "source_key": "backbone.lwir_layer1.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn3.bias",
+      "source_key": "backbone.lwir_layer1.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn3.running_mean",
+      "source_key": "backbone.lwir_layer1.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn3.running_var",
+      "source_key": "backbone.lwir_layer1.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.1.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.conv1.weight",
+      "source_key": "backbone.lwir_layer1.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn1.weight",
+      "source_key": "backbone.lwir_layer1.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn1.bias",
+      "source_key": "backbone.lwir_layer1.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn1.running_mean",
+      "source_key": "backbone.lwir_layer1.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn1.running_var",
+      "source_key": "backbone.lwir_layer1.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.conv2.weight",
+      "source_key": "backbone.lwir_layer1.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn2.weight",
+      "source_key": "backbone.lwir_layer1.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn2.bias",
+      "source_key": "backbone.lwir_layer1.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn2.running_mean",
+      "source_key": "backbone.lwir_layer1.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn2.running_var",
+      "source_key": "backbone.lwir_layer1.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.conv3.weight",
+      "source_key": "backbone.lwir_layer1.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn3.weight",
+      "source_key": "backbone.lwir_layer1.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn3.bias",
+      "source_key": "backbone.lwir_layer1.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn3.running_mean",
+      "source_key": "backbone.lwir_layer1.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn3.running_var",
+      "source_key": "backbone.lwir_layer1.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer1.2.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer1.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.conv1.weight",
+      "source_key": "backbone.vis_layer2.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn1.weight",
+      "source_key": "backbone.vis_layer2.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn1.bias",
+      "source_key": "backbone.vis_layer2.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn1.running_mean",
+      "source_key": "backbone.vis_layer2.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn1.running_var",
+      "source_key": "backbone.vis_layer2.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.conv2.weight",
+      "source_key": "backbone.vis_layer2.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn2.weight",
+      "source_key": "backbone.vis_layer2.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn2.bias",
+      "source_key": "backbone.vis_layer2.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn2.running_mean",
+      "source_key": "backbone.vis_layer2.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn2.running_var",
+      "source_key": "backbone.vis_layer2.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.conv3.weight",
+      "source_key": "backbone.vis_layer2.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn3.weight",
+      "source_key": "backbone.vis_layer2.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn3.bias",
+      "source_key": "backbone.vis_layer2.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn3.running_mean",
+      "source_key": "backbone.vis_layer2.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn3.running_var",
+      "source_key": "backbone.vis_layer2.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.0.weight",
+      "source_key": "backbone.vis_layer2.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.1.weight",
+      "source_key": "backbone.vis_layer2.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.1.bias",
+      "source_key": "backbone.vis_layer2.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.1.running_mean",
+      "source_key": "backbone.vis_layer2.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.1.running_var",
+      "source_key": "backbone.vis_layer2.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.conv1.weight",
+      "source_key": "backbone.vis_layer2.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn1.weight",
+      "source_key": "backbone.vis_layer2.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn1.bias",
+      "source_key": "backbone.vis_layer2.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn1.running_mean",
+      "source_key": "backbone.vis_layer2.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn1.running_var",
+      "source_key": "backbone.vis_layer2.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.conv2.weight",
+      "source_key": "backbone.vis_layer2.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn2.weight",
+      "source_key": "backbone.vis_layer2.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn2.bias",
+      "source_key": "backbone.vis_layer2.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn2.running_mean",
+      "source_key": "backbone.vis_layer2.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn2.running_var",
+      "source_key": "backbone.vis_layer2.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.conv3.weight",
+      "source_key": "backbone.vis_layer2.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn3.weight",
+      "source_key": "backbone.vis_layer2.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn3.bias",
+      "source_key": "backbone.vis_layer2.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn3.running_mean",
+      "source_key": "backbone.vis_layer2.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn3.running_var",
+      "source_key": "backbone.vis_layer2.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.1.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.conv1.weight",
+      "source_key": "backbone.vis_layer2.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn1.weight",
+      "source_key": "backbone.vis_layer2.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn1.bias",
+      "source_key": "backbone.vis_layer2.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn1.running_mean",
+      "source_key": "backbone.vis_layer2.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn1.running_var",
+      "source_key": "backbone.vis_layer2.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.conv2.weight",
+      "source_key": "backbone.vis_layer2.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn2.weight",
+      "source_key": "backbone.vis_layer2.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn2.bias",
+      "source_key": "backbone.vis_layer2.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn2.running_mean",
+      "source_key": "backbone.vis_layer2.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn2.running_var",
+      "source_key": "backbone.vis_layer2.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.conv3.weight",
+      "source_key": "backbone.vis_layer2.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn3.weight",
+      "source_key": "backbone.vis_layer2.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn3.bias",
+      "source_key": "backbone.vis_layer2.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn3.running_mean",
+      "source_key": "backbone.vis_layer2.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn3.running_var",
+      "source_key": "backbone.vis_layer2.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.2.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.conv1.weight",
+      "source_key": "backbone.vis_layer2.3.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn1.weight",
+      "source_key": "backbone.vis_layer2.3.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn1.bias",
+      "source_key": "backbone.vis_layer2.3.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn1.running_mean",
+      "source_key": "backbone.vis_layer2.3.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn1.running_var",
+      "source_key": "backbone.vis_layer2.3.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.3.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.conv2.weight",
+      "source_key": "backbone.vis_layer2.3.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn2.weight",
+      "source_key": "backbone.vis_layer2.3.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn2.bias",
+      "source_key": "backbone.vis_layer2.3.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn2.running_mean",
+      "source_key": "backbone.vis_layer2.3.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn2.running_var",
+      "source_key": "backbone.vis_layer2.3.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.3.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.conv3.weight",
+      "source_key": "backbone.vis_layer2.3.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn3.weight",
+      "source_key": "backbone.vis_layer2.3.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn3.bias",
+      "source_key": "backbone.vis_layer2.3.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn3.running_mean",
+      "source_key": "backbone.vis_layer2.3.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn3.running_var",
+      "source_key": "backbone.vis_layer2.3.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer2.3.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer2.3.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.conv1.weight",
+      "source_key": "backbone.lwir_layer2.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn1.weight",
+      "source_key": "backbone.lwir_layer2.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn1.bias",
+      "source_key": "backbone.lwir_layer2.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn1.running_mean",
+      "source_key": "backbone.lwir_layer2.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn1.running_var",
+      "source_key": "backbone.lwir_layer2.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.conv2.weight",
+      "source_key": "backbone.lwir_layer2.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn2.weight",
+      "source_key": "backbone.lwir_layer2.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn2.bias",
+      "source_key": "backbone.lwir_layer2.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn2.running_mean",
+      "source_key": "backbone.lwir_layer2.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn2.running_var",
+      "source_key": "backbone.lwir_layer2.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.conv3.weight",
+      "source_key": "backbone.lwir_layer2.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn3.weight",
+      "source_key": "backbone.lwir_layer2.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn3.bias",
+      "source_key": "backbone.lwir_layer2.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn3.running_mean",
+      "source_key": "backbone.lwir_layer2.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn3.running_var",
+      "source_key": "backbone.lwir_layer2.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.0.weight",
+      "source_key": "backbone.lwir_layer2.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.1.weight",
+      "source_key": "backbone.lwir_layer2.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.1.bias",
+      "source_key": "backbone.lwir_layer2.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.1.running_mean",
+      "source_key": "backbone.lwir_layer2.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.1.running_var",
+      "source_key": "backbone.lwir_layer2.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.conv1.weight",
+      "source_key": "backbone.lwir_layer2.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn1.weight",
+      "source_key": "backbone.lwir_layer2.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn1.bias",
+      "source_key": "backbone.lwir_layer2.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn1.running_mean",
+      "source_key": "backbone.lwir_layer2.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn1.running_var",
+      "source_key": "backbone.lwir_layer2.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.conv2.weight",
+      "source_key": "backbone.lwir_layer2.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn2.weight",
+      "source_key": "backbone.lwir_layer2.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn2.bias",
+      "source_key": "backbone.lwir_layer2.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn2.running_mean",
+      "source_key": "backbone.lwir_layer2.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn2.running_var",
+      "source_key": "backbone.lwir_layer2.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.conv3.weight",
+      "source_key": "backbone.lwir_layer2.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn3.weight",
+      "source_key": "backbone.lwir_layer2.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn3.bias",
+      "source_key": "backbone.lwir_layer2.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn3.running_mean",
+      "source_key": "backbone.lwir_layer2.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn3.running_var",
+      "source_key": "backbone.lwir_layer2.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.1.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.conv1.weight",
+      "source_key": "backbone.lwir_layer2.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn1.weight",
+      "source_key": "backbone.lwir_layer2.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn1.bias",
+      "source_key": "backbone.lwir_layer2.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn1.running_mean",
+      "source_key": "backbone.lwir_layer2.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn1.running_var",
+      "source_key": "backbone.lwir_layer2.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.conv2.weight",
+      "source_key": "backbone.lwir_layer2.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn2.weight",
+      "source_key": "backbone.lwir_layer2.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn2.bias",
+      "source_key": "backbone.lwir_layer2.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn2.running_mean",
+      "source_key": "backbone.lwir_layer2.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn2.running_var",
+      "source_key": "backbone.lwir_layer2.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.conv3.weight",
+      "source_key": "backbone.lwir_layer2.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn3.weight",
+      "source_key": "backbone.lwir_layer2.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn3.bias",
+      "source_key": "backbone.lwir_layer2.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn3.running_mean",
+      "source_key": "backbone.lwir_layer2.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn3.running_var",
+      "source_key": "backbone.lwir_layer2.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.2.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.conv1.weight",
+      "source_key": "backbone.lwir_layer2.3.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn1.weight",
+      "source_key": "backbone.lwir_layer2.3.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn1.bias",
+      "source_key": "backbone.lwir_layer2.3.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn1.running_mean",
+      "source_key": "backbone.lwir_layer2.3.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn1.running_var",
+      "source_key": "backbone.lwir_layer2.3.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.3.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.conv2.weight",
+      "source_key": "backbone.lwir_layer2.3.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn2.weight",
+      "source_key": "backbone.lwir_layer2.3.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn2.bias",
+      "source_key": "backbone.lwir_layer2.3.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn2.running_mean",
+      "source_key": "backbone.lwir_layer2.3.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn2.running_var",
+      "source_key": "backbone.lwir_layer2.3.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.3.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.conv3.weight",
+      "source_key": "backbone.lwir_layer2.3.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn3.weight",
+      "source_key": "backbone.lwir_layer2.3.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn3.bias",
+      "source_key": "backbone.lwir_layer2.3.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn3.running_mean",
+      "source_key": "backbone.lwir_layer2.3.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn3.running_var",
+      "source_key": "backbone.lwir_layer2.3.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer2.3.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer2.3.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.conv1.weight",
+      "source_key": "backbone.vis_layer3.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn1.weight",
+      "source_key": "backbone.vis_layer3.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn1.bias",
+      "source_key": "backbone.vis_layer3.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn1.running_var",
+      "source_key": "backbone.vis_layer3.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.conv2.weight",
+      "source_key": "backbone.vis_layer3.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn2.weight",
+      "source_key": "backbone.vis_layer3.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn2.bias",
+      "source_key": "backbone.vis_layer3.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn2.running_var",
+      "source_key": "backbone.vis_layer3.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.conv3.weight",
+      "source_key": "backbone.vis_layer3.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn3.weight",
+      "source_key": "backbone.vis_layer3.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn3.bias",
+      "source_key": "backbone.vis_layer3.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn3.running_var",
+      "source_key": "backbone.vis_layer3.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.0.weight",
+      "source_key": "backbone.vis_layer3.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.1.weight",
+      "source_key": "backbone.vis_layer3.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.1.bias",
+      "source_key": "backbone.vis_layer3.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.1.running_mean",
+      "source_key": "backbone.vis_layer3.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.1.running_var",
+      "source_key": "backbone.vis_layer3.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.conv1.weight",
+      "source_key": "backbone.vis_layer3.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn1.weight",
+      "source_key": "backbone.vis_layer3.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn1.bias",
+      "source_key": "backbone.vis_layer3.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn1.running_var",
+      "source_key": "backbone.vis_layer3.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.conv2.weight",
+      "source_key": "backbone.vis_layer3.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn2.weight",
+      "source_key": "backbone.vis_layer3.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn2.bias",
+      "source_key": "backbone.vis_layer3.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn2.running_var",
+      "source_key": "backbone.vis_layer3.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.conv3.weight",
+      "source_key": "backbone.vis_layer3.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn3.weight",
+      "source_key": "backbone.vis_layer3.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn3.bias",
+      "source_key": "backbone.vis_layer3.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn3.running_var",
+      "source_key": "backbone.vis_layer3.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.1.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.conv1.weight",
+      "source_key": "backbone.vis_layer3.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn1.weight",
+      "source_key": "backbone.vis_layer3.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn1.bias",
+      "source_key": "backbone.vis_layer3.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn1.running_var",
+      "source_key": "backbone.vis_layer3.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.conv2.weight",
+      "source_key": "backbone.vis_layer3.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn2.weight",
+      "source_key": "backbone.vis_layer3.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn2.bias",
+      "source_key": "backbone.vis_layer3.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn2.running_var",
+      "source_key": "backbone.vis_layer3.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.conv3.weight",
+      "source_key": "backbone.vis_layer3.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn3.weight",
+      "source_key": "backbone.vis_layer3.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn3.bias",
+      "source_key": "backbone.vis_layer3.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn3.running_var",
+      "source_key": "backbone.vis_layer3.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.2.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.conv1.weight",
+      "source_key": "backbone.vis_layer3.3.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn1.weight",
+      "source_key": "backbone.vis_layer3.3.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn1.bias",
+      "source_key": "backbone.vis_layer3.3.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.3.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn1.running_var",
+      "source_key": "backbone.vis_layer3.3.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.3.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.conv2.weight",
+      "source_key": "backbone.vis_layer3.3.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn2.weight",
+      "source_key": "backbone.vis_layer3.3.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn2.bias",
+      "source_key": "backbone.vis_layer3.3.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.3.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn2.running_var",
+      "source_key": "backbone.vis_layer3.3.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.3.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.conv3.weight",
+      "source_key": "backbone.vis_layer3.3.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn3.weight",
+      "source_key": "backbone.vis_layer3.3.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn3.bias",
+      "source_key": "backbone.vis_layer3.3.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.3.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn3.running_var",
+      "source_key": "backbone.vis_layer3.3.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.3.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.3.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.conv1.weight",
+      "source_key": "backbone.vis_layer3.4.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn1.weight",
+      "source_key": "backbone.vis_layer3.4.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn1.bias",
+      "source_key": "backbone.vis_layer3.4.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.4.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn1.running_var",
+      "source_key": "backbone.vis_layer3.4.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.4.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.conv2.weight",
+      "source_key": "backbone.vis_layer3.4.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn2.weight",
+      "source_key": "backbone.vis_layer3.4.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn2.bias",
+      "source_key": "backbone.vis_layer3.4.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.4.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn2.running_var",
+      "source_key": "backbone.vis_layer3.4.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.4.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.conv3.weight",
+      "source_key": "backbone.vis_layer3.4.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn3.weight",
+      "source_key": "backbone.vis_layer3.4.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn3.bias",
+      "source_key": "backbone.vis_layer3.4.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.4.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn3.running_var",
+      "source_key": "backbone.vis_layer3.4.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.4.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.4.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.conv1.weight",
+      "source_key": "backbone.vis_layer3.5.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn1.weight",
+      "source_key": "backbone.vis_layer3.5.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn1.bias",
+      "source_key": "backbone.vis_layer3.5.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn1.running_mean",
+      "source_key": "backbone.vis_layer3.5.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn1.running_var",
+      "source_key": "backbone.vis_layer3.5.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.5.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.conv2.weight",
+      "source_key": "backbone.vis_layer3.5.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn2.weight",
+      "source_key": "backbone.vis_layer3.5.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn2.bias",
+      "source_key": "backbone.vis_layer3.5.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn2.running_mean",
+      "source_key": "backbone.vis_layer3.5.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn2.running_var",
+      "source_key": "backbone.vis_layer3.5.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.5.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.conv3.weight",
+      "source_key": "backbone.vis_layer3.5.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn3.weight",
+      "source_key": "backbone.vis_layer3.5.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn3.bias",
+      "source_key": "backbone.vis_layer3.5.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn3.running_mean",
+      "source_key": "backbone.vis_layer3.5.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn3.running_var",
+      "source_key": "backbone.vis_layer3.5.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer3.5.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer3.5.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.conv1.weight",
+      "source_key": "backbone.lwir_layer3.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn1.weight",
+      "source_key": "backbone.lwir_layer3.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn1.bias",
+      "source_key": "backbone.lwir_layer3.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.conv2.weight",
+      "source_key": "backbone.lwir_layer3.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn2.weight",
+      "source_key": "backbone.lwir_layer3.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn2.bias",
+      "source_key": "backbone.lwir_layer3.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.conv3.weight",
+      "source_key": "backbone.lwir_layer3.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn3.weight",
+      "source_key": "backbone.lwir_layer3.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn3.bias",
+      "source_key": "backbone.lwir_layer3.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.0.weight",
+      "source_key": "backbone.lwir_layer3.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.1.weight",
+      "source_key": "backbone.lwir_layer3.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.1.bias",
+      "source_key": "backbone.lwir_layer3.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.1.running_mean",
+      "source_key": "backbone.lwir_layer3.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.1.running_var",
+      "source_key": "backbone.lwir_layer3.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.conv1.weight",
+      "source_key": "backbone.lwir_layer3.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn1.weight",
+      "source_key": "backbone.lwir_layer3.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn1.bias",
+      "source_key": "backbone.lwir_layer3.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.conv2.weight",
+      "source_key": "backbone.lwir_layer3.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn2.weight",
+      "source_key": "backbone.lwir_layer3.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn2.bias",
+      "source_key": "backbone.lwir_layer3.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.conv3.weight",
+      "source_key": "backbone.lwir_layer3.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn3.weight",
+      "source_key": "backbone.lwir_layer3.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn3.bias",
+      "source_key": "backbone.lwir_layer3.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.1.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.conv1.weight",
+      "source_key": "backbone.lwir_layer3.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn1.weight",
+      "source_key": "backbone.lwir_layer3.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn1.bias",
+      "source_key": "backbone.lwir_layer3.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.conv2.weight",
+      "source_key": "backbone.lwir_layer3.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn2.weight",
+      "source_key": "backbone.lwir_layer3.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn2.bias",
+      "source_key": "backbone.lwir_layer3.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.conv3.weight",
+      "source_key": "backbone.lwir_layer3.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn3.weight",
+      "source_key": "backbone.lwir_layer3.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn3.bias",
+      "source_key": "backbone.lwir_layer3.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.2.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.conv1.weight",
+      "source_key": "backbone.lwir_layer3.3.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn1.weight",
+      "source_key": "backbone.lwir_layer3.3.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn1.bias",
+      "source_key": "backbone.lwir_layer3.3.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.3.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.3.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.3.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.conv2.weight",
+      "source_key": "backbone.lwir_layer3.3.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn2.weight",
+      "source_key": "backbone.lwir_layer3.3.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn2.bias",
+      "source_key": "backbone.lwir_layer3.3.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.3.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.3.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.3.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.conv3.weight",
+      "source_key": "backbone.lwir_layer3.3.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn3.weight",
+      "source_key": "backbone.lwir_layer3.3.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn3.bias",
+      "source_key": "backbone.lwir_layer3.3.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.3.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.3.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.3.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.3.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.conv1.weight",
+      "source_key": "backbone.lwir_layer3.4.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn1.weight",
+      "source_key": "backbone.lwir_layer3.4.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn1.bias",
+      "source_key": "backbone.lwir_layer3.4.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.4.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.4.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.4.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.conv2.weight",
+      "source_key": "backbone.lwir_layer3.4.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn2.weight",
+      "source_key": "backbone.lwir_layer3.4.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn2.bias",
+      "source_key": "backbone.lwir_layer3.4.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.4.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.4.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.4.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.conv3.weight",
+      "source_key": "backbone.lwir_layer3.4.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn3.weight",
+      "source_key": "backbone.lwir_layer3.4.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn3.bias",
+      "source_key": "backbone.lwir_layer3.4.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.4.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.4.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.4.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.4.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.conv1.weight",
+      "source_key": "backbone.lwir_layer3.5.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn1.weight",
+      "source_key": "backbone.lwir_layer3.5.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn1.bias",
+      "source_key": "backbone.lwir_layer3.5.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn1.running_mean",
+      "source_key": "backbone.lwir_layer3.5.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn1.running_var",
+      "source_key": "backbone.lwir_layer3.5.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.5.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.conv2.weight",
+      "source_key": "backbone.lwir_layer3.5.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn2.weight",
+      "source_key": "backbone.lwir_layer3.5.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn2.bias",
+      "source_key": "backbone.lwir_layer3.5.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn2.running_mean",
+      "source_key": "backbone.lwir_layer3.5.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn2.running_var",
+      "source_key": "backbone.lwir_layer3.5.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.5.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.conv3.weight",
+      "source_key": "backbone.lwir_layer3.5.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn3.weight",
+      "source_key": "backbone.lwir_layer3.5.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn3.bias",
+      "source_key": "backbone.lwir_layer3.5.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn3.running_mean",
+      "source_key": "backbone.lwir_layer3.5.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn3.running_var",
+      "source_key": "backbone.lwir_layer3.5.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer3.5.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer3.5.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.conv1.weight",
+      "source_key": "backbone.vis_layer4.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn1.weight",
+      "source_key": "backbone.vis_layer4.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn1.bias",
+      "source_key": "backbone.vis_layer4.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn1.running_mean",
+      "source_key": "backbone.vis_layer4.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn1.running_var",
+      "source_key": "backbone.vis_layer4.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.conv2.weight",
+      "source_key": "backbone.vis_layer4.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn2.weight",
+      "source_key": "backbone.vis_layer4.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn2.bias",
+      "source_key": "backbone.vis_layer4.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn2.running_mean",
+      "source_key": "backbone.vis_layer4.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn2.running_var",
+      "source_key": "backbone.vis_layer4.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.conv3.weight",
+      "source_key": "backbone.vis_layer4.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn3.weight",
+      "source_key": "backbone.vis_layer4.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn3.bias",
+      "source_key": "backbone.vis_layer4.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn3.running_mean",
+      "source_key": "backbone.vis_layer4.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn3.running_var",
+      "source_key": "backbone.vis_layer4.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.0.weight",
+      "source_key": "backbone.vis_layer4.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.1.weight",
+      "source_key": "backbone.vis_layer4.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.1.bias",
+      "source_key": "backbone.vis_layer4.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.1.running_mean",
+      "source_key": "backbone.vis_layer4.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.1.running_var",
+      "source_key": "backbone.vis_layer4.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.conv1.weight",
+      "source_key": "backbone.vis_layer4.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn1.weight",
+      "source_key": "backbone.vis_layer4.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn1.bias",
+      "source_key": "backbone.vis_layer4.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn1.running_mean",
+      "source_key": "backbone.vis_layer4.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn1.running_var",
+      "source_key": "backbone.vis_layer4.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.conv2.weight",
+      "source_key": "backbone.vis_layer4.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn2.weight",
+      "source_key": "backbone.vis_layer4.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn2.bias",
+      "source_key": "backbone.vis_layer4.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn2.running_mean",
+      "source_key": "backbone.vis_layer4.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn2.running_var",
+      "source_key": "backbone.vis_layer4.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.conv3.weight",
+      "source_key": "backbone.vis_layer4.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn3.weight",
+      "source_key": "backbone.vis_layer4.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn3.bias",
+      "source_key": "backbone.vis_layer4.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn3.running_mean",
+      "source_key": "backbone.vis_layer4.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn3.running_var",
+      "source_key": "backbone.vis_layer4.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.1.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.conv1.weight",
+      "source_key": "backbone.vis_layer4.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn1.weight",
+      "source_key": "backbone.vis_layer4.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn1.bias",
+      "source_key": "backbone.vis_layer4.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn1.running_mean",
+      "source_key": "backbone.vis_layer4.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn1.running_var",
+      "source_key": "backbone.vis_layer4.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn1.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.conv2.weight",
+      "source_key": "backbone.vis_layer4.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn2.weight",
+      "source_key": "backbone.vis_layer4.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn2.bias",
+      "source_key": "backbone.vis_layer4.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn2.running_mean",
+      "source_key": "backbone.vis_layer4.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn2.running_var",
+      "source_key": "backbone.vis_layer4.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn2.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.conv3.weight",
+      "source_key": "backbone.vis_layer4.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn3.weight",
+      "source_key": "backbone.vis_layer4.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn3.bias",
+      "source_key": "backbone.vis_layer4.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn3.running_mean",
+      "source_key": "backbone.vis_layer4.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn3.running_var",
+      "source_key": "backbone.vis_layer4.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.vis_layer4.2.bn3.num_batches_tracked",
+      "source_key": "backbone.vis_layer4.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.conv1.weight",
+      "source_key": "backbone.lwir_layer4.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn1.weight",
+      "source_key": "backbone.lwir_layer4.0.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn1.bias",
+      "source_key": "backbone.lwir_layer4.0.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn1.running_mean",
+      "source_key": "backbone.lwir_layer4.0.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn1.running_var",
+      "source_key": "backbone.lwir_layer4.0.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.0.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.conv2.weight",
+      "source_key": "backbone.lwir_layer4.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn2.weight",
+      "source_key": "backbone.lwir_layer4.0.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn2.bias",
+      "source_key": "backbone.lwir_layer4.0.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn2.running_mean",
+      "source_key": "backbone.lwir_layer4.0.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn2.running_var",
+      "source_key": "backbone.lwir_layer4.0.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.0.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.conv3.weight",
+      "source_key": "backbone.lwir_layer4.0.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn3.weight",
+      "source_key": "backbone.lwir_layer4.0.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn3.bias",
+      "source_key": "backbone.lwir_layer4.0.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn3.running_mean",
+      "source_key": "backbone.lwir_layer4.0.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn3.running_var",
+      "source_key": "backbone.lwir_layer4.0.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.0.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.0.weight",
+      "source_key": "backbone.lwir_layer4.0.downsample.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.1.weight",
+      "source_key": "backbone.lwir_layer4.0.downsample.1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.1.bias",
+      "source_key": "backbone.lwir_layer4.0.downsample.1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.1.running_mean",
+      "source_key": "backbone.lwir_layer4.0.downsample.1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.1.running_var",
+      "source_key": "backbone.lwir_layer4.0.downsample.1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.0.downsample.1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.0.downsample.1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.conv1.weight",
+      "source_key": "backbone.lwir_layer4.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn1.weight",
+      "source_key": "backbone.lwir_layer4.1.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn1.bias",
+      "source_key": "backbone.lwir_layer4.1.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn1.running_mean",
+      "source_key": "backbone.lwir_layer4.1.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn1.running_var",
+      "source_key": "backbone.lwir_layer4.1.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.1.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.conv2.weight",
+      "source_key": "backbone.lwir_layer4.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn2.weight",
+      "source_key": "backbone.lwir_layer4.1.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn2.bias",
+      "source_key": "backbone.lwir_layer4.1.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn2.running_mean",
+      "source_key": "backbone.lwir_layer4.1.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn2.running_var",
+      "source_key": "backbone.lwir_layer4.1.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.1.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.conv3.weight",
+      "source_key": "backbone.lwir_layer4.1.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn3.weight",
+      "source_key": "backbone.lwir_layer4.1.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn3.bias",
+      "source_key": "backbone.lwir_layer4.1.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn3.running_mean",
+      "source_key": "backbone.lwir_layer4.1.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn3.running_var",
+      "source_key": "backbone.lwir_layer4.1.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.1.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.1.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.conv1.weight",
+      "source_key": "backbone.lwir_layer4.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn1.weight",
+      "source_key": "backbone.lwir_layer4.2.bn1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn1.bias",
+      "source_key": "backbone.lwir_layer4.2.bn1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn1.running_mean",
+      "source_key": "backbone.lwir_layer4.2.bn1.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn1.running_var",
+      "source_key": "backbone.lwir_layer4.2.bn1.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn1.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.2.bn1.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.conv2.weight",
+      "source_key": "backbone.lwir_layer4.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn2.weight",
+      "source_key": "backbone.lwir_layer4.2.bn2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn2.bias",
+      "source_key": "backbone.lwir_layer4.2.bn2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn2.running_mean",
+      "source_key": "backbone.lwir_layer4.2.bn2.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn2.running_var",
+      "source_key": "backbone.lwir_layer4.2.bn2.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn2.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.2.bn2.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.conv3.weight",
+      "source_key": "backbone.lwir_layer4.2.conv3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn3.weight",
+      "source_key": "backbone.lwir_layer4.2.bn3.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn3.bias",
+      "source_key": "backbone.lwir_layer4.2.bn3.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn3.running_mean",
+      "source_key": "backbone.lwir_layer4.2.bn3.running_mean",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn3.running_var",
+      "source_key": "backbone.lwir_layer4.2.bn3.running_var",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lwir_layer4.2.bn3.num_batches_tracked",
+      "source_key": "backbone.lwir_layer4.2.bn3.num_batches_tracked",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_f.weight",
+      "source_key": "backbone.ipm.0.conv_f.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_f.bias",
+      "source_key": "backbone.ipm.0.conv_f.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_bright_map.weight",
+      "source_key": "backbone.ipm.0.conv_bright_map.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_bright_map.bias",
+      "source_key": "backbone.ipm.0.conv_bright_map.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_fuse.weight",
+      "source_key": "backbone.ipm.0.conv_fuse.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.0.conv_fuse.bias",
+      "source_key": "backbone.ipm.0.conv_fuse.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_f.weight",
+      "source_key": "backbone.ipm.1.conv_f.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_f.bias",
+      "source_key": "backbone.ipm.1.conv_f.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_bright_map.weight",
+      "source_key": "backbone.ipm.1.conv_bright_map.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_bright_map.bias",
+      "source_key": "backbone.ipm.1.conv_bright_map.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_fuse.weight",
+      "source_key": "backbone.ipm.1.conv_fuse.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.1.conv_fuse.bias",
+      "source_key": "backbone.ipm.1.conv_fuse.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_f.weight",
+      "source_key": "backbone.ipm.2.conv_f.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_f.bias",
+      "source_key": "backbone.ipm.2.conv_f.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_bright_map.weight",
+      "source_key": "backbone.ipm.2.conv_bright_map.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_bright_map.bias",
+      "source_key": "backbone.ipm.2.conv_bright_map.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_fuse.weight",
+      "source_key": "backbone.ipm.2.conv_fuse.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.ipm.2.conv_fuse.bias",
+      "source_key": "backbone.ipm.2.conv_fuse.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv0.weight",
+      "source_key": "backbone.lsk.0.conv0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv0.bias",
+      "source_key": "backbone.lsk.0.conv0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv_spatial.weight",
+      "source_key": "backbone.lsk.0.conv_spatial.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv_spatial.bias",
+      "source_key": "backbone.lsk.0.conv_spatial.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv1.weight",
+      "source_key": "backbone.lsk.0.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv1.bias",
+      "source_key": "backbone.lsk.0.conv1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv2.weight",
+      "source_key": "backbone.lsk.0.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv2.bias",
+      "source_key": "backbone.lsk.0.conv2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv_squeeze.weight",
+      "source_key": "backbone.lsk.0.conv_squeeze.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.0.conv_squeeze.bias",
+      "source_key": "backbone.lsk.0.conv_squeeze.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv0.weight",
+      "source_key": "backbone.lsk.1.conv0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv0.bias",
+      "source_key": "backbone.lsk.1.conv0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv_spatial.weight",
+      "source_key": "backbone.lsk.1.conv_spatial.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv_spatial.bias",
+      "source_key": "backbone.lsk.1.conv_spatial.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv1.weight",
+      "source_key": "backbone.lsk.1.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv1.bias",
+      "source_key": "backbone.lsk.1.conv1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv2.weight",
+      "source_key": "backbone.lsk.1.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv2.bias",
+      "source_key": "backbone.lsk.1.conv2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv_squeeze.weight",
+      "source_key": "backbone.lsk.1.conv_squeeze.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.1.conv_squeeze.bias",
+      "source_key": "backbone.lsk.1.conv_squeeze.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv0.weight",
+      "source_key": "backbone.lsk.2.conv0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv0.bias",
+      "source_key": "backbone.lsk.2.conv0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv_spatial.weight",
+      "source_key": "backbone.lsk.2.conv_spatial.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv_spatial.bias",
+      "source_key": "backbone.lsk.2.conv_spatial.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv1.weight",
+      "source_key": "backbone.lsk.2.conv1.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv1.bias",
+      "source_key": "backbone.lsk.2.conv1.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv2.weight",
+      "source_key": "backbone.lsk.2.conv2.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv2.bias",
+      "source_key": "backbone.lsk.2.conv2.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv_squeeze.weight",
+      "source_key": "backbone.lsk.2.conv_squeeze.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.lsk.2.conv_squeeze.bias",
+      "source_key": "backbone.lsk.2.conv_squeeze.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.0.0.weight",
+      "source_key": "backbone.thermal_convlist1.0.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.0.0.bias",
+      "source_key": "backbone.thermal_convlist1.0.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.1.0.weight",
+      "source_key": "backbone.thermal_convlist1.1.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.1.0.bias",
+      "source_key": "backbone.thermal_convlist1.1.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.2.0.weight",
+      "source_key": "backbone.thermal_convlist1.2.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.2.0.bias",
+      "source_key": "backbone.thermal_convlist1.2.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.3.0.weight",
+      "source_key": "backbone.thermal_convlist1.3.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist1.3.0.bias",
+      "source_key": "backbone.thermal_convlist1.3.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.0.0.weight",
+      "source_key": "backbone.thermal_convlist2.0.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.0.0.bias",
+      "source_key": "backbone.thermal_convlist2.0.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.1.0.weight",
+      "source_key": "backbone.thermal_convlist2.1.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.1.0.bias",
+      "source_key": "backbone.thermal_convlist2.1.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.2.0.weight",
+      "source_key": "backbone.thermal_convlist2.2.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.2.0.bias",
+      "source_key": "backbone.thermal_convlist2.2.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.3.0.weight",
+      "source_key": "backbone.thermal_convlist2.3.0.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "backbone.thermal_convlist2.3.0.bias",
+      "source_key": "backbone.thermal_convlist2.3.0.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "neck.lateral_convs.1.conv.weight",
+      "source_key": "neck.lateral_convs.0.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.lateral_convs.1.conv.bias",
+      "source_key": "neck.lateral_convs.0.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.lateral_convs.2.conv.weight",
+      "source_key": "neck.lateral_convs.1.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.lateral_convs.2.conv.bias",
+      "source_key": "neck.lateral_convs.1.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.lateral_convs.3.conv.weight",
+      "source_key": "neck.lateral_convs.2.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.lateral_convs.3.conv.bias",
+      "source_key": "neck.lateral_convs.2.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.1.conv.weight",
+      "source_key": "neck.fpn_convs.0.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.1.conv.bias",
+      "source_key": "neck.fpn_convs.0.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.2.conv.weight",
+      "source_key": "neck.fpn_convs.1.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.2.conv.bias",
+      "source_key": "neck.fpn_convs.1.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.3.conv.weight",
+      "source_key": "neck.fpn_convs.2.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.3.conv.bias",
+      "source_key": "neck.fpn_convs.2.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.4.conv.weight",
+      "source_key": "neck.fpn_convs.3.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "neck.fpn_convs.4.conv.bias",
+      "source_key": "neck.fpn_convs.3.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.0.conv.weight",
+      "source_key": "bbox_head.cls_convs.0.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.0.gn.weight",
+      "source_key": "bbox_head.cls_convs.0.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.0.gn.bias",
+      "source_key": "bbox_head.cls_convs.0.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.1.conv.weight",
+      "source_key": "bbox_head.cls_convs.1.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.1.gn.weight",
+      "source_key": "bbox_head.cls_convs.1.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.1.gn.bias",
+      "source_key": "bbox_head.cls_convs.1.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.2.conv.weight",
+      "source_key": "bbox_head.cls_convs.2.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.2.gn.weight",
+      "source_key": "bbox_head.cls_convs.2.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.2.gn.bias",
+      "source_key": "bbox_head.cls_convs.2.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.3.conv.weight",
+      "source_key": "bbox_head.cls_convs.3.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.3.gn.weight",
+      "source_key": "bbox_head.cls_convs.3.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.cls_convs.3.gn.bias",
+      "source_key": "bbox_head.cls_convs.3.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.0.conv.weight",
+      "source_key": "bbox_head.reg_convs.0.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.0.gn.weight",
+      "source_key": "bbox_head.reg_convs.0.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.0.gn.bias",
+      "source_key": "bbox_head.reg_convs.0.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.1.conv.weight",
+      "source_key": "bbox_head.reg_convs.1.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.1.gn.weight",
+      "source_key": "bbox_head.reg_convs.1.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.1.gn.bias",
+      "source_key": "bbox_head.reg_convs.1.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.2.conv.weight",
+      "source_key": "bbox_head.reg_convs.2.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.2.gn.weight",
+      "source_key": "bbox_head.reg_convs.2.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.2.gn.bias",
+      "source_key": "bbox_head.reg_convs.2.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.3.conv.weight",
+      "source_key": "bbox_head.reg_convs.3.conv.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.3.gn.weight",
+      "source_key": "bbox_head.reg_convs.3.gn.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.reg_convs.3.gn.bias",
+      "source_key": "bbox_head.reg_convs.3.gn.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.gfl_cls.weight",
+      "source_key": "bbox_head.gfl_cls.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.gfl_cls.bias",
+      "source_key": "bbox_head.gfl_cls.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.gfl_reg.weight",
+      "source_key": "bbox_head.gfl_reg.weight",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.gfl_reg.bias",
+      "source_key": "bbox_head.gfl_reg.bias",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.scales.0.scale",
+      "source_key": "bbox_head.scales.0.scale",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.scales.1.scale",
+      "source_key": "bbox_head.scales.1.scale",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.scales.2.scale",
+      "source_key": "bbox_head.scales.2.scale",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.scales.3.scale",
+      "source_key": "bbox_head.scales.3.scale",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.scales.4.scale",
+      "source_key": "bbox_head.scales.4.scale",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "bbox_head.integral.project",
+      "source_key": "bbox_head.integral.project",
+      "reason": "same_name"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.1.conv.weight",
+      "source_key": "nect_t.lateral_convs.0.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.1.conv.bias",
+      "source_key": "nect_t.lateral_convs.0.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.2.conv.weight",
+      "source_key": "nect_t.lateral_convs.1.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.2.conv.bias",
+      "source_key": "nect_t.lateral_convs.1.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.3.conv.weight",
+      "source_key": "nect_t.lateral_convs.2.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.lateral_convs.3.conv.bias",
+      "source_key": "nect_t.lateral_convs.2.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.1.conv.weight",
+      "source_key": "nect_t.fpn_convs.0.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.1.conv.bias",
+      "source_key": "nect_t.fpn_convs.0.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.2.conv.weight",
+      "source_key": "nect_t.fpn_convs.1.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.2.conv.bias",
+      "source_key": "nect_t.fpn_convs.1.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.3.conv.weight",
+      "source_key": "nect_t.fpn_convs.2.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.3.conv.bias",
+      "source_key": "nect_t.fpn_convs.2.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.4.conv.weight",
+      "source_key": "nect_t.fpn_convs.3.conv.weight",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "nect_t.fpn_convs.4.conv.bias",
+      "source_key": "nect_t.fpn_convs.3.conv.bias",
+      "reason": "fpn_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv.0.weight",
+      "source_key": "fuse.0.Q_rgb.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv.0.bias",
+      "source_key": "fuse.0.Q_rgb.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv_gamma.weight",
+      "source_key": "fuse.0.Q_rgb.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv_gamma.bias",
+      "source_key": "fuse.0.Q_rgb.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv_beta.weight",
+      "source_key": "fuse.0.Q_rgb.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_rgb.conv_beta.bias",
+      "source_key": "fuse.0.Q_rgb.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv.0.weight",
+      "source_key": "fuse.0.Q_thermal.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv.0.bias",
+      "source_key": "fuse.0.Q_thermal.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv_gamma.weight",
+      "source_key": "fuse.0.Q_thermal.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv_gamma.bias",
+      "source_key": "fuse.0.Q_thermal.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv_beta.weight",
+      "source_key": "fuse.0.Q_thermal.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.Q_thermal.conv_beta.bias",
+      "source_key": "fuse.0.Q_thermal.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.K_rgb.weight",
+      "source_key": "fuse.0.K_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.K_rgb.bias",
+      "source_key": "fuse.0.K_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.K_thermal.weight",
+      "source_key": "fuse.0.K_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.K_thermal.bias",
+      "source_key": "fuse.0.K_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.V_rgb.weight",
+      "source_key": "fuse.0.V_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.V_rgb.bias",
+      "source_key": "fuse.0.V_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.V_thermal.weight",
+      "source_key": "fuse.0.V_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.1.V_thermal.bias",
+      "source_key": "fuse.0.V_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv.0.weight",
+      "source_key": "fuse.1.Q_rgb.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv.0.bias",
+      "source_key": "fuse.1.Q_rgb.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv_gamma.weight",
+      "source_key": "fuse.1.Q_rgb.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv_gamma.bias",
+      "source_key": "fuse.1.Q_rgb.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv_beta.weight",
+      "source_key": "fuse.1.Q_rgb.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_rgb.conv_beta.bias",
+      "source_key": "fuse.1.Q_rgb.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv.0.weight",
+      "source_key": "fuse.1.Q_thermal.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv.0.bias",
+      "source_key": "fuse.1.Q_thermal.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv_gamma.weight",
+      "source_key": "fuse.1.Q_thermal.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv_gamma.bias",
+      "source_key": "fuse.1.Q_thermal.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv_beta.weight",
+      "source_key": "fuse.1.Q_thermal.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.Q_thermal.conv_beta.bias",
+      "source_key": "fuse.1.Q_thermal.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.K_rgb.weight",
+      "source_key": "fuse.1.K_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.K_rgb.bias",
+      "source_key": "fuse.1.K_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.K_thermal.weight",
+      "source_key": "fuse.1.K_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.K_thermal.bias",
+      "source_key": "fuse.1.K_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.V_rgb.weight",
+      "source_key": "fuse.1.V_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.V_rgb.bias",
+      "source_key": "fuse.1.V_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.V_thermal.weight",
+      "source_key": "fuse.1.V_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.2.V_thermal.bias",
+      "source_key": "fuse.1.V_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv.0.weight",
+      "source_key": "fuse.2.Q_rgb.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv.0.bias",
+      "source_key": "fuse.2.Q_rgb.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv_gamma.weight",
+      "source_key": "fuse.2.Q_rgb.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv_gamma.bias",
+      "source_key": "fuse.2.Q_rgb.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv_beta.weight",
+      "source_key": "fuse.2.Q_rgb.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_rgb.conv_beta.bias",
+      "source_key": "fuse.2.Q_rgb.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv.0.weight",
+      "source_key": "fuse.2.Q_thermal.conv.0.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv.0.bias",
+      "source_key": "fuse.2.Q_thermal.conv.0.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv_gamma.weight",
+      "source_key": "fuse.2.Q_thermal.conv_gamma.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv_gamma.bias",
+      "source_key": "fuse.2.Q_thermal.conv_gamma.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv_beta.weight",
+      "source_key": "fuse.2.Q_thermal.conv_beta.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.Q_thermal.conv_beta.bias",
+      "source_key": "fuse.2.Q_thermal.conv_beta.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.K_rgb.weight",
+      "source_key": "fuse.2.K_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.K_rgb.bias",
+      "source_key": "fuse.2.K_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.K_thermal.weight",
+      "source_key": "fuse.2.K_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.K_thermal.bias",
+      "source_key": "fuse.2.K_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.V_rgb.weight",
+      "source_key": "fuse.2.V_rgb.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.V_rgb.bias",
+      "source_key": "fuse.2.V_rgb.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.V_thermal.weight",
+      "source_key": "fuse.2.V_thermal.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.3.V_thermal.bias",
+      "source_key": "fuse.2.V_thermal.bias",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.4.conv1x1.weight",
+      "source_key": "fuse.3.conv1x1.weight",
+      "reason": "fusion_level_remap"
+    },
+    {
+      "target_key": "fuse.4.conv1x1.bias",
+      "source_key": "fuse.3.conv1x1.bias",
+      "reason": "fusion_level_remap"
+    }
+  ],
+  "new_initialized_key_list": [
+    "fuse.0.conv1x1.bias",
+    "fuse.0.conv1x1.weight",
+    "neck.fpn_convs.0.conv.bias",
+    "neck.fpn_convs.0.conv.weight",
+    "neck.lateral_convs.0.conv.bias",
+    "neck.lateral_convs.0.conv.weight",
+    "nect_t.fpn_convs.0.conv.bias",
+    "nect_t.fpn_convs.0.conv.weight",
+    "nect_t.lateral_convs.0.conv.bias",
+    "nect_t.lateral_convs.0.conv.weight"
+  ],
+  "discarded_key_list": [
+    "fuse.4.conv1x1.bias",
+    "fuse.4.conv1x1.weight",
+    "neck.fpn_convs.4.conv.bias",
+    "neck.fpn_convs.4.conv.weight",
+    "nect_t.fpn_convs.4.conv.bias",
+    "nect_t.fpn_convs.4.conv.weight"
+  ]
+}

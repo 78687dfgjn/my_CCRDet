@@ -26,10 +26,20 @@ class GFLAF(SingleStageDetector):
                  init_cfg=None,
                  tanh=None,
                  fusion_types=None,
-                 global_shift=None):
+                 global_shift=None,
+                 attention_mode=None,
+                 attention_hw_threshold=4096):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
         self.tanh = tanh
+        # None preserves the released full-attention baseline. Candidate
+        # configs opt into 'skip' explicitly for high-resolution P2 safety.
+        self.attention_mode = 'full' if attention_mode is None else str(attention_mode).lower()
+        if self.attention_mode not in ('full', 'skip'):
+            raise ValueError('attention_mode must be full or skip')
+        self.attention_hw_threshold = int(attention_hw_threshold)
+        if self.attention_hw_threshold <= 0:
+            raise ValueError('attention_hw_threshold must be positive')
         self.global_thermal_shift = GlobalThermalShift(
             **(global_shift or dict(mode='off')))
         self.nect_t = build_neck(neck)
@@ -43,7 +53,11 @@ class GFLAF(SingleStageDetector):
     def _build_fusion(self, fusion_type):
         fusion_type = str(fusion_type).lower()
         if fusion_type == 'fusion':
-            return Fusion(256, tanh=self.tanh)
+            return Fusion(
+                256,
+                tanh=self.tanh,
+                attention_mode=self.attention_mode,
+                attention_hw_threshold=self.attention_hw_threshold)
         if fusion_type == 'fusion_cat':
             return Fusion_CAT(256)
         raise ValueError('Unsupported fusion type: {}'.format(fusion_type))
@@ -90,10 +104,17 @@ class Fusion_CAT_WTA(torch.nn.Module):
         return temp
     
 class Fusion(nn.Module):
-    def __init__(self, dim, tanh=False):
+    def __init__(self, dim, tanh=False, attention_mode='skip',
+                 attention_hw_threshold=4096):
         super().__init__()
         self.dim = dim
         self.tanh = tanh
+        self.attention_mode = str(attention_mode).lower()
+        if self.attention_mode not in ('full', 'skip'):
+            raise ValueError('attention_mode must be full or skip')
+        self.attention_hw_threshold = int(attention_hw_threshold)
+        if self.attention_hw_threshold <= 0:
+            raise ValueError('attention_hw_threshold must be positive')
         self.Q_rgb = ModalityNorm(self.dim)
         self.Q_thermal = ModalityNorm(self.dim)
         self.K_rgb = nn.Conv2d(self.dim, self.dim, 1, 1)
@@ -104,6 +125,9 @@ class Fusion(nn.Module):
 
     def forward(self, rgb, thermal):   
         _, _, H, W = rgb.shape
+        if (self.attention_mode == 'skip' and
+                H * W > self.attention_hw_threshold):
+            return rgb + thermal
         rgb_Q = self.Q_rgb(rgb, thermal) 
         thermal_Q = self.Q_thermal(thermal, rgb)  
         

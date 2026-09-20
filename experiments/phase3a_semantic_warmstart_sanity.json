@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "work_dirs/baseline_seed_0/epoch_12.pth",
+  "candidate_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "loaded_key_count": 824,
+  "expected_loaded_key_count": 824,
+  "new_initialized_key_count": 10,
+  "p2_initialized_key_count": 10,
+  "p2_initialized_parameter_count": 1443072,
+  "discarded_key_count": 6,
+  "checks": {
+    "p3_to_p6_semantic_values": true,
+    "p2_not_source_loaded": true,
+    "p7_discarded_and_p6_target_remapped": true,
+    "candidate_fusion_types": true
+  },
+  "p2_initialized_keys": [
+    "fuse.0.conv1x1.bias",
+    "fuse.0.conv1x1.weight",
+    "neck.fpn_convs.0.conv.bias",
+    "neck.fpn_convs.0.conv.weight",
+    "neck.lateral_convs.0.conv.bias",
+    "neck.lateral_convs.0.conv.weight",
+    "nect_t.fpn_convs.0.conv.bias",
+    "nect_t.fpn_convs.0.conv.weight",
+    "nect_t.lateral_convs.0.conv.bias",
+    "nect_t.lateral_convs.0.conv.weight"
+  ],
+  "discarded_keys": [
+    "fuse.4.conv1x1.bias",
+    "fuse.4.conv1x1.weight",
+    "neck.fpn_convs.4.conv.bias",
+    "neck.fpn_convs.4.conv.weight",
+    "nect_t.fpn_convs.4.conv.bias",
+    "nect_t.fpn_convs.4.conv.weight"
+  ],
+  "failures": []
+}
