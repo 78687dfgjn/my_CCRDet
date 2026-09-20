@@ -1,0 +1,26 @@
+{
+  "status": "UNAVAILABLE",
+  "reason": "released image metadata contains numeric file_name/id only; no sequence/video/frame grouping field",
+  "image_count": 1225,
+  "image_metadata_keys": [
+    "file_name",
+    "height",
+    "id",
+    "width"
+  ],
+  "file_name_first": [
+    "04900.jpg",
+    "04901.jpg",
+    "04902.jpg",
+    "04903.jpg",
+    "04904.jpg"
+  ],
+  "file_name_last": [
+    "06120.jpg",
+    "06121.jpg",
+    "06122.jpg",
+    "06123.jpg",
+    "06124.jpg"
+  ],
+  "random_split_used": false
+}

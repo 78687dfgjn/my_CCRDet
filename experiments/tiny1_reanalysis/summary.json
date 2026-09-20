@@ -1,0 +1,56 @@
+{
+  "protocol": {
+    "area_label": "tiny1",
+    "area_range": [
+      1,
+      64
+    ],
+    "iou_thresholds": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "matching_iou": 0.5,
+    "max_dets": [
+      100,
+      300,
+      1000
+    ],
+    "matching_max_det": 1000,
+    "categories": {
+      "0": "person",
+      "1": "rider",
+      "2": "crowd"
+    },
+    "ignore_uncertain": true,
+    "use_iod_for_ignore": true
+  },
+  "counts": {
+    "A": 161,
+    "B": 256,
+    "C": 0,
+    "D": 112
+  },
+  "by_category": {
+    "person": {
+      "A": 157,
+      "B": 254,
+      "C": 0,
+      "D": 110
+    },
+    "crowd": {
+      "A": 3,
+      "B": 2,
+      "C": 0,
+      "D": 0
+    },
+    "rider": {
+      "A": 1,
+      "B": 0,
+      "C": 0,
+      "D": 2
+    }
+  },
+  "total_tiny1_gt": 529,
+  "candidate_fpn_level": "Not recoverable from post-NMS result tensors."
+}

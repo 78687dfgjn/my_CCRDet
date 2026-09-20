@@ -1,0 +1,26 @@
+{
+  "area_label": "tiny1",
+  "area_range": [
+    1,
+    64
+  ],
+  "iou_thresholds": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "matching_iou": 0.5,
+  "max_dets": [
+    100,
+    300,
+    1000
+  ],
+  "matching_max_det": 1000,
+  "categories": {
+    "0": "person",
+    "1": "rider",
+    "2": "crowd"
+  },
+  "ignore_uncertain": true,
+  "use_iod_for_ignore": true
+}
