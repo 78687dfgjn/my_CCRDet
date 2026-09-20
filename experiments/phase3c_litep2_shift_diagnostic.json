@@ -1,0 +1,42 @@
+{
+  "checkpoint": "/root/CCRDet/work_dirs/phase3c_full_lite_p2p6_seed0/epoch_10.pth",
+  "best_epoch": 10,
+  "protocol": {
+    "dataset": "RGBTDronePerson validation",
+    "dy": 0.0,
+    "fixed_dx_pixels": -1.0,
+    "dx_semantics": "negative dx moves thermal content left",
+    "training": false,
+    "evaluator": "released DronePerson evaluator"
+  },
+  "off": {
+    "mAP25": 59.870000000000005,
+    "mAP50_all": 43.21,
+    "mAP75": 3.7900000000000005,
+    "mAP50_tiny": 44.9,
+    "mAP50_tiny1": 27.98,
+    "mAP50_tiny2": 31.540000000000003,
+    "mAP50_tiny3": 51.72,
+    "mAP50_small": 25.16
+  },
+  "fixed_dx_minus1": {
+    "mAP25": 59.709999999999994,
+    "mAP50_all": 45.96,
+    "mAP75": 4.77,
+    "mAP50_tiny": 47.599999999999994,
+    "mAP50_tiny1": 30.270000000000003,
+    "mAP50_tiny2": 34.68,
+    "mAP50_tiny3": 53.349999999999994,
+    "mAP50_small": 25.39
+  },
+  "delta_fixed_minus_off": {
+    "mAP25": -0.1600000000000108,
+    "mAP50_all": 2.75,
+    "mAP75": 0.9799999999999991,
+    "mAP50_tiny": 2.6999999999999957,
+    "mAP50_tiny1": 2.2900000000000027,
+    "mAP50_tiny2": 3.139999999999997,
+    "mAP50_tiny3": 1.6299999999999955,
+    "mAP50_small": 0.23000000000000043
+  }
+}

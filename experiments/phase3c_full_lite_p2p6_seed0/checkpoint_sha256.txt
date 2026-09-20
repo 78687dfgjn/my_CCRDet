@@ -1,0 +1,2 @@
+best_epoch_10 713f13dceae87154cf87a1613ccddb881582cdb2cf2736089515e53953ab3dcb  /root/CCRDet/work_dirs/phase3c_full_lite_p2p6_seed0/epoch_10.pth
+epoch12 5852e102cb6092dc0d96b571e3840d5ed8cdb0aaa66c164860683a64463216fc  /root/CCRDet/work_dirs/phase3c_full_lite_p2p6_seed0/epoch_12.pth

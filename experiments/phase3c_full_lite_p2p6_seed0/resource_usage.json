@@ -1,0 +1,19 @@
+{
+  "training_pid": 971,
+  "training_wall_time_seconds": 18922.634,
+  "training_wall_time_hms": "5:15:22",
+  "gpu_name": "NVIDIA GeForce RTX 2080 Ti",
+  "gpu_count": 1,
+  "training_log_peak_memory_mib": 19249,
+  "driver_monitor": {
+    "csv": "/root/CCRDet/experiments/phase3c_full_lite_p2p6_seed0/resource_monitor.csv",
+    "sample_count": 1827,
+    "peak_memory_used_mib": 20779,
+    "peak_utilization_gpu_percent": 100
+  },
+  "preflight": {
+    "peak_allocated_bytes": 19867923456,
+    "peak_reserved_bytes": 21533556736,
+    "peak_driver_used_mib": 21621
+  }
+}

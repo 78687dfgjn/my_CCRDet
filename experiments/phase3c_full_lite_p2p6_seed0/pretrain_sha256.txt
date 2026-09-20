@@ -1,0 +1,1 @@
+afa54b9ff80a52402f0489439ccba00f3998b2e49ee1aaffdf2bf78ac5c39639  /root/CCRDet/pretrain_weights/resnet50-2stream.pth
