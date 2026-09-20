@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "config": "/root/CCRDet/configs_local/exp_full_lite_p2p6_seed0.py",
+  "initialization_audit": "/root/CCRDet/experiments/phase3c_initialization_audit.json",
+  "iterations_requested": 5,
+  "iterations_completed": 5,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "metrics": [
+    {
+      "iteration": 1,
+      "log_vars": {
+        "loss_cls": 0.0011889127781614661,
+        "loss_bbox": 1.91982901096344,
+        "loss_dfl": 0.7085956931114197,
+        "loss": 2.6296136379241943
+      },
+      "loss": 2.6296136379241943,
+      "seconds": 3.128180503845215,
+      "driver_used_mb": 19463
+    },
+    {
+      "iteration": 2,
+      "log_vars": {
+        "loss_cls": 0.006868467200547457,
+        "loss_bbox": 1.8901749849319458,
+        "loss_dfl": 0.6552735567092896,
+        "loss": 2.5523171424865723
+      },
+      "loss": 2.5523171424865723,
+      "seconds": 2.5292537212371826,
+      "driver_used_mb": 20067
+    },
+    {
+      "iteration": 3,
+      "log_vars": {
+        "loss_cls": 0.0019855820573866367,
+        "loss_bbox": 1.8917303085327148,
+        "loss_dfl": 0.5554555058479309,
+        "loss": 2.449171304702759
+      },
+      "loss": 2.449171304702759,
+      "seconds": 2.434177875518799,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 4,
+      "log_vars": {
+        "loss_cls": 0.03211236745119095,
+        "loss_bbox": 1.7193657159805298,
+        "loss_dfl": 0.46206194162368774,
+        "loss": 2.2135400772094727
+      },
+      "loss": 2.2135400772094727,
+      "seconds": 2.4541494846343994,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 5,
+      "log_vars": {
+        "loss_cls": 0.3729911148548126,
+        "loss_bbox": 1.3016115427017212,
+        "loss_dfl": 0.4364309012889862,
+        "loss": 2.1110334396362305
+      },
+      "loss": 2.1110334396362305,
+      "seconds": 2.440164804458618,
+      "driver_used_mb": 21621
+    }
+  ],
+  "total_seconds": 13.351016998291016,
+  "mean_iteration_seconds": 2.5971852779388427,
+  "peak_allocated_bytes": 19867923456,
+  "peak_reserved_bytes": 21533556736,
+  "peak_driver_used_mb": 21621,
+  "gpu_processes_before": "2411143, [Not Found], 1714 MiB",
+  "error": null
+}
