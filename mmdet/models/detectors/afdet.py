@@ -72,6 +72,13 @@ class GFLAF(SingleStageDetector):
             x = self.neck(x)
             y = self.nect_t(y)
       
+        if len(x) != len(y) or len(x) != len(self.fuse):
+            raise RuntimeError(
+                'Fusion feature count mismatch: len(rgb_features)={}, '
+                'len(thermal_features)={}, len(fusion_modules)={}, '
+                'fusion_types={}'.format(
+                    len(x), len(y), len(self.fuse), self.fusion_types))
+
         features = []       
         # Fusion
         for i in range(len(x)):
@@ -104,7 +111,7 @@ class Fusion_CAT_WTA(torch.nn.Module):
         return temp
     
 class Fusion(nn.Module):
-    def __init__(self, dim, tanh=False, attention_mode='skip',
+    def __init__(self, dim, tanh=False, attention_mode='full',
                  attention_hw_threshold=4096):
         super().__init__()
         self.dim = dim
@@ -115,6 +122,12 @@ class Fusion(nn.Module):
         self.attention_hw_threshold = int(attention_hw_threshold)
         if self.attention_hw_threshold <= 0:
             raise ValueError('attention_hw_threshold must be positive')
+        # Analysis-only counters. They are plain Python attributes, so they do
+        # not enter state_dict and remain numerically inert when disabled.
+        self.analysis_enabled = False
+        self.analysis_total_calls = 0
+        self.analysis_skip_calls = 0
+        self.analysis_full_calls = 0
         self.Q_rgb = ModalityNorm(self.dim)
         self.Q_thermal = ModalityNorm(self.dim)
         self.K_rgb = nn.Conv2d(self.dim, self.dim, 1, 1)
@@ -125,9 +138,15 @@ class Fusion(nn.Module):
 
     def forward(self, rgb, thermal):   
         _, _, H, W = rgb.shape
+        if self.analysis_enabled:
+            self.analysis_total_calls += 1
         if (self.attention_mode == 'skip' and
                 H * W > self.attention_hw_threshold):
+            if self.analysis_enabled:
+                self.analysis_skip_calls += 1
             return rgb + thermal
+        if self.analysis_enabled:
+            self.analysis_full_calls += 1
         rgb_Q = self.Q_rgb(rgb, thermal) 
         thermal_Q = self.Q_thermal(thermal, rgb)  
         

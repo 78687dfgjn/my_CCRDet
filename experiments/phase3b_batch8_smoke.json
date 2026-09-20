@@ -1,0 +1,293 @@
+{
+  "status": "PASS",
+  "config": "configs_local/exp_p2p6_seed0.py",
+  "checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "iterations_requested": 20,
+  "iterations_completed": 20,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "feature_shapes": {
+    "0": [
+      8,
+      256,
+      128,
+      160
+    ],
+    "1": [
+      8,
+      256,
+      64,
+      80
+    ],
+    "2": [
+      8,
+      256,
+      32,
+      40
+    ],
+    "3": [
+      8,
+      256,
+      16,
+      20
+    ],
+    "4": [
+      8,
+      256,
+      8,
+      10
+    ]
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "log_vars": {
+        "loss_cls": 0.06432542949914932,
+        "loss_bbox": 1.6970349550247192,
+        "loss_dfl": 0.562420129776001,
+        "loss": 2.3237805366516113
+      },
+      "loss": 2.3237805366516113,
+      "iteration_seconds": 2.8847126960754395,
+      "driver_used_mb": 19463
+    },
+    {
+      "iteration": 2,
+      "log_vars": {
+        "loss_cls": 0.058274853974580765,
+        "loss_bbox": 1.724578619003296,
+        "loss_dfl": 0.6005555987358093,
+        "loss": 2.383409023284912
+      },
+      "loss": 2.383409023284912,
+      "iteration_seconds": 2.2151682376861572,
+      "driver_used_mb": 20067
+    },
+    {
+      "iteration": 3,
+      "log_vars": {
+        "loss_cls": 0.0970010906457901,
+        "loss_bbox": 1.6628893613815308,
+        "loss_dfl": 0.49059146642684937,
+        "loss": 2.2504818439483643
+      },
+      "loss": 2.2504818439483643,
+      "iteration_seconds": 2.1660890579223633,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 4,
+      "log_vars": {
+        "loss_cls": 0.11294086277484894,
+        "loss_bbox": 1.5859277248382568,
+        "loss_dfl": 0.503180205821991,
+        "loss": 2.2020487785339355
+      },
+      "loss": 2.2020487785339355,
+      "iteration_seconds": 2.164579391479492,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 5,
+      "log_vars": {
+        "loss_cls": 0.19073539972305298,
+        "loss_bbox": 1.482073426246643,
+        "loss_dfl": 0.43674948811531067,
+        "loss": 2.109558343887329
+      },
+      "loss": 2.109558343887329,
+      "iteration_seconds": 2.1705756187438965,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 6,
+      "log_vars": {
+        "loss_cls": 0.38136616349220276,
+        "loss_bbox": 1.3667089939117432,
+        "loss_dfl": 0.42857715487480164,
+        "loss": 2.176652193069458
+      },
+      "loss": 2.176652193069458,
+      "iteration_seconds": 2.164778232574463,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 7,
+      "log_vars": {
+        "loss_cls": 0.524563729763031,
+        "loss_bbox": 1.2649009227752686,
+        "loss_dfl": 0.35794806480407715,
+        "loss": 2.1474127769470215
+      },
+      "loss": 2.1474127769470215,
+      "iteration_seconds": 2.1669180393218994,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 8,
+      "log_vars": {
+        "loss_cls": 0.4428429901599884,
+        "loss_bbox": 1.1787115335464478,
+        "loss_dfl": 0.3384281396865845,
+        "loss": 1.9599826335906982
+      },
+      "loss": 1.9599826335906982,
+      "iteration_seconds": 2.1828362941741943,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 9,
+      "log_vars": {
+        "loss_cls": 0.4059072434902191,
+        "loss_bbox": 1.0881190299987793,
+        "loss_dfl": 0.30159464478492737,
+        "loss": 1.7956209182739258
+      },
+      "loss": 1.7956209182739258,
+      "iteration_seconds": 2.1725199222564697,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 10,
+      "log_vars": {
+        "loss_cls": 0.5777444243431091,
+        "loss_bbox": 0.982037365436554,
+        "loss_dfl": 0.26976191997528076,
+        "loss": 1.8295437097549438
+      },
+      "loss": 1.8295437097549438,
+      "iteration_seconds": 2.184741735458374,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 11,
+      "log_vars": {
+        "loss_cls": 0.43687719106674194,
+        "loss_bbox": 1.0390478372573853,
+        "loss_dfl": 0.3132326900959015,
+        "loss": 1.7891576290130615
+      },
+      "loss": 1.7891576290130615,
+      "iteration_seconds": 2.1819965839385986,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 12,
+      "log_vars": {
+        "loss_cls": 0.46993279457092285,
+        "loss_bbox": 0.9105967283248901,
+        "loss_dfl": 0.29656982421875,
+        "loss": 1.677099347114563
+      },
+      "loss": 1.677099347114563,
+      "iteration_seconds": 2.1782169342041016,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 13,
+      "log_vars": {
+        "loss_cls": 0.45492205023765564,
+        "loss_bbox": 0.9573845863342285,
+        "loss_dfl": 0.2918749153614044,
+        "loss": 1.7041815519332886
+      },
+      "loss": 1.7041815519332886,
+      "iteration_seconds": 2.1761271953582764,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 14,
+      "log_vars": {
+        "loss_cls": 0.49157097935676575,
+        "loss_bbox": 0.9103035926818848,
+        "loss_dfl": 0.2849046587944031,
+        "loss": 1.686779260635376
+      },
+      "loss": 1.686779260635376,
+      "iteration_seconds": 2.1882219314575195,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 15,
+      "log_vars": {
+        "loss_cls": 0.33675846457481384,
+        "loss_bbox": 0.8983437418937683,
+        "loss_dfl": 0.2609240412712097,
+        "loss": 1.4960262775421143
+      },
+      "loss": 1.4960262775421143,
+      "iteration_seconds": 2.188037395477295,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 16,
+      "log_vars": {
+        "loss_cls": 0.35279330611228943,
+        "loss_bbox": 0.8638144135475159,
+        "loss_dfl": 0.25776687264442444,
+        "loss": 1.474374532699585
+      },
+      "loss": 1.474374532699585,
+      "iteration_seconds": 2.1907799243927,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 17,
+      "log_vars": {
+        "loss_cls": 0.3847140073776245,
+        "loss_bbox": 0.9134135842323303,
+        "loss_dfl": 0.316449910402298,
+        "loss": 1.6145775318145752
+      },
+      "loss": 1.6145775318145752,
+      "iteration_seconds": 2.1829311847686768,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 18,
+      "log_vars": {
+        "loss_cls": 0.3438025116920471,
+        "loss_bbox": 0.9289234280586243,
+        "loss_dfl": 0.3025108277797699,
+        "loss": 1.5752367973327637
+      },
+      "loss": 1.5752367973327637,
+      "iteration_seconds": 2.188645839691162,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 19,
+      "log_vars": {
+        "loss_cls": 0.5443836450576782,
+        "loss_bbox": 0.8861728310585022,
+        "loss_dfl": 0.2736724615097046,
+        "loss": 1.7042289972305298
+      },
+      "loss": 1.7042289972305298,
+      "iteration_seconds": 2.1852309703826904,
+      "driver_used_mb": 21621
+    },
+    {
+      "iteration": 20,
+      "log_vars": {
+        "loss_cls": 0.3757610321044922,
+        "loss_bbox": 0.9207368493080139,
+        "loss_dfl": 0.2925170660018921,
+        "loss": 1.5890148878097534
+      },
+      "loss": 1.5890148878097534,
+      "iteration_seconds": 2.1870667934417725,
+      "driver_used_mb": 21621
+    }
+  ],
+  "mean_iteration_seconds": 2.216008698940277,
+  "peak_allocated_bytes": 19869149184,
+  "peak_reserved_bytes": 21533556736,
+  "peak_driver_used_mb": 21621,
+  "error": null
+}

@@ -7,8 +7,6 @@ model = dict(
     bbox_head=dict(
         anchor_generator=dict(strides=[4, 8, 16, 32, 64])),
     global_shift=dict(mode='off'),
-    attention_mode='skip',
-    attention_hw_threshold=4096,
     fusion_types=['fusion_cat', 'fusion', 'fusion', 'fusion', 'fusion_cat'])
 
 optimizer = dict(lr=0.001)

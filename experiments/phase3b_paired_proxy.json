@@ -1,0 +1,53 @@
+{
+  "protocol": {
+    "seed": 0,
+    "deterministic": true,
+    "epochs": 3,
+    "batch_size": 8,
+    "input_resolution": [512, 640],
+    "lr": 0.001,
+    "load_from_same_epoch12_checkpoint": true,
+    "amp": false,
+    "gradient_accumulation": false
+  },
+  "control": {
+    "config": "configs_local/exp_proxy_control_p3p7_seed0.py",
+    "best_epoch": 3,
+    "metrics": {
+      "mAP25": 0.5635,
+      "mAP50": 0.4001,
+      "mAP75": 0.0346,
+      "tiny": 0.4130,
+      "tiny1": 0.1356,
+      "tiny2": 0.2911,
+      "tiny3": 0.4760,
+      "small": 0.2814
+    }
+  },
+  "lite_p2": {
+    "config": "configs_local/exp_proxy_lite_p2p6_seed0.py",
+    "best_epoch": 3,
+    "metrics": {
+      "mAP25": 0.5715,
+      "mAP50": 0.4158,
+      "mAP75": 0.0329,
+      "tiny": 0.4291,
+      "tiny1": 0.3222,
+      "tiny2": 0.3108,
+      "tiny3": 0.4924,
+      "small": 0.2540
+    }
+  },
+  "delta_lite_minus_control": {
+    "mAP25": 0.0080,
+    "mAP50": 0.0157,
+    "mAP75": -0.0017,
+    "tiny": 0.0161,
+    "tiny1": 0.1866,
+    "tiny2": 0.0197,
+    "tiny3": 0.0164,
+    "small": -0.0274
+  },
+  "decision": "GO",
+  "decision_scope": "proxy screening only; not a paper result"
+}
