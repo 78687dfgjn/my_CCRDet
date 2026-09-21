@@ -1,0 +1,700 @@
+{
+  "allowed_missing_prefixes": [
+    "p2_micro_alignment."
+  ],
+  "baseline_config": "configs_local/exp_proxy_lite_p2p6_seed0.py",
+  "baseline_protocol_diff_outside_allowed": [
+    [
+      "_test_pipeline",
+      "missing_in_a",
+      null,
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "flip": false,
+          "img_scale": [
+            640,
+            512
+          ],
+          "transforms": [
+            {
+              "keep_ratio": true,
+              "type": "Resize"
+            },
+            {
+              "dx": -2,
+              "dy": 2,
+              "fill_value": 93.1,
+              "type": "PairThermalCalibration"
+            },
+            {
+              "type": "RandomFlip"
+            },
+            {
+              "mean_list": [
+                [
+                  115.37,
+                  121.82,
+                  122.63
+                ],
+                [
+                  93.1,
+                  93.1,
+                  93.1
+                ]
+              ],
+              "std_list": [
+                [
+                  85.13,
+                  89.01,
+                  88.27
+                ],
+                [
+                  50.24,
+                  50.24,
+                  50.24
+                ]
+              ],
+              "to_rgb": true,
+              "type": "MultiNormalize"
+            },
+            {
+              "size_divisor": 32,
+              "type": "Pad"
+            },
+            {
+              "type": "DefaultFormatBundle"
+            },
+            {
+              "keys": [
+                "img"
+              ],
+              "type": "Collect"
+            }
+          ],
+          "type": "MultiScaleFlipAug"
+        }
+      ]
+    ],
+    [
+      "_train_pipeline",
+      "missing_in_a",
+      null,
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "type": "LoadAnnotations",
+          "with_bbox": true
+        },
+        {
+          "img_scale": [
+            640,
+            512
+          ],
+          "keep_ratio": true,
+          "type": "Resize"
+        },
+        {
+          "dx": -2,
+          "dy": 2,
+          "fill_value": 93.1,
+          "type": "PairThermalCalibration"
+        },
+        {
+          "flip_ratio": 0.5,
+          "type": "RandomFlip"
+        },
+        {
+          "mean_list": [
+            [
+              115.37,
+              121.82,
+              122.63
+            ],
+            [
+              93.1,
+              93.1,
+              93.1
+            ]
+          ],
+          "std_list": [
+            [
+              85.13,
+              89.01,
+              88.27
+            ],
+            [
+              50.24,
+              50.24,
+              50.24
+            ]
+          ],
+          "to_rgb": true,
+          "type": "MultiNormalize"
+        },
+        {
+          "size_divisor": 32,
+          "type": "Pad"
+        },
+        {
+          "type": "DefaultFormatBundle"
+        },
+        {
+          "keys": [
+            "img",
+            "gt_bboxes",
+            "gt_labels"
+          ],
+          "type": "Collect"
+        }
+      ]
+    ]
+  ],
+  "calibration": {
+    "dx": -2,
+    "dy": 2,
+    "location": "after Resize and before RandomFlip",
+    "source": "train-only estimator"
+  },
+  "candidate_config": "configs_local/exp_proxy_cgma_litep2_seed0.py",
+  "missing_keys_allowed_only": true,
+  "model_differences": [
+    [
+      "model.p2_alignment",
+      "missing_in_a",
+      null,
+      {
+        "analysis_enabled": true,
+        "enabled": true,
+        "feature_stride": 4,
+        "hidden_channels": 64,
+        "max_residual_px": 1.0,
+        "mode": "residual"
+      }
+    ],
+    [
+      "model.p2_detail",
+      "missing_in_a",
+      null,
+      {
+        "enabled": false
+      }
+    ]
+  ],
+  "phase": "3F",
+  "phase3b_config_warmstart": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "pipeline_differences": [
+    [
+      "data.test.pipeline",
+      "list_diff",
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "flip": false,
+          "img_scale": [
+            640,
+            512
+          ],
+          "transforms": [
+            {
+              "keep_ratio": true,
+              "type": "Resize"
+            },
+            {
+              "type": "RandomFlip"
+            },
+            {
+              "mean_list": [
+                [
+                  115.37,
+                  121.82,
+                  122.63
+                ],
+                [
+                  93.1,
+                  93.1,
+                  93.1
+                ]
+              ],
+              "std_list": [
+                [
+                  85.13,
+                  89.01,
+                  88.27
+                ],
+                [
+                  50.24,
+                  50.24,
+                  50.24
+                ]
+              ],
+              "to_rgb": true,
+              "type": "MultiNormalize"
+            },
+            {
+              "size_divisor": 32,
+              "type": "Pad"
+            },
+            {
+              "type": "DefaultFormatBundle"
+            },
+            {
+              "keys": [
+                "img"
+              ],
+              "type": "Collect"
+            }
+          ],
+          "type": "MultiScaleFlipAug"
+        }
+      ],
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "flip": false,
+          "img_scale": [
+            640,
+            512
+          ],
+          "transforms": [
+            {
+              "keep_ratio": true,
+              "type": "Resize"
+            },
+            {
+              "dx": -2,
+              "dy": 2,
+              "fill_value": 93.1,
+              "type": "PairThermalCalibration"
+            },
+            {
+              "type": "RandomFlip"
+            },
+            {
+              "mean_list": [
+                [
+                  115.37,
+                  121.82,
+                  122.63
+                ],
+                [
+                  93.1,
+                  93.1,
+                  93.1
+                ]
+              ],
+              "std_list": [
+                [
+                  85.13,
+                  89.01,
+                  88.27
+                ],
+                [
+                  50.24,
+                  50.24,
+                  50.24
+                ]
+              ],
+              "to_rgb": true,
+              "type": "MultiNormalize"
+            },
+            {
+              "size_divisor": 32,
+              "type": "Pad"
+            },
+            {
+              "type": "DefaultFormatBundle"
+            },
+            {
+              "keys": [
+                "img"
+              ],
+              "type": "Collect"
+            }
+          ],
+          "type": "MultiScaleFlipAug"
+        }
+      ]
+    ],
+    [
+      "data.train.pipeline",
+      "list_diff",
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "type": "LoadAnnotations",
+          "with_bbox": true
+        },
+        {
+          "img_scale": [
+            640,
+            512
+          ],
+          "keep_ratio": true,
+          "type": "Resize"
+        },
+        {
+          "flip_ratio": 0.5,
+          "type": "RandomFlip"
+        },
+        {
+          "mean_list": [
+            [
+              115.37,
+              121.82,
+              122.63
+            ],
+            [
+              93.1,
+              93.1,
+              93.1
+            ]
+          ],
+          "std_list": [
+            [
+              85.13,
+              89.01,
+              88.27
+            ],
+            [
+              50.24,
+              50.24,
+              50.24
+            ]
+          ],
+          "to_rgb": true,
+          "type": "MultiNormalize"
+        },
+        {
+          "size_divisor": 32,
+          "type": "Pad"
+        },
+        {
+          "type": "DefaultFormatBundle"
+        },
+        {
+          "keys": [
+            "img",
+            "gt_bboxes",
+            "gt_labels"
+          ],
+          "type": "Collect"
+        }
+      ],
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "type": "LoadAnnotations",
+          "with_bbox": true
+        },
+        {
+          "img_scale": [
+            640,
+            512
+          ],
+          "keep_ratio": true,
+          "type": "Resize"
+        },
+        {
+          "dx": -2,
+          "dy": 2,
+          "fill_value": 93.1,
+          "type": "PairThermalCalibration"
+        },
+        {
+          "flip_ratio": 0.5,
+          "type": "RandomFlip"
+        },
+        {
+          "mean_list": [
+            [
+              115.37,
+              121.82,
+              122.63
+            ],
+            [
+              93.1,
+              93.1,
+              93.1
+            ]
+          ],
+          "std_list": [
+            [
+              85.13,
+              89.01,
+              88.27
+            ],
+            [
+              50.24,
+              50.24,
+              50.24
+            ]
+          ],
+          "to_rgb": true,
+          "type": "MultiNormalize"
+        },
+        {
+          "size_divisor": 32,
+          "type": "Pad"
+        },
+        {
+          "type": "DefaultFormatBundle"
+        },
+        {
+          "keys": [
+            "img",
+            "gt_bboxes",
+            "gt_labels"
+          ],
+          "type": "Collect"
+        }
+      ]
+    ],
+    [
+      "data.val.pipeline",
+      "list_diff",
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "flip": false,
+          "img_scale": [
+            640,
+            512
+          ],
+          "transforms": [
+            {
+              "keep_ratio": true,
+              "type": "Resize"
+            },
+            {
+              "type": "RandomFlip"
+            },
+            {
+              "mean_list": [
+                [
+                  115.37,
+                  121.82,
+                  122.63
+                ],
+                [
+                  93.1,
+                  93.1,
+                  93.1
+                ]
+              ],
+              "std_list": [
+                [
+                  85.13,
+                  89.01,
+                  88.27
+                ],
+                [
+                  50.24,
+                  50.24,
+                  50.24
+                ]
+              ],
+              "to_rgb": true,
+              "type": "MultiNormalize"
+            },
+            {
+              "size_divisor": 32,
+              "type": "Pad"
+            },
+            {
+              "type": "DefaultFormatBundle"
+            },
+            {
+              "keys": [
+                "img"
+              ],
+              "type": "Collect"
+            }
+          ],
+          "type": "MultiScaleFlipAug"
+        }
+      ],
+      [
+        {
+          "spectrals": [
+            "visible",
+            "thermal"
+          ],
+          "type": "LoadImagePairFromFile"
+        },
+        {
+          "flip": false,
+          "img_scale": [
+            640,
+            512
+          ],
+          "transforms": [
+            {
+              "keep_ratio": true,
+              "type": "Resize"
+            },
+            {
+              "dx": -2,
+              "dy": 2,
+              "fill_value": 93.1,
+              "type": "PairThermalCalibration"
+            },
+            {
+              "type": "RandomFlip"
+            },
+            {
+              "mean_list": [
+                [
+                  115.37,
+                  121.82,
+                  122.63
+                ],
+                [
+                  93.1,
+                  93.1,
+                  93.1
+                ]
+              ],
+              "std_list": [
+                [
+                  85.13,
+                  89.01,
+                  88.27
+                ],
+                [
+                  50.24,
+                  50.24,
+                  50.24
+                ]
+              ],
+              "to_rgb": true,
+              "type": "MultiNormalize"
+            },
+            {
+              "size_divisor": 32,
+              "type": "Pad"
+            },
+            {
+              "type": "DefaultFormatBundle"
+            },
+            {
+              "keys": [
+                "img"
+              ],
+              "type": "Collect"
+            }
+          ],
+          "type": "MultiScaleFlipAug"
+        }
+      ]
+    ]
+  ],
+  "resolved_training_fields": {
+    "deterministic": true,
+    "evaluation": {
+      "interval": 1,
+      "metric": "bbox"
+    },
+    "fpn_num_outs": 5,
+    "fpn_start_level": 0,
+    "fusion_types": [
+      "fusion_cat",
+      "fusion",
+      "fusion",
+      "fusion",
+      "fusion_cat"
+    ],
+    "global_shift": {
+      "mode": "off"
+    },
+    "load_from": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+    "optimizer": {
+      "lr": 0.001,
+      "momentum": 0.9,
+      "type": "SGD",
+      "weight_decay": 0.0001
+    },
+    "p2_alignment": {
+      "analysis_enabled": true,
+      "enabled": true,
+      "feature_stride": 4,
+      "hidden_channels": 64,
+      "max_residual_px": 1.0,
+      "mode": "residual"
+    },
+    "p2_detail": {
+      "enabled": false
+    },
+    "resume_from": null,
+    "runner": {
+      "max_epochs": 3,
+      "type": "EpochBasedRunner"
+    },
+    "samples_per_gpu": 8,
+    "seed": 0,
+    "strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "workers_per_gpu": 8
+  },
+  "semantic_warmstart_compatible": true,
+  "shape_mismatch_empty": true,
+  "unexpected_keys_empty": true,
+  "warmstart_missing_keys": [
+    "p2_micro_alignment.offset.bias",
+    "p2_micro_alignment.offset.weight",
+    "p2_micro_alignment.reduce.bias",
+    "p2_micro_alignment.reduce.weight"
+  ],
+  "warmstart_path_matches_phase3b": true,
+  "warmstart_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "warmstart_shape_mismatch": [],
+  "warmstart_source": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "warmstart_unexpected_keys": []
+}

@@ -1,0 +1,61 @@
+{
+  "calibration_off_minus_full": {
+    "mAP25": -0.0014,
+    "mAP50": -0.1373,
+    "mAP75": -0.0331,
+    "small": -0.0113,
+    "tiny": -0.1435,
+    "tiny1": 0.0355,
+    "tiny2": -0.1415,
+    "tiny3": -0.1162
+  },
+  "calibration_off_residual_on_optional": {
+    "mAP25": 0.5762,
+    "mAP50": 0.3067,
+    "mAP75": 0.01,
+    "small": 0.2207,
+    "tiny": 0.3192,
+    "tiny1": 0.1543,
+    "tiny2": 0.1922,
+    "tiny3": 0.4036
+  },
+  "calibration_on_residual_off": {
+    "mAP25": 0.5786,
+    "mAP50": 0.4473,
+    "mAP75": 0.0459,
+    "small": 0.2342,
+    "tiny": 0.4662,
+    "tiny1": 0.1239,
+    "tiny2": 0.3366,
+    "tiny3": 0.5236
+  },
+  "checkpoint": "work_dirs/phase3f_proxy_cgma_litep2_seed0/epoch_3.pth",
+  "checkpoint_is_trained_with_residual_on": true,
+  "diagnostic_only": true,
+  "experiment": "phase3f_residual_ablation_diagnostic",
+  "full_calibration_on_residual_on": {
+    "mAP25": 0.5776,
+    "mAP50": 0.444,
+    "mAP75": 0.0431,
+    "small": 0.232,
+    "tiny": 0.4627,
+    "tiny1": 0.1188,
+    "tiny2": 0.3337,
+    "tiny3": 0.5198
+  },
+  "full_minus_residual_off": {
+    "mAP25": -0.001,
+    "mAP50": -0.0033,
+    "mAP75": -0.0028,
+    "small": -0.0022,
+    "tiny": -0.0035,
+    "tiny1": -0.0051,
+    "tiny2": -0.0029,
+    "tiny3": -0.0038
+  },
+  "interpretation_rule": {
+    "reason": "full mAP50 is 0.33 percentage points below residual-off; learned offsets are nonzero, so the branch was used but did not improve this diagnostic.",
+    "residual_signal": "NO",
+    "residual_unused": "NO"
+  }
+}

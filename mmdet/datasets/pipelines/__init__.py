@@ -16,6 +16,7 @@ from .transforms import (Albu, CopyPaste, CutOut, Expand, MinIoURandomCrop,
                          RandomFlip, RandomShift, Resize, SegRescale,
                          YOLOXHSVRandomAug)
 from .multispectral_transforms import (MultiNormalize, RandomMasking, SpectralShift)
+from .paired_thermal_shift import PairThermalCalibration
 
 __all__ = [
     'Compose', 'to_tensor', 'ToTensor', 'ImageToTensor', 'ToDataContainer',

@@ -1,0 +1,1 @@
+20-iteration full-resolution batch-8 smoke PASS; see experiments/phase3f_offset_smoke.json

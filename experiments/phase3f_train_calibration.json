@@ -1,0 +1,249 @@
+{
+  "aggregation": "mean ZNCC selects winner; median reported",
+  "bootstrap": {
+    "repetitions": 500,
+    "seed": 0,
+    "winner_frequencies": {
+      "(-1, -1)": 0.0,
+      "(-1, -2)": 0.0,
+      "(-1, 0)": 0.0,
+      "(-1, 1)": 0.0,
+      "(-1, 2)": 0.0,
+      "(-2, -1)": 0.0,
+      "(-2, -2)": 0.0,
+      "(-2, 0)": 0.0,
+      "(-2, 1)": 0.0,
+      "(-2, 2)": 1.0,
+      "(0, -1)": 0.0,
+      "(0, -2)": 0.0,
+      "(0, 0)": 0.0,
+      "(0, 1)": 0.0,
+      "(0, 2)": 0.0,
+      "(1, -1)": 0.0,
+      "(1, -2)": 0.0,
+      "(1, 0)": 0.0,
+      "(1, 1)": 0.0,
+      "(1, 2)": 0.0,
+      "(2, -1)": 0.0,
+      "(2, -2)": 0.0,
+      "(2, 0)": 0.0,
+      "(2, 1)": 0.0,
+      "(2, 2)": 0.0
+    },
+    "winner_frequency": 1.0
+  },
+  "candidate_count": 25,
+  "candidate_range": [
+    -2,
+    2
+  ],
+  "candidate_scores": [
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -2,
+      "dy": -2,
+      "mean_zncc": 0.0682831364042962,
+      "median_zncc": 0.06611301004886627
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -2,
+      "dy": -1,
+      "mean_zncc": 0.06982316613652075,
+      "median_zncc": 0.06815845146775246
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -2,
+      "dy": 0,
+      "mean_zncc": 0.07126728402629443,
+      "median_zncc": 0.06977217271924019
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -2,
+      "dy": 1,
+      "mean_zncc": 0.07250878281716723,
+      "median_zncc": 0.07070787996053696
+    },
+    {
+      "bootstrap_winner_frequency": 1.0,
+      "dx": -2,
+      "dy": 2,
+      "mean_zncc": 0.07343760823867064,
+      "median_zncc": 0.07177813723683357
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -1,
+      "dy": -2,
+      "mean_zncc": 0.06702542882539779,
+      "median_zncc": 0.0649946928024292
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -1,
+      "dy": -1,
+      "mean_zncc": 0.06859988141534684,
+      "median_zncc": 0.06675714254379272
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -1,
+      "dy": 0,
+      "mean_zncc": 0.06995938070166241,
+      "median_zncc": 0.06806585192680359
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -1,
+      "dy": 1,
+      "mean_zncc": 0.07111841082586857,
+      "median_zncc": 0.06942742317914963
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": -1,
+      "dy": 2,
+      "mean_zncc": 0.0720323679503807,
+      "median_zncc": 0.07021043822169304
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 0,
+      "dy": -2,
+      "mean_zncc": 0.06553970129172378,
+      "median_zncc": 0.06317777559161186
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 0,
+      "dy": -1,
+      "mean_zncc": 0.0671269323278451,
+      "median_zncc": 0.06527797877788544
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 0,
+      "dy": 0,
+      "mean_zncc": 0.06840382776408141,
+      "median_zncc": 0.06672244891524315
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 0,
+      "dy": 1,
+      "mean_zncc": 0.06949506109066088,
+      "median_zncc": 0.06755740195512772
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 0,
+      "dy": 2,
+      "mean_zncc": 0.0704076650722917,
+      "median_zncc": 0.06879424676299095
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 1,
+      "dy": -2,
+      "mean_zncc": 0.06381404749228833,
+      "median_zncc": 0.06156771071255207
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 1,
+      "dy": -1,
+      "mean_zncc": 0.06531538956813314,
+      "median_zncc": 0.06302264332771301
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 1,
+      "dy": 0,
+      "mean_zncc": 0.06650237056816784,
+      "median_zncc": 0.06480973586440086
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 1,
+      "dy": 1,
+      "mean_zncc": 0.06758975397049097,
+      "median_zncc": 0.06602440401911736
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 1,
+      "dy": 2,
+      "mean_zncc": 0.06852609284398717,
+      "median_zncc": 0.06665265187621117
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 2,
+      "dy": -2,
+      "mean_zncc": 0.0617656881205299,
+      "median_zncc": 0.05932505987584591
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 2,
+      "dy": -1,
+      "mean_zncc": 0.06313103988702894,
+      "median_zncc": 0.06065329350531101
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 2,
+      "dy": 0,
+      "mean_zncc": 0.06428636419256079,
+      "median_zncc": 0.06230686418712139
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 2,
+      "dy": 1,
+      "mean_zncc": 0.06542581298040204,
+      "median_zncc": 0.06313107907772064
+    },
+    {
+      "bootstrap_winner_frequency": 0.0,
+      "dx": 2,
+      "dy": 2,
+      "mean_zncc": 0.06639472355819746,
+      "median_zncc": 0.06398515775799751
+    }
+  ],
+  "data_split": "train_only",
+  "image_shape_hw": [
+    512,
+    640
+  ],
+  "metric": "Sobel-gradient ZNCC",
+  "pairing_logic": "LoadImagePairFromFile: train/visible/<filename> paired with train/thermal/<filename>",
+  "score_margin": 0.0009288254215034097,
+  "second_best": {
+    "dx": -2,
+    "dy": 1,
+    "mean_score": 0.07250878281716723
+  },
+  "sobel_definition": "grayscale -> fixed Sobel X/Y -> gradient magnitude; common 2-pixel border crop",
+  "stability": "STABLE",
+  "tie_breaking": [
+    "smaller |dx|+|dy|",
+    "smaller |dy|",
+    "smaller |dx|",
+    "lexical order"
+  ],
+  "train_file_list_sha256": "4bfd524aea8f625e52f76d0c3e8e4c28059ee06c549cade88f2dafb8c23bca81",
+  "train_pair_count": 4900,
+  "train_root": "/root/CCRDet/train",
+  "used_annotations": false,
+  "used_validation_data": false,
+  "winner": {
+    "dx": -2,
+    "dy": 2
+  },
+  "winner_mean_score": 0.07343760823867064,
+  "winner_median_score": 0.07177813723683357
+}

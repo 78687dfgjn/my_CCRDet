@@ -1,0 +1,130 @@
+{
+  "best_checkpoint_sha256": "bd3a635d878ddc79e5f3f33d28dbf33dfffaa889c9caae7589fb4c0b9a58836a",
+  "best_epoch": 3,
+  "best_metrics": {
+    "epoch": 3,
+    "mAP25": 0.5776,
+    "mAP50": 0.444,
+    "mAP75": 0.0431,
+    "small": 0.232,
+    "tiny": 0.4627,
+    "tiny1": 0.1188,
+    "tiny2": 0.3337,
+    "tiny3": 0.5198
+  },
+  "checkpoint_paths": [
+    "work_dirs/phase3f_proxy_cgma_litep2_seed0/epoch_1.pth",
+    "work_dirs/phase3f_proxy_cgma_litep2_seed0/epoch_2.pth",
+    "work_dirs/phase3f_proxy_cgma_litep2_seed0/epoch_3.pth"
+  ],
+  "delta_best_minus_control_percentage_points": {
+    "mAP25": 0.61,
+    "mAP50": 2.82,
+    "mAP75": 1.02,
+    "small": -2.2,
+    "tiny": 3.36,
+    "tiny1": -20.34,
+    "tiny2": 2.29,
+    "tiny3": 2.74
+  },
+  "delta_best_minus_control_raw": {
+    "mAP25": 0.0061,
+    "mAP50": 0.0282,
+    "mAP75": 0.0102,
+    "small": -0.022,
+    "tiny": 0.0336,
+    "tiny1": -0.2034,
+    "tiny2": 0.0229,
+    "tiny3": 0.0274
+  },
+  "epoch3_metrics": {
+    "epoch": 3,
+    "mAP25": 0.5776,
+    "mAP50": 0.444,
+    "mAP75": 0.0431,
+    "small": 0.232,
+    "tiny": 0.4627,
+    "tiny1": 0.1188,
+    "tiny2": 0.3337,
+    "tiny3": 0.5198
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "mAP25": 0.5622,
+      "mAP50": 0.4209,
+      "mAP75": 0.0318,
+      "small": 0.2441,
+      "tiny": 0.4416,
+      "tiny1": 0.0772,
+      "tiny2": 0.3539,
+      "tiny3": 0.4849
+    },
+    {
+      "epoch": 2,
+      "mAP25": 0.569,
+      "mAP50": 0.4219,
+      "mAP75": 0.0334,
+      "small": 0.1991,
+      "tiny": 0.4446,
+      "tiny1": 0.1246,
+      "tiny2": 0.3231,
+      "tiny3": 0.5126
+    },
+    {
+      "epoch": 3,
+      "mAP25": 0.5776,
+      "mAP50": 0.444,
+      "mAP75": 0.0431,
+      "small": 0.232,
+      "tiny": 0.4627,
+      "tiny1": 0.1188,
+      "tiny2": 0.3337,
+      "tiny3": 0.5198
+    }
+  ],
+  "experiment": "phase3f_cgma_litep2_seed0_paired_proxy",
+  "note": "Screening proxy only; not a formal 12-epoch result.",
+  "paired_control": {
+    "epoch": 3,
+    "mAP25": 0.5715,
+    "mAP50": 0.4158,
+    "mAP75": 0.0329,
+    "small": 0.254,
+    "tiny": 0.4291,
+    "tiny1": 0.3222,
+    "tiny2": 0.3108,
+    "tiny3": 0.4924
+  },
+  "peak_allocated_bytes": 20732361216,
+  "peak_driver_used_mb": 22173,
+  "peak_reserved_bytes": 21701328896,
+  "protocol": {
+    "batch_size": 8,
+    "calibration": {
+      "dx": -2,
+      "dy": 2,
+      "source": "train-only estimator"
+    },
+    "deterministic": true,
+    "epochs": 3,
+    "global_shift": "off",
+    "lr": 0.001,
+    "momentum": 0.9,
+    "optimizer": "SGD",
+    "p2_alignment": {
+      "enabled": true,
+      "feature_stride": 4,
+      "hidden_channels": 64,
+      "max_residual_px": 1.0
+    },
+    "resolution": "640x512",
+    "seed": 0,
+    "spdi": "disabled",
+    "warmstart": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+    "warmstart_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+    "weight_decay": 0.0001
+  },
+  "status": "COMPLETED",
+  "training_wall_time_seconds": 4772.3
+}

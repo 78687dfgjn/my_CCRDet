@@ -2,6 +2,7 @@
 from ..builder import DETECTORS, build_backbone, build_neck
 from ..utils.global_shift import GlobalThermalShift
 from ..utils.p2_detail_injection import P2DetailInjection
+from ..utils.p2_micro_alignment import P2MicroAlignment
 from .single_stage import SingleStageDetector
 import torch
 import torch.nn as nn
@@ -30,7 +31,8 @@ class GFLAF(SingleStageDetector):
                  global_shift=None,
                  attention_mode=None,
                  attention_hw_threshold=4096,
-                 p2_detail=None):
+                 p2_detail=None,
+                 p2_alignment=None):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
         self.tanh = tanh
@@ -52,6 +54,15 @@ class GFLAF(SingleStageDetector):
                 gate_channels=p2_detail.get('gate_channels', 1),
                 zero_init=p2_detail.get('zero_init', True),
                 init_mode=p2_detail.get('init_mode', None))
+        p2_alignment = p2_alignment or {}
+        self.p2_micro_alignment = None
+        if p2_alignment.get('enabled', False):
+            self.p2_micro_alignment = P2MicroAlignment(
+                modality_channels=256,
+                hidden_channels=p2_alignment.get('hidden_channels', 64),
+                feature_stride=p2_alignment.get('feature_stride', 4),
+                max_residual_px=p2_alignment.get('max_residual_px', 1.0),
+                analysis_enabled=p2_alignment.get('analysis_enabled', False))
         self.nect_t = build_neck(neck)
         self.fusion_types = list(fusion_types or
                                  ['fusion', 'fusion', 'fusion',
@@ -100,7 +111,11 @@ class GFLAF(SingleStageDetector):
         features = []       
         # Fusion
         for i in range(len(x)):
-            feat = self.fuse[i](x[i], y[i])
+            rgb_feat = x[i]
+            thermal_feat = y[i]
+            if i == 0 and self.p2_micro_alignment is not None:
+                thermal_feat = self.p2_micro_alignment(rgb_feat, thermal_feat)
+            feat = self.fuse[i](rgb_feat, thermal_feat)
             if i == 0 and self.p2_detail_injection is not None:
                 feat = self.p2_detail_injection(feat, p2_rgb, p2_thermal)
             features.append(feat)

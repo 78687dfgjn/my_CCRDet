@@ -22,6 +22,7 @@ from .transformer import (DetrTransformerDecoder, DetrTransformerDecoderLayer,
 from .conv_module import ConvModule
 from .global_shift import GlobalThermalShift
 from .p2_detail_injection import P2DetailInjection
+from .p2_micro_alignment import P2MicroAlignment
 
 __all__ = [
     'ResLayer', 'gaussian_radius', 'gen_gaussian_target',
@@ -35,5 +36,5 @@ __all__ = [
     'preprocess_panoptic_gt', 'DyReLU',
     'get_uncertain_point_coords_with_randomness', 'get_uncertainty',
     'ConvModule', 'nlc2nchw2nlc', 'GlobalThermalShift',
-    'P2DetailInjection'
+    'P2DetailInjection', 'P2MicroAlignment'
 ]

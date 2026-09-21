@@ -1,0 +1,43 @@
+{
+  "calibration": {
+    "dx": -2,
+    "dy": 2,
+    "fill_value": 93.1,
+    "location": "after Resize before RandomFlip"
+  },
+  "checkpoint": "/hy-tmp/CCRDet_assets/work_dirs/phase3b_proxy_lite_p2p6_seed0/epoch_3.pth",
+  "checkpoint_sha256": "203c7a78a178736712a9c88ca5963981f10b2213b262785e63101ed08867ffed",
+  "delta_on_minus_off": {
+    "mAP25": -0.0024,
+    "mAP50": -0.0993,
+    "mAP75": -0.0293,
+    "small": -0.0326,
+    "tiny": -0.1006,
+    "tiny1": -0.2873,
+    "tiny2": -0.1146,
+    "tiny3": -0.0892
+  },
+  "estimator_json": "experiments/phase3f_train_calibration.json",
+  "experiment": "phase3f_calibration_only_diagnostic",
+  "note": "Inference-only diagnostic on an existing Phase 3B Lite-P2 checkpoint; not a trained calibration model.",
+  "off": {
+    "mAP25": 0.5715,
+    "mAP50": 0.4158,
+    "mAP75": 0.0329,
+    "small": 0.254,
+    "tiny": 0.4291,
+    "tiny1": 0.3222,
+    "tiny2": 0.3108,
+    "tiny3": 0.4924
+  },
+  "train_derived_on": {
+    "mAP25": 0.5691,
+    "mAP50": 0.3165,
+    "mAP75": 0.0036,
+    "small": 0.2214,
+    "tiny": 0.3285,
+    "tiny1": 0.0349,
+    "tiny2": 0.1962,
+    "tiny3": 0.4032
+  }
+}
