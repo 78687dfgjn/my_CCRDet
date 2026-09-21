@@ -1,0 +1,32 @@
+{
+  "status": "RESOURCE_BLOCKED",
+  "config": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "paired_control": {
+    "label": "Lite-P2-P6 Fusion_CAT paired proxy",
+    "best_epoch": 3,
+    "metrics": {
+      "mAP25": 0.5715,
+      "mAP50": 0.4158,
+      "mAP75": 0.0329,
+      "tiny": 0.4291,
+      "tiny1": 0.3222,
+      "tiny2": 0.3108,
+      "tiny3": 0.4924,
+      "small": 0.254
+    }
+  },
+  "candidate": null,
+  "delta_candidate_minus_control": null,
+  "decision": "PGCF = RESOURCE BLOCKED; no 3-epoch proxy was started.",
+  "reason": {
+    "failure": "CUDA out of memory",
+    "iteration_completed": 4,
+    "iteration_attempted": 5,
+    "peak_allocated_bytes": 20977880064,
+    "peak_reserved_bytes": 21716008960,
+    "peak_driver_used_mb": 22143,
+    "other_gpu_processes_running": false
+  },
+  "training_not_started": true
+}

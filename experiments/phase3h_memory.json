@@ -1,0 +1,141 @@
+{
+  "status": "RESOURCE_BLOCKED",
+  "config": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "missing_keys": [
+    "fuse.0.reduce.weight",
+    "fuse.0.reduce.bias",
+    "fuse.0.depthwise.weight",
+    "fuse.0.depthwise.bias",
+    "fuse.0.gate_logits.weight",
+    "fuse.0.gate_logits.bias"
+  ],
+  "unexpected_keys": [],
+  "iterations_requested": 20,
+  "iterations_completed": 4,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "feature_shapes": {
+    "output": [
+      8,
+      256,
+      128,
+      160
+    ]
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 2.2854084968566895,
+      "log_vars": {
+        "loss_cls": 0.07799184322357178,
+        "loss_bbox": 1.656834363937378,
+        "loss_dfl": 0.5505821704864502,
+        "loss": 2.2854084968566895
+      },
+      "iteration_seconds": 2.9330646991729736,
+      "driver_used_mb": 20523
+    },
+    {
+      "iteration": 2,
+      "loss": 2.434506416320801,
+      "log_vars": {
+        "loss_cls": 0.06389733403921127,
+        "loss_bbox": 1.7522298097610474,
+        "loss_dfl": 0.6183792948722839,
+        "loss": 2.434506416320801
+      },
+      "iteration_seconds": 2.2824249267578125,
+      "driver_used_mb": 11787
+    },
+    {
+      "iteration": 3,
+      "loss": 2.230776071548462,
+      "log_vars": {
+        "loss_cls": 0.11540008336305618,
+        "loss_bbox": 1.6295603513717651,
+        "loss_dfl": 0.48581555485725403,
+        "loss": 2.230776071548462
+      },
+      "iteration_seconds": 2.292775869369507,
+      "driver_used_mb": 20791
+    },
+    {
+      "iteration": 4,
+      "loss": 2.2203211784362793,
+      "log_vars": {
+        "loss_cls": 0.15198707580566406,
+        "loss_bbox": 1.56332266330719,
+        "loss_dfl": 0.5050113201141357,
+        "loss": 2.2203211784362793
+      },
+      "iteration_seconds": 2.244624614715576,
+      "driver_used_mb": 22143
+    }
+  ],
+  "mean_iteration_seconds": 2.4382225275039673,
+  "peak_allocated_bytes": 20977880064,
+  "peak_reserved_bytes": 21716008960,
+  "peak_driver_used_mb": 22143,
+  "error": "RuntimeError('CUDA out of memory. Tried to allocate 800.00 MiB (GPU 0; 21.67 GiB total capacity; 17.93 GiB already allocated; 285.75 MiB free; 19.95 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF')",
+  "other_gpu_processes_running": false,
+  "resource_blocked_at_iteration": 5,
+  "training_started": false,
+  "training_not_started_due_to_smoke_block": true,
+  "gate_stats_at_smoke_end": {
+    "calls": 5,
+    "count": 13107200,
+    "mean_rgb_weight": 1.000051326751709,
+    "mean_thermal_weight": 0.9999487113952636,
+    "std_rgb_weight": 0.0001282148618035289,
+    "std_thermal_weight": 0.0,
+    "mean_abs_weight_minus_1": 0.0001345838198903948,
+    "fraction_rgb_weight_gt_1_25": 0.0,
+    "fraction_thermal_weight_gt_1_25": 0.0,
+    "min_rgb_weight": 0.9977507591247559,
+    "max_rgb_weight": 1.0022335052490234,
+    "min_thermal_weight": 0.9977664351463318,
+    "max_thermal_weight": 1.0022491216659546,
+    "group_mean_rgb_weight": [
+      0.06250057220458985,
+      0.06249935388565064,
+      0.06251464366912841,
+      0.06251245260238647,
+      0.062495265007019046,
+      0.06250053644180298,
+      0.06251079678535461,
+      0.06249632716178894,
+      0.062494680881500245,
+      0.062496436834335325,
+      0.062478400468826294,
+      0.0625086796283722,
+      0.06251994371414185,
+      0.06250641107559204,
+      0.06250619411468505,
+      0.06251061797142028
+    ],
+    "group_mean_thermal_weight": [
+      0.06249942660331726,
+      0.06250064730644227,
+      0.06248535513877869,
+      0.06248754501342774,
+      0.06250473260879516,
+      0.06249946475028992,
+      0.06248920440673828,
+      0.06250367283821107,
+      0.06250532150268555,
+      0.06250356197357178,
+      0.06252160191535949,
+      0.0624913227558136,
+      0.06248005747795105,
+      0.062493587732315066,
+      0.062493807077407836,
+      0.062489380836486814
+    ]
+  }
+}

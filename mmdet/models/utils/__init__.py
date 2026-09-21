@@ -23,6 +23,7 @@ from .conv_module import ConvModule
 from .global_shift import GlobalThermalShift
 from .p2_detail_injection import P2DetailInjection
 from .p2_micro_alignment import P2MicroAlignment
+from .p2_groupwise_complementary_fusion import P2GroupwiseComplementaryFusion
 
 __all__ = [
     'ResLayer', 'gaussian_radius', 'gen_gaussian_target',
@@ -36,5 +37,6 @@ __all__ = [
     'preprocess_panoptic_gt', 'DyReLU',
     'get_uncertain_point_coords_with_randomness', 'get_uncertainty',
     'ConvModule', 'nlc2nchw2nlc', 'GlobalThermalShift',
-    'P2DetailInjection', 'P2MicroAlignment'
+    'P2DetailInjection', 'P2MicroAlignment',
+    'P2GroupwiseComplementaryFusion'
 ]

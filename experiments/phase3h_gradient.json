@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "initialization": "gate_logits_weight_and_bias_zero",
+  "iterations": [
+    {
+      "iteration": 1,
+      "loss": 0.33330482244491577,
+      "gate_logits_grad_norm": 0.0031678464729338884,
+      "reduce_grad_norm": 0.0,
+      "depthwise_grad_norm": 0.0,
+      "conv1x1_grad_norm": 0.07906923443078995,
+      "gate_logits_weight_norm_before_step": 0.0,
+      "reduce_weight_norm": 3.2685985565185547,
+      "depthwise_weight_norm": 3.213646173477173
+    },
+    {
+      "iteration": 2,
+      "loss": 0.33284416794776917,
+      "gate_logits_grad_norm": 0.0025279768742620945,
+      "reduce_grad_norm": 5.486920073849433e-08,
+      "depthwise_grad_norm": 7.805238233515865e-09,
+      "conv1x1_grad_norm": 0.07897302508354187,
+      "gate_logits_weight_norm_before_step": 3.1678466712037334e-06,
+      "reduce_weight_norm": 3.2685985565185547,
+      "depthwise_weight_norm": 3.213646173477173
+    }
+  ],
+  "iteration_1_reduce_and_depthwise_zero_allowed": true,
+  "iteration_2_reduce_and_depthwise_nonzero_required": true,
+  "gradient_pass": true
+}

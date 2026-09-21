@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "source_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "control_config": "configs_local/exp_proxy_lite_p2p6_seed0.py",
+  "candidate_config": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+  "warmstart": {
+    "missing_keys": [
+      "fuse.0.reduce.weight",
+      "fuse.0.reduce.bias",
+      "fuse.0.depthwise.weight",
+      "fuse.0.depthwise.bias",
+      "fuse.0.gate_logits.weight",
+      "fuse.0.gate_logits.bias"
+    ],
+    "unexpected_keys": [],
+    "allowed_new_key_prefixes": [
+      "fuse.0.reduce.",
+      "fuse.0.depthwise.",
+      "fuse.0.gate_logits."
+    ],
+    "source_not_in_candidate": [],
+    "common_tensor_mismatches": [],
+    "source_common_tensor_count": 834,
+    "pgcf_fresh_keys": [
+      "fuse.0.depthwise.bias",
+      "fuse.0.depthwise.weight",
+      "fuse.0.gate_logits.bias",
+      "fuse.0.gate_logits.weight",
+      "fuse.0.reduce.bias",
+      "fuse.0.reduce.weight"
+    ],
+    "pgcf_fresh_key_count": 6
+  },
+  "protocol_equal_to_control": {
+    "data": true,
+    "optimizer": true,
+    "optimizer_config": true,
+    "lr_config": true,
+    "runner": true,
+    "evaluation": true,
+    "seed": true,
+    "deterministic": true,
+    "train_cfg": true,
+    "test_cfg": true
+  },
+  "architecture": {
+    "control_fusion_types": [
+      "fusion_cat",
+      "fusion",
+      "fusion",
+      "fusion",
+      "fusion_cat"
+    ],
+    "candidate_fusion_types": [
+      "p2_pgcf",
+      "fusion",
+      "fusion",
+      "fusion",
+      "fusion_cat"
+    ],
+    "control_fpn_start_level": 0,
+    "candidate_fpn_start_level": 0,
+    "control_num_outs": 5,
+    "candidate_num_outs": 5,
+    "control_strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "candidate_strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "candidate_pgcf_analysis": true,
+    "global_shift": "{'mode': 'off'}",
+    "p2_detail": "{'enabled': False}",
+    "p2_alignment": "{'enabled': False}"
+  },
+  "parameters": {
+    "fusion_cat_params": 131328,
+    "pgcf_total_params": 157312,
+    "pgcf_additional_params": 25984,
+    "reduce_params": 24608,
+    "depthwise_params": 320,
+    "gate_logits_params": 1056
+  },
+  "flops": {
+    "definition": "multiply-add counted as 2 FLOPs; conv-only",
+    "p2_shape": [
+      128,
+      160
+    ],
+    "fusion_cat_conv_flops": 5368709120,
+    "pgcf_additional_conv_flops": 1060372480,
+    "pgcf_total_conv_flops": 6429081600,
+    "excluded": "abs, softmax, ReLU, tensor reshaping"
+  }
+}

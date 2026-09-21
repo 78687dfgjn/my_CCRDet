@@ -3,6 +3,7 @@ from ..builder import DETECTORS, build_backbone, build_neck
 from ..utils.global_shift import GlobalThermalShift
 from ..utils.p2_detail_injection import P2DetailInjection
 from ..utils.p2_micro_alignment import P2MicroAlignment
+from ..utils.p2_groupwise_complementary_fusion import P2GroupwiseComplementaryFusion
 from .single_stage import SingleStageDetector
 import torch
 import torch.nn as nn
@@ -32,7 +33,8 @@ class GFLAF(SingleStageDetector):
                  attention_mode=None,
                  attention_hw_threshold=4096,
                  p2_detail=None,
-                 p2_alignment=None):
+                 p2_alignment=None,
+                 pgcf_analysis=False):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
         self.tanh = tanh
@@ -63,6 +65,7 @@ class GFLAF(SingleStageDetector):
                 feature_stride=p2_alignment.get('feature_stride', 4),
                 max_residual_px=p2_alignment.get('max_residual_px', 1.0),
                 analysis_enabled=p2_alignment.get('analysis_enabled', False))
+        self.pgcf_analysis = bool(pgcf_analysis)
         self.nect_t = build_neck(neck)
         self.fusion_types = list(fusion_types or
                                  ['fusion', 'fusion', 'fusion',
@@ -81,6 +84,9 @@ class GFLAF(SingleStageDetector):
                 attention_hw_threshold=self.attention_hw_threshold)
         if fusion_type == 'fusion_cat':
             return Fusion_CAT(256)
+        if fusion_type in ('p2_pgcf', 'pgcf'):
+            return P2GroupwiseComplementaryFusion(
+                256, groups=16, analysis_enabled=self.pgcf_analysis)
         raise ValueError('Unsupported fusion type: {}'.format(fusion_type))
       
     def extract_feat(self, img):

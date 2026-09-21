@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "config_a": "configs_local/exp_p2p6_seed0.py",
+  "config_b": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+  "module_types_b": [
+    "P2GroupwiseComplementaryFusion",
+    "Fusion",
+    "Fusion",
+    "Fusion",
+    "Fusion_CAT"
+  ],
+  "base_missing_keys": [],
+  "base_unexpected_keys": [],
+  "candidate_missing_keys": [
+    "fuse.0.reduce.weight",
+    "fuse.0.reduce.bias",
+    "fuse.0.depthwise.weight",
+    "fuse.0.depthwise.bias",
+    "fuse.0.gate_logits.weight",
+    "fuse.0.gate_logits.bias"
+  ],
+  "candidate_unexpected_keys": [],
+  "allowed_new_key_prefixes": [
+    "fuse.0.reduce.",
+    "fuse.0.depthwise.",
+    "fuse.0.gate_logits."
+  ],
+  "warmstart_compatibility_pass": true,
+  "features": [
+    {
+      "level": "P2",
+      "shape": [
+        1,
+        256,
+        32,
+        40
+      ],
+      "torch_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "level": "P3",
+      "shape": [
+        1,
+        256,
+        16,
+        20
+      ],
+      "torch_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "level": "P4",
+      "shape": [
+        1,
+        256,
+        8,
+        10
+      ],
+      "torch_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "level": "P5",
+      "shape": [
+        1,
+        256,
+        4,
+        5
+      ],
+      "torch_equal": true,
+      "max_abs_diff": 0.0
+    },
+    {
+      "level": "P6",
+      "shape": [
+        1,
+        256,
+        2,
+        3
+      ],
+      "torch_equal": true,
+      "max_abs_diff": 0.0
+    }
+  ],
+  "initial_gate_logit_weight_norm": 0.0,
+  "initial_gate_logit_bias_norm": 0.0,
+  "identity_pass": true
+}
