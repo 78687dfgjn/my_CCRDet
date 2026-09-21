@@ -5,6 +5,7 @@ model = dict(
     fusion_types=[
         'p2_pgcf', 'fusion', 'fusion', 'fusion', 'fusion_cat'],
     pgcf_analysis=True,
+    pgcf_checkpoint=True,
     global_shift=dict(mode='off'),
     p2_detail=dict(enabled=False),
     p2_alignment=dict(enabled=False))

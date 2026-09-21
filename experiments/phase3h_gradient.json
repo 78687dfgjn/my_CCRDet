@@ -17,7 +17,7 @@
       "iteration": 2,
       "loss": 0.33284416794776917,
       "gate_logits_grad_norm": 0.0025279768742620945,
-      "reduce_grad_norm": 5.486920073849433e-08,
+      "reduce_grad_norm": 5.486919718578065e-08,
       "depthwise_grad_norm": 7.805238233515865e-09,
       "conv1x1_grad_norm": 0.07897302508354187,
       "gate_logits_weight_norm_before_step": 3.1678466712037334e-06,

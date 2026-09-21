@@ -78,6 +78,7 @@
       64
     ],
     "candidate_pgcf_analysis": true,
+    "candidate_pgcf_checkpoint": true,
     "global_shift": "{'mode': 'off'}",
     "p2_detail": "{'enabled': False}",
     "p2_alignment": "{'enabled': False}"

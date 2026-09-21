@@ -1,32 +1,500 @@
 {
-  "status": "RESOURCE_BLOCKED",
+  "status": "PASS",
+  "experiment": "Phase 3H-R PGCF activation-checkpointed accuracy proxy",
+  "resource_gate": "PASS",
+  "accuracy_status": "NO-GO",
   "config": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
   "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
-  "paired_control": {
-    "label": "Lite-P2-P6 Fusion_CAT paired proxy",
-    "best_epoch": 3,
-    "metrics": {
-      "mAP25": 0.5715,
-      "mAP50": 0.4158,
-      "mAP75": 0.0329,
-      "tiny": 0.4291,
-      "tiny1": 0.3222,
-      "tiny2": 0.3108,
-      "tiny3": 0.4924,
-      "small": 0.254
+  "source_checkpoint_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "protocol_audit_status": "PASS",
+  "training_wall_seconds": 4831.681,
+  "training_wall_human": "1:20:32",
+  "peak_training_logged_memory_mib": 19249,
+  "metrics_by_epoch": [
+    {
+      "epoch": 1,
+      "mAP25": 0.5596,
+      "mAP50": 0.339,
+      "mAP75": 0.0097,
+      "tiny": 0.3518,
+      "tiny1": 0.2438,
+      "tiny2": 0.2494,
+      "tiny3": 0.4142,
+      "small": 0.25,
+      "loss_cls": 0.20806,
+      "loss_bbox": 0.69745,
+      "loss_dfl": 0.23172,
+      "loss": 1.13723,
+      "lr": 0.001,
+      "train_memory_mib": 19249
+    },
+    {
+      "epoch": 2,
+      "mAP25": 0.565,
+      "mAP50": 0.3984,
+      "mAP75": 0.027,
+      "tiny": 0.4141,
+      "tiny1": 0.2611,
+      "tiny2": 0.2998,
+      "tiny3": 0.48,
+      "small": 0.232,
+      "loss_cls": 0.1977,
+      "loss_bbox": 0.68304,
+      "loss_dfl": 0.22472,
+      "loss": 1.10546,
+      "lr": 0.001,
+      "train_memory_mib": 19249
+    },
+    {
+      "epoch": 3,
+      "mAP25": 0.5719,
+      "mAP50": 0.4161,
+      "mAP75": 0.0332,
+      "tiny": 0.4299,
+      "tiny1": 0.3196,
+      "tiny2": 0.3128,
+      "tiny3": 0.4926,
+      "small": 0.2497,
+      "loss_cls": 0.19469,
+      "loss_bbox": 0.66021,
+      "loss_dfl": 0.21834,
+      "loss": 1.07324,
+      "lr": 0.001,
+      "train_memory_mib": 19249
     }
+  ],
+  "best_epoch": 3,
+  "best_metrics": {
+    "mAP25": 0.5719,
+    "mAP50": 0.4161,
+    "mAP75": 0.0332,
+    "tiny": 0.4299,
+    "tiny1": 0.3196,
+    "tiny2": 0.3128,
+    "tiny3": 0.4926,
+    "small": 0.2497
   },
-  "candidate": null,
-  "delta_candidate_minus_control": null,
-  "decision": "PGCF = RESOURCE BLOCKED; no 3-epoch proxy was started.",
-  "reason": {
-    "failure": "CUDA out of memory",
-    "iteration_completed": 4,
-    "iteration_attempted": 5,
-    "peak_allocated_bytes": 20977880064,
-    "peak_reserved_bytes": 21716008960,
-    "peak_driver_used_mb": 22143,
-    "other_gpu_processes_running": false
+  "epoch3_metrics": {
+    "mAP25": 0.5719,
+    "mAP50": 0.4161,
+    "mAP75": 0.0332,
+    "tiny": 0.4299,
+    "tiny1": 0.3196,
+    "tiny2": 0.3128,
+    "tiny3": 0.4926,
+    "small": 0.2497
   },
-  "training_not_started": true
+  "paired_control": {
+    "mAP25": 0.5715,
+    "mAP50": 0.4158,
+    "mAP75": 0.0329,
+    "tiny": 0.4291,
+    "tiny1": 0.3222,
+    "tiny2": 0.3108,
+    "tiny3": 0.4924,
+    "small": 0.254
+  },
+  "delta_best_minus_control": {
+    "mAP25": 0.00039999999999995595,
+    "mAP50": 0.00030000000000002247,
+    "mAP75": 0.00030000000000000165,
+    "tiny": 0.0008000000000000229,
+    "tiny1": -0.002599999999999991,
+    "tiny2": 0.0020000000000000018,
+    "tiny3": 0.00019999999999997797,
+    "small": -0.004299999999999998
+  },
+  "decision_rule": "NO-GO because mAP50 delta is +0.03 pp (< +0.2 pp) and neither mAP75 nor small improved.",
+  "checkpoint_equivalence": {
+    "status": "PASS",
+    "input_shape": [
+      2,
+      256,
+      16,
+      20
+    ],
+    "checkpoint_enabled_a": false,
+    "checkpoint_enabled_b": true,
+    "output_torch_equal": true,
+    "output_max_abs_diff": 0.0,
+    "gradient_rows": [
+      {
+        "parameter": "reduce.weight",
+        "finite_a": true,
+        "finite_b": true,
+        "max_abs_gradient_diff": 0.0,
+        "gradient_norm_a": 0.0,
+        "gradient_norm_b": 0.0
+      },
+      {
+        "parameter": "depthwise.weight",
+        "finite_a": true,
+        "finite_b": true,
+        "max_abs_gradient_diff": 0.0,
+        "gradient_norm_a": 0.0,
+        "gradient_norm_b": 0.0
+      },
+      {
+        "parameter": "gate_logits.weight",
+        "finite_a": true,
+        "finite_b": true,
+        "max_abs_gradient_diff": 0.0,
+        "gradient_norm_a": 0.0034917443990707397,
+        "gradient_norm_b": 0.0034917443990707397
+      },
+      {
+        "parameter": "conv1x1.weight",
+        "finite_a": true,
+        "finite_b": true,
+        "max_abs_gradient_diff": 0.0,
+        "gradient_norm_a": 0.09712096303701401,
+        "gradient_norm_b": 0.09712096303701401
+      }
+    ],
+    "max_abs_gradient_diff": 0.0,
+    "telemetry_calls_a": 0,
+    "telemetry_calls_b": 0,
+    "telemetry_recomputation_not_counted": true
+  },
+  "identity": {
+    "status": "PASS",
+    "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+    "config_a": "configs_local/exp_p2p6_seed0.py",
+    "config_b": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+    "module_types_b": [
+      "P2GroupwiseComplementaryFusion",
+      "Fusion",
+      "Fusion",
+      "Fusion",
+      "Fusion_CAT"
+    ],
+    "base_missing_keys": [],
+    "base_unexpected_keys": [],
+    "candidate_missing_keys": [
+      "fuse.0.reduce.weight",
+      "fuse.0.reduce.bias",
+      "fuse.0.depthwise.weight",
+      "fuse.0.depthwise.bias",
+      "fuse.0.gate_logits.weight",
+      "fuse.0.gate_logits.bias"
+    ],
+    "candidate_unexpected_keys": [],
+    "allowed_new_key_prefixes": [
+      "fuse.0.reduce.",
+      "fuse.0.depthwise.",
+      "fuse.0.gate_logits."
+    ],
+    "warmstart_compatibility_pass": true,
+    "features": [
+      {
+        "level": "P2",
+        "shape": [
+          1,
+          256,
+          32,
+          40
+        ],
+        "torch_equal": true,
+        "max_abs_diff": 0.0
+      },
+      {
+        "level": "P3",
+        "shape": [
+          1,
+          256,
+          16,
+          20
+        ],
+        "torch_equal": true,
+        "max_abs_diff": 0.0
+      },
+      {
+        "level": "P4",
+        "shape": [
+          1,
+          256,
+          8,
+          10
+        ],
+        "torch_equal": true,
+        "max_abs_diff": 0.0
+      },
+      {
+        "level": "P5",
+        "shape": [
+          1,
+          256,
+          4,
+          5
+        ],
+        "torch_equal": true,
+        "max_abs_diff": 0.0
+      },
+      {
+        "level": "P6",
+        "shape": [
+          1,
+          256,
+          2,
+          3
+        ],
+        "torch_equal": true,
+        "max_abs_diff": 0.0
+      }
+    ],
+    "initial_gate_logit_weight_norm": 0.0,
+    "initial_gate_logit_bias_norm": 0.0,
+    "identity_pass": true
+  },
+  "telemetry_audit": {
+    "status": "PASS",
+    "root_cause": "Previous smoke report divided group sums by the total count across all groups; the group aggregation denominator was count/groups. Forward math was unchanged.",
+    "mean_rgb_weight": 1.0,
+    "mean_thermal_weight": 1.0,
+    "group_mean_rgb_weight": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "group_mean_thermal_weight": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "max_group_abs_error": 0.0,
+    "telemetry_calls": 1
+  },
+  "resource_comparison": {
+    "original_non_checkpointed": {
+      "status": "RESOURCE_BLOCKED",
+      "iterations_completed": 4,
+      "blocked_at": 5,
+      "peak_allocated_gib": 19.5371732711792,
+      "peak_reserved_gib": 20.224609375,
+      "peak_driver_used_mib": 22143,
+      "mean_iteration_seconds_completed_prefix": 2.4382225275039673
+    },
+    "checkpointed": {
+      "status": "PASS",
+      "iterations_completed": 20,
+      "peak_allocated_gib": 18.505455017089844,
+      "peak_reserved_gib": 20.173828125,
+      "peak_driver_used_mib": 22135,
+      "mean_iteration_seconds": 2.2587194800376893
+    },
+    "difference_checkpointed_minus_original": {
+      "allocated_gib": -1.0317182540893555,
+      "reserved_gib": -0.05078125,
+      "driver_used_mib": -8,
+      "allocated_saving_gib": 1.0317182540893555,
+      "reserved_saving_gib": 0.05078125,
+      "driver_saving_mib": 8
+    },
+    "timing_note": "The original run stopped after four completed iterations while the checkpointed run completed twenty; timing is descriptive, not a controlled overhead estimate."
+  },
+  "gate_dynamics": {
+    "status": "PASS",
+    "config": "configs_local/exp_proxy_pgcf_p2p6_seed0.py",
+    "work_dir": "/hy-tmp/CCRDet_assets/work_dirs/phase3h_proxy_pgcf_p2p6_seed0",
+    "max_batches_per_checkpoint": 20,
+    "rows": [
+      {
+        "calls": 20,
+        "count": 6553600,
+        "mean_rgb_weight": 0.995746021270752,
+        "mean_thermal_weight": 1.0042539787292482,
+        "std_rgb_weight": 0.0049371399674864435,
+        "std_thermal_weight": 0.004937139938012061,
+        "mean_abs_weight_minus_1": 0.004481336390599608,
+        "fraction_rgb_weight_gt_1_25": 0.0,
+        "fraction_thermal_weight_gt_1_25": 0.0,
+        "min_rgb_weight": 0.9830080270767212,
+        "max_rgb_weight": 1.0051337480545044,
+        "min_thermal_weight": 0.9948663115501404,
+        "max_thermal_weight": 1.0169919729232788,
+        "group_mean_rgb_weight": [
+          0.9939181613922119,
+          0.9955146551132202,
+          1.0018188238143921,
+          0.993113350868225,
+          0.9936243152618408,
+          0.9967535257339477,
+          0.9950213479995728,
+          0.9954024219512939,
+          0.99767653465271,
+          0.9949953413009643,
+          0.9978670454025269,
+          0.9969206428527833,
+          0.9935804986953736,
+          0.9946151542663574,
+          0.9988371753692626,
+          0.9922773027420044
+        ],
+        "group_mean_thermal_weight": [
+          1.006081838607788,
+          1.004485354423523,
+          0.998181185722351,
+          1.0068866443634032,
+          1.0063756799697876,
+          1.0032464742660523,
+          1.0049786615371703,
+          1.0045975923538208,
+          1.00232346534729,
+          1.005004653930664,
+          1.0021329593658448,
+          1.00307936668396,
+          1.0064195108413696,
+          1.0053848457336425,
+          1.0011628293991088,
+          1.0077227020263673
+        ],
+        "epoch": 1,
+        "checkpoint": "/hy-tmp/CCRDet_assets/work_dirs/phase3h_proxy_pgcf_p2p6_seed0/epoch_1.pth",
+        "batches": 20,
+        "dataset_instances_available": 1216,
+        "analysis_mode": "eval_only"
+      },
+      {
+        "calls": 20,
+        "count": 6553600,
+        "mean_rgb_weight": 0.9953817081451416,
+        "mean_thermal_weight": 1.0046182918548583,
+        "std_rgb_weight": 0.005740454359603615,
+        "std_thermal_weight": 0.005740454359603615,
+        "mean_abs_weight_minus_1": 0.004996871184557676,
+        "fraction_rgb_weight_gt_1_25": 0.0,
+        "fraction_thermal_weight_gt_1_25": 0.0,
+        "min_rgb_weight": 0.9752143621444702,
+        "max_rgb_weight": 1.0074338912963867,
+        "min_thermal_weight": 0.9925661087036133,
+        "max_thermal_weight": 1.0247856378555298,
+        "group_mean_rgb_weight": [
+          0.9941940641403199,
+          0.9943571329116822,
+          1.0027790117263793,
+          0.9946870040893555,
+          0.994790210723877,
+          0.9974952173233033,
+          0.9955173301696777,
+          0.9952631330490113,
+          0.9974354362487793,
+          0.9913723754882813,
+          0.9988974380493164,
+          0.9939943170547485,
+          0.9892700433731079,
+          0.9936289310455322,
+          1.000215811729431,
+          0.9922101402282715
+        ],
+        "group_mean_thermal_weight": [
+          1.0058059358596803,
+          1.0056428623199463,
+          0.9972209739685058,
+          1.0053129959106446,
+          1.0052097845077514,
+          1.0025047731399537,
+          1.0044826555252075,
+          1.0047368621826172,
+          1.0025645685195923,
+          1.0086276197433472,
+          1.0011025667190552,
+          1.0060056829452515,
+          1.0107299566268921,
+          1.0063710737228393,
+          0.9997842073440552,
+          1.0077898597717285
+        ],
+        "epoch": 2,
+        "checkpoint": "/hy-tmp/CCRDet_assets/work_dirs/phase3h_proxy_pgcf_p2p6_seed0/epoch_2.pth",
+        "batches": 20,
+        "dataset_instances_available": 1216,
+        "analysis_mode": "eval_only"
+      },
+      {
+        "calls": 20,
+        "count": 6553600,
+        "mean_rgb_weight": 0.9955866575241089,
+        "mean_thermal_weight": 1.0044133377075195,
+        "std_rgb_weight": 0.006065139166371292,
+        "std_thermal_weight": 0.006065139058404076,
+        "mean_abs_weight_minus_1": 0.004950683498755097,
+        "fraction_rgb_weight_gt_1_25": 0.0,
+        "fraction_thermal_weight_gt_1_25": 0.0,
+        "min_rgb_weight": 0.9672626256942749,
+        "max_rgb_weight": 1.0070898532867432,
+        "min_thermal_weight": 0.9929102063179016,
+        "max_thermal_weight": 1.032737374305725,
+        "group_mean_rgb_weight": [
+          0.9945529842376709,
+          0.9951355361938476,
+          1.002044415473938,
+          0.9934496784210205,
+          0.9987092399597168,
+          0.9984779167175293,
+          0.9946213722229004,
+          0.9959540414810181,
+          0.997753381729126,
+          0.9896108627319335,
+          1.0007067108154297,
+          0.9934782409667968,
+          0.9870080614089966,
+          0.9923552560806275,
+          1.0015436840057372,
+          0.9939851379394531
+        ],
+        "group_mean_thermal_weight": [
+          1.0054470157623292,
+          1.0048644590377807,
+          0.9979555749893189,
+          1.0065503311157227,
+          1.0012907457351685,
+          1.0015220880508422,
+          1.005378623008728,
+          1.0040459537506103,
+          1.0022465991973877,
+          1.0103891229629516,
+          0.9992932891845703,
+          1.00652174949646,
+          1.0129919338226319,
+          1.007644739151001,
+          0.9984563159942627,
+          1.0060148572921752
+        ],
+        "epoch": 3,
+        "checkpoint": "/hy-tmp/CCRDet_assets/work_dirs/phase3h_proxy_pgcf_p2p6_seed0/epoch_3.pth",
+        "batches": 20,
+        "dataset_instances_available": 1216,
+        "analysis_mode": "eval_only"
+      }
+    ],
+    "note": "Evaluation-only telemetry; checkpoint recomputation inactive."
+  },
+  "accuracy_training_started_after_resource_pass": true,
+  "other_training_started": false
 }

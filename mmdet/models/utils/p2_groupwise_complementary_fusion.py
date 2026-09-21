@@ -5,12 +5,14 @@ checkpoint can warm-start the shared final projection directly.
 """
 import torch
 import torch.nn as nn
+from torch.utils.checkpoint import checkpoint
 
 
 class P2GroupwiseComplementaryFusion(nn.Module):
     """P2 RGB-T fusion with local groupwise modality competition."""
 
-    def __init__(self, in_channels=256, groups=16, analysis_enabled=False):
+    def __init__(self, in_channels=256, groups=16, analysis_enabled=False,
+                 checkpoint_enabled=False):
         super().__init__()
         if in_channels % groups != 0:
             raise ValueError('in_channels must be divisible by groups')
@@ -18,6 +20,7 @@ class P2GroupwiseComplementaryFusion(nn.Module):
         self.groups = int(groups)
         self.channels_per_group = self.in_channels // self.groups
         self.analysis_enabled = bool(analysis_enabled)
+        self.checkpoint_enabled = bool(checkpoint_enabled)
         self.conv1x1 = nn.Conv2d(2 * self.in_channels, self.in_channels, 1)
         self.reduce = nn.Conv2d(3 * self.in_channels, 32, 1)
         self.depthwise = nn.Conv2d(32, 32, 3, padding=1, groups=32)
@@ -111,7 +114,7 @@ class P2GroupwiseComplementaryFusion(nn.Module):
                 value / group_count for value in stats['group_thermal_sum']],
         }
 
-    def forward(self, rgb, thermal):
+    def _forward_impl(self, rgb, thermal, record_analysis):
         if rgb.shape != thermal.shape:
             raise ValueError('RGB and thermal P2 features must have equal shapes')
         batch, _, height, width = rgb.shape
@@ -122,7 +125,8 @@ class P2GroupwiseComplementaryFusion(nn.Module):
         logits = self.gate_logits(hidden)
         logits = logits.view(batch, 2, self.groups, height, width)
         weights = 2.0 * torch.softmax(logits, dim=1)
-        self._record_analysis(weights)
+        if record_analysis:
+            self._record_analysis(weights)
         rgb_weight = weights[:, 0].unsqueeze(2)
         thermal_weight = weights[:, 1].unsqueeze(2)
         rgb_grouped = rgb.view(
@@ -134,3 +138,15 @@ class P2GroupwiseComplementaryFusion(nn.Module):
         thermal_weighted = (thermal_grouped * thermal_weight).reshape(
             batch, self.in_channels, height, width)
         return self.conv1x1(torch.cat((rgb_weighted, thermal_weighted), dim=1))
+
+    def _checkpoint_forward(self, rgb, thermal):
+        # PyTorch 1.10-compatible reentrant checkpoint path.  This function is
+        # pure with respect to telemetry, so backward recomputation is not
+        # counted as a second analysis call.
+        return self._forward_impl(rgb, thermal, False)
+
+    def forward(self, rgb, thermal):
+        if self.training and self.checkpoint_enabled:
+            return checkpoint(self._checkpoint_forward, rgb, thermal)
+        return self._forward_impl(
+            rgb, thermal, self.analysis_enabled)

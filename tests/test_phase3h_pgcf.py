@@ -83,8 +83,10 @@ def main():
     gradient_rows = []
     for iteration in (1, 2):
         optimizer.zero_grad(set_to_none=True)
-        x_rgb = torch.randn(2, 256, 32, 40, device='cuda')
-        x_thermal = torch.randn(2, 256, 32, 40, device='cuda')
+        x_rgb = torch.randn(2, 256, 32, 40, device='cuda',
+                             requires_grad=True)
+        x_thermal = torch.randn(2, 256, 32, 40, device='cuda',
+                                  requires_grad=True)
         output = pgcf(x_rgb, x_thermal)
         loss = (output * output).mean() + 0.01 * output.mean()
         loss.backward()

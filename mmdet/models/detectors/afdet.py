@@ -34,7 +34,8 @@ class GFLAF(SingleStageDetector):
                  attention_hw_threshold=4096,
                  p2_detail=None,
                  p2_alignment=None,
-                 pgcf_analysis=False):
+                 pgcf_analysis=False,
+                 pgcf_checkpoint=False):
         super(GFLAF, self).__init__(backbone, neck, bbox_head, train_cfg,
                                   test_cfg, pretrained, init_cfg)
         self.tanh = tanh
@@ -66,6 +67,7 @@ class GFLAF(SingleStageDetector):
                 max_residual_px=p2_alignment.get('max_residual_px', 1.0),
                 analysis_enabled=p2_alignment.get('analysis_enabled', False))
         self.pgcf_analysis = bool(pgcf_analysis)
+        self.pgcf_checkpoint = bool(pgcf_checkpoint)
         self.nect_t = build_neck(neck)
         self.fusion_types = list(fusion_types or
                                  ['fusion', 'fusion', 'fusion',
@@ -86,7 +88,8 @@ class GFLAF(SingleStageDetector):
             return Fusion_CAT(256)
         if fusion_type in ('p2_pgcf', 'pgcf'):
             return P2GroupwiseComplementaryFusion(
-                256, groups=16, analysis_enabled=self.pgcf_analysis)
+                256, groups=16, analysis_enabled=self.pgcf_analysis,
+                checkpoint_enabled=self.pgcf_checkpoint)
         raise ValueError('Unsupported fusion type: {}'.format(fusion_type))
       
     def extract_feat(self, img):

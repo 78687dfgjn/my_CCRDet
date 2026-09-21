@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "input_shape": [
+    2,
+    256,
+    16,
+    20
+  ],
+  "checkpoint_enabled_a": false,
+  "checkpoint_enabled_b": true,
+  "output_torch_equal": true,
+  "output_max_abs_diff": 0.0,
+  "gradient_rows": [
+    {
+      "parameter": "reduce.weight",
+      "finite_a": true,
+      "finite_b": true,
+      "max_abs_gradient_diff": 0.0,
+      "gradient_norm_a": 0.0,
+      "gradient_norm_b": 0.0
+    },
+    {
+      "parameter": "depthwise.weight",
+      "finite_a": true,
+      "finite_b": true,
+      "max_abs_gradient_diff": 0.0,
+      "gradient_norm_a": 0.0,
+      "gradient_norm_b": 0.0
+    },
+    {
+      "parameter": "gate_logits.weight",
+      "finite_a": true,
+      "finite_b": true,
+      "max_abs_gradient_diff": 0.0,
+      "gradient_norm_a": 0.0034917443990707397,
+      "gradient_norm_b": 0.0034917443990707397
+    },
+    {
+      "parameter": "conv1x1.weight",
+      "finite_a": true,
+      "finite_b": true,
+      "max_abs_gradient_diff": 0.0,
+      "gradient_norm_a": 0.09712096303701401,
+      "gradient_norm_b": 0.09712096303701401
+    }
+  ],
+  "max_abs_gradient_diff": 0.0,
+  "telemetry_calls_a": 0,
+  "telemetry_calls_b": 0,
+  "telemetry_recomputation_not_counted": true
+}

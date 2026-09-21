@@ -1,4 +1,5 @@
 """20-iteration full-resolution PGCF memory and finite-loss smoke."""
+import argparse
 import json
 import subprocess
 import time
@@ -28,10 +29,14 @@ def driver_used_mb():
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config', default='configs_local/exp_proxy_pgcf_p2p6_seed0.py')
+    parser.add_argument('--output', default='experiments/phase3h_memory_checkpointed.json')
+    args = parser.parse_args()
     if not torch.cuda.is_available():
         raise RuntimeError('CUDA is required for the memory smoke')
     from mmcv import Config
-    cfg = Config.fromfile(CONFIG)
+    cfg = Config.fromfile(args.config)
     cfg.model.backbone.pretrained = None
     set_random_seed(0, deterministic=True)
     dataset = build_dataset(cfg.data.train)
@@ -92,6 +97,8 @@ def main():
                     for key, value in outputs['log_vars'].items()},
                 'iteration_seconds': elapsed,
                 'driver_used_mb': driver_used_mb(),
+                'allocated_bytes': torch.cuda.memory_allocated(device),
+                'reserved_bytes': torch.cuda.memory_reserved(device),
             })
     except RuntimeError as exc:
         status = ('RESOURCE_BLOCKED' if 'out of memory' in str(exc).lower()
@@ -104,7 +111,7 @@ def main():
         hook.remove()
     report = {
         'status': status,
-        'config': CONFIG,
+        'config': args.config,
         'source_checkpoint': SOURCE,
         'missing_keys': list(incompat.missing_keys),
         'unexpected_keys': list(incompat.unexpected_keys),
@@ -124,8 +131,8 @@ def main():
         'gate_stats_at_smoke_end': pgcf.get_analysis_stats(),
         'error': error,
     }
-    Path('experiments').mkdir(exist_ok=True)
-    Path('experiments/phase3h_memory.json').write_text(
+    Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+    Path(args.output).write_text(
         json.dumps(report, indent=2))
     print(json.dumps(report, indent=2))
     if status != 'PASS':

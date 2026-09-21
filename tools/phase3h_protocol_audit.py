@@ -87,6 +87,7 @@ def main():
         'candidate_strides': list(
             cfg.model.bbox_head.anchor_generator.strides),
         'candidate_pgcf_analysis': bool(cfg.model.pgcf_analysis),
+        'candidate_pgcf_checkpoint': bool(cfg.model.pgcf_checkpoint),
         'global_shift': repr(cfg.model.global_shift),
         'p2_detail': repr(cfg.model.p2_detail),
         'p2_alignment': repr(cfg.model.p2_alignment),
