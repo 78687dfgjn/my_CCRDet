@@ -50,7 +50,8 @@ class GFLAF(SingleStageDetector):
             self.p2_detail_injection = P2DetailInjection(
                 in_channels=256,
                 gate_channels=p2_detail.get('gate_channels', 1),
-                zero_init=p2_detail.get('zero_init', True))
+                zero_init=p2_detail.get('zero_init', True),
+                init_mode=p2_detail.get('init_mode', None))
         self.nect_t = build_neck(neck)
         self.fusion_types = list(fusion_types or
                                  ['fusion', 'fusion', 'fusion',

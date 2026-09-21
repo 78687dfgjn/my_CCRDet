@@ -19,7 +19,8 @@ class P2DetailInjection(nn.Module):
         zero_init: Initialize the residual scale ``alpha`` to zero.
     """
 
-    def __init__(self, in_channels=256, gate_channels=1, zero_init=True):
+    def __init__(self, in_channels=256, gate_channels=1, zero_init=True,
+                 init_mode=None):
         super().__init__()
         if gate_channels not in (1, in_channels):
             raise ValueError(
@@ -37,9 +38,25 @@ class P2DetailInjection(nn.Module):
             groups=in_channels)
         self.pointwise = nn.Conv2d(in_channels, in_channels, 1)
         self.gate = nn.Conv2d(2 * in_channels, gate_channels, 1)
-        self.alpha = nn.Parameter(torch.zeros(1) if zero_init else torch.ones(1))
+        # ``zero_alpha`` is the original SPDI-v1 parameterization.  The
+        # ``zero_projection`` mode preserves exact identity while allowing
+        # useful gradients through the detail branch from the first update.
+        if init_mode is None:
+            init_mode = 'zero_alpha' if zero_init else 'standard_alpha'
+        init_mode = str(init_mode).lower()
+        if init_mode not in ('zero_alpha', 'zero_projection',
+                             'standard_alpha'):
+            raise ValueError(
+                'init_mode must be zero_alpha, zero_projection, or '
+                'standard_alpha, got {}'.format(init_mode))
+        self.alpha = nn.Parameter(
+            torch.zeros(1) if init_mode == 'zero_alpha' else torch.ones(1))
+        if init_mode == 'zero_projection':
+            nn.init.zeros_(self.pointwise.weight)
+            nn.init.zeros_(self.pointwise.bias)
         self.gate_channels = gate_channels
         self.zero_init = bool(zero_init)
+        self.init_mode = init_mode
 
     def build_detail(self, p2_rgb, p2_thermal):
         """Return the P2 detail tensor at the P3 spatial resolution."""

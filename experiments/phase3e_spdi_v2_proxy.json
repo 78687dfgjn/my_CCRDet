@@ -1,0 +1,886 @@
+{
+  "best_epoch": 3,
+  "best_metrics": {
+    "mAP25": 56.41,
+    "mAP50": 39.96,
+    "mAP75": 3.51,
+    "small": 26.57,
+    "tiny": 41.46,
+    "tiny1": 13.86,
+    "tiny2": 28.72,
+    "tiny3": 48.04
+  },
+  "control_epoch3": {
+    "epoch": 3,
+    "mAP25": 56.35,
+    "mAP50": 40.01,
+    "mAP75": 3.46,
+    "small": 28.14,
+    "tiny": 41.3,
+    "tiny1": 13.56,
+    "tiny2": 29.11,
+    "tiny3": 47.6
+  },
+  "decision": {
+    "high_iou_benefit": "NO",
+    "rule": "v2 minus paired control mAP50 <= +0.1 pp => NOT SUPPORTED BY CURRENT INJECTION DESIGN",
+    "small_tradeoff": "YES",
+    "spdi_v2_status": "NOT SUPPORTED BY CURRENT INJECTION DESIGN",
+    "tiny1_benefit": "YES",
+    "tiny_benefit": "YES"
+  },
+  "delta_v2_minus_control": {
+    "mAP25": 0.06,
+    "mAP50": -0.05,
+    "mAP75": 0.05,
+    "small": -1.57,
+    "tiny": 0.16,
+    "tiny1": 0.3,
+    "tiny2": -0.39,
+    "tiny3": 0.44
+  },
+  "delta_v2_minus_spdi_v1": {
+    "mAP25": 0.02,
+    "mAP50": -0.21,
+    "mAP75": 0.01,
+    "small": -1.38,
+    "tiny": 0.13,
+    "tiny1": -5.38,
+    "tiny2": -0.63,
+    "tiny3": 0.36
+  },
+  "epoch3_metrics": {
+    "mAP25": 56.41,
+    "mAP50": 39.96,
+    "mAP75": 3.51,
+    "small": 26.57,
+    "tiny": 41.46,
+    "tiny1": 13.86,
+    "tiny2": 28.72,
+    "tiny3": 48.04
+  },
+  "experiment": "phase3e_spdi_v2_proxy",
+  "forbidden_experiments_started": false,
+  "identity_test": {
+    "base_missing_keys": [],
+    "base_unexpected_keys": [],
+    "checkpoint": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "features": [
+      {
+        "level": "P3",
+        "max_abs_diff": 0.0,
+        "shape": [
+          1,
+          256,
+          64,
+          80
+        ],
+        "torch_equal": true
+      },
+      {
+        "level": "P4",
+        "max_abs_diff": 0.0,
+        "shape": [
+          1,
+          256,
+          32,
+          40
+        ],
+        "torch_equal": true
+      },
+      {
+        "level": "P5",
+        "max_abs_diff": 0.0,
+        "shape": [
+          1,
+          256,
+          16,
+          20
+        ],
+        "torch_equal": true
+      },
+      {
+        "level": "P6",
+        "max_abs_diff": 0.0,
+        "shape": [
+          1,
+          256,
+          8,
+          10
+        ],
+        "torch_equal": true
+      },
+      {
+        "level": "P7",
+        "max_abs_diff": 0.0,
+        "shape": [
+          1,
+          256,
+          4,
+          5
+        ],
+        "torch_equal": true
+      }
+    ],
+    "identity_pass": true,
+    "v2_alpha": 1.0,
+    "v2_init_mode": "zero_projection",
+    "v2_missing_keys": [
+      "p2_detail_injection.alpha",
+      "p2_detail_injection.p2_fusion.weight",
+      "p2_detail_injection.p2_fusion.bias",
+      "p2_detail_injection.depthwise.weight",
+      "p2_detail_injection.depthwise.bias",
+      "p2_detail_injection.pointwise.weight",
+      "p2_detail_injection.pointwise.bias",
+      "p2_detail_injection.gate.weight",
+      "p2_detail_injection.gate.bias"
+    ],
+    "v2_pointwise_bias_abs_sum": 0.0,
+    "v2_pointwise_weight_abs_sum": 0.0,
+    "v2_unexpected_keys": []
+  },
+  "initialization": {
+    "alpha_init": 1.0,
+    "missing_keys": [
+      "p2_detail_injection.alpha",
+      "p2_detail_injection.p2_fusion.weight",
+      "p2_detail_injection.p2_fusion.bias",
+      "p2_detail_injection.depthwise.weight",
+      "p2_detail_injection.depthwise.bias",
+      "p2_detail_injection.pointwise.weight",
+      "p2_detail_injection.pointwise.bias",
+      "p2_detail_injection.gate.weight",
+      "p2_detail_injection.gate.bias"
+    ],
+    "pointwise_weight_abs_sum_init": 0.0,
+    "resume_optimizer_used": false,
+    "semantic_warmstart_used": false,
+    "source_checkpoint": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "spdi_init_mode": "zero_projection",
+    "unexpected_keys": []
+  },
+  "is_formal_paper_result": false,
+  "metrics_by_epoch": {
+    "1": {
+      "train_mean_logged": {
+        "loss": 0.914885,
+        "loss_bbox": 0.582662,
+        "loss_cls": 0.171403,
+        "loss_dfl": 0.160817
+      },
+      "validation": {
+        "mAP25": 56.68,
+        "mAP50": 38.33,
+        "mAP75": 2.74,
+        "small": 24.16,
+        "tiny": 40.16,
+        "tiny1": 18.94,
+        "tiny2": 27.83,
+        "tiny3": 46.91
+      }
+    },
+    "2": {
+      "train_mean_logged": {
+        "loss": 0.90738,
+        "loss_bbox": 0.57723,
+        "loss_cls": 0.169782,
+        "loss_dfl": 0.160371
+      },
+      "validation": {
+        "mAP25": 55.79,
+        "mAP50": 38.05,
+        "mAP75": 3.16,
+        "small": 25.35,
+        "tiny": 39.49,
+        "tiny1": 13.71,
+        "tiny2": 27.04,
+        "tiny3": 46.31
+      }
+    },
+    "3": {
+      "train_mean_logged": {
+        "loss": 0.888927,
+        "loss_bbox": 0.564634,
+        "loss_cls": 0.165118,
+        "loss_dfl": 0.159173
+      },
+      "validation": {
+        "mAP25": 56.41,
+        "mAP50": 39.96,
+        "mAP75": 3.51,
+        "small": 26.57,
+        "tiny": 41.46,
+        "tiny1": 13.86,
+        "tiny2": 28.72,
+        "tiny3": 48.04
+      }
+    }
+  },
+  "precheck": {
+    "failure": null,
+    "same_run_continued_to_three_epochs": true,
+    "status": "PASS"
+  },
+  "protocol_audit": {
+    "control_config": "configs_local/exp_proxy_control_p3p7_seed0.py",
+    "control_reference_metrics": {
+      "epoch3": {
+        "mAP25": 56.35,
+        "mAP50": 40.01,
+        "mAP75": 3.46,
+        "small": 28.14,
+        "tiny": 41.3,
+        "tiny1": 13.56,
+        "tiny2": 29.11,
+        "tiny3": 47.6
+      }
+    },
+    "fields": {
+      "ann_file": [
+        "/root/CCRDet/train_thermal.json",
+        "/root/CCRDet/train_thermal.json",
+        "/root/CCRDet/train_thermal.json"
+      ],
+      "deterministic": [
+        true,
+        true,
+        true
+      ],
+      "evaluation_interval": [
+        1,
+        1,
+        1
+      ],
+      "evaluation_metric": [
+        "bbox",
+        "bbox",
+        "bbox"
+      ],
+      "img_prefix": [
+        "/root/CCRDet/train/",
+        "/root/CCRDet/train/",
+        "/root/CCRDet/train/"
+      ],
+      "input_pipeline": [
+        [
+          {
+            "spectrals": [
+              "visible",
+              "thermal"
+            ],
+            "type": "LoadImagePairFromFile"
+          },
+          {
+            "type": "LoadAnnotations",
+            "with_bbox": true
+          },
+          {
+            "img_scale": [
+              640,
+              512
+            ],
+            "keep_ratio": true,
+            "type": "Resize"
+          },
+          {
+            "flip_ratio": 0.5,
+            "type": "RandomFlip"
+          },
+          {
+            "mean_list": [
+              [
+                115.37,
+                121.82,
+                122.63
+              ],
+              [
+                93.1,
+                93.1,
+                93.1
+              ]
+            ],
+            "std_list": [
+              [
+                85.13,
+                89.01,
+                88.27
+              ],
+              [
+                50.24,
+                50.24,
+                50.24
+              ]
+            ],
+            "to_rgb": true,
+            "type": "MultiNormalize"
+          },
+          {
+            "size_divisor": 32,
+            "type": "Pad"
+          },
+          {
+            "type": "DefaultFormatBundle"
+          },
+          {
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels"
+            ],
+            "type": "Collect"
+          }
+        ],
+        [
+          {
+            "spectrals": [
+              "visible",
+              "thermal"
+            ],
+            "type": "LoadImagePairFromFile"
+          },
+          {
+            "type": "LoadAnnotations",
+            "with_bbox": true
+          },
+          {
+            "img_scale": [
+              640,
+              512
+            ],
+            "keep_ratio": true,
+            "type": "Resize"
+          },
+          {
+            "flip_ratio": 0.5,
+            "type": "RandomFlip"
+          },
+          {
+            "mean_list": [
+              [
+                115.37,
+                121.82,
+                122.63
+              ],
+              [
+                93.1,
+                93.1,
+                93.1
+              ]
+            ],
+            "std_list": [
+              [
+                85.13,
+                89.01,
+                88.27
+              ],
+              [
+                50.24,
+                50.24,
+                50.24
+              ]
+            ],
+            "to_rgb": true,
+            "type": "MultiNormalize"
+          },
+          {
+            "size_divisor": 32,
+            "type": "Pad"
+          },
+          {
+            "type": "DefaultFormatBundle"
+          },
+          {
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels"
+            ],
+            "type": "Collect"
+          }
+        ],
+        [
+          {
+            "spectrals": [
+              "visible",
+              "thermal"
+            ],
+            "type": "LoadImagePairFromFile"
+          },
+          {
+            "type": "LoadAnnotations",
+            "with_bbox": true
+          },
+          {
+            "img_scale": [
+              640,
+              512
+            ],
+            "keep_ratio": true,
+            "type": "Resize"
+          },
+          {
+            "flip_ratio": 0.5,
+            "type": "RandomFlip"
+          },
+          {
+            "mean_list": [
+              [
+                115.37,
+                121.82,
+                122.63
+              ],
+              [
+                93.1,
+                93.1,
+                93.1
+              ]
+            ],
+            "std_list": [
+              [
+                85.13,
+                89.01,
+                88.27
+              ],
+              [
+                50.24,
+                50.24,
+                50.24
+              ]
+            ],
+            "to_rgb": true,
+            "type": "MultiNormalize"
+          },
+          {
+            "size_divisor": 32,
+            "type": "Pad"
+          },
+          {
+            "type": "DefaultFormatBundle"
+          },
+          {
+            "keys": [
+              "img",
+              "gt_bboxes",
+              "gt_labels"
+            ],
+            "type": "Collect"
+          }
+        ]
+      ],
+      "load_from": [
+        "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+        "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+        "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth"
+      ],
+      "model_without_p2_detail": [
+        {
+          "backbone": {
+            "depth": 50,
+            "dims_in": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "dims_lsk": [
+              32,
+              32,
+              64,
+              64
+            ],
+            "norm_cfg": {
+              "requires_grad": true,
+              "type": "BN"
+            },
+            "norm_eval": true,
+            "num_stages": 4,
+            "out_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pretrained": "pretrain_weights/resnet50-2stream.pth",
+            "style": "pytorch",
+            "type": "AMFusionResNet",
+            "zero_init_residual": false
+          },
+          "bbox_head": {
+            "anchor_generator": {
+              "octave_base_scale": 8,
+              "ratios": [
+                1.0
+              ],
+              "scales_per_octave": 1,
+              "strides": [
+                8,
+                16,
+                32,
+                64,
+                128
+              ],
+              "type": "AnchorGenerator"
+            },
+            "feat_channels": 256,
+            "in_channels": 256,
+            "loss_bbox": {
+              "loss_weight": 2.0,
+              "type": "GIoULoss"
+            },
+            "loss_cls": {
+              "beta": 2.0,
+              "loss_weight": 1.0,
+              "type": "QualityFocalLoss",
+              "use_sigmoid": true
+            },
+            "loss_dfl": {
+              "loss_weight": 0.25,
+              "type": "DistributionFocalLoss"
+            },
+            "num_classes": 3,
+            "reg_max": 16,
+            "stacked_convs": 4,
+            "type": "GFLHead"
+          },
+          "neck": {
+            "add_extra_convs": "on_output",
+            "in_channels": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "num_outs": 5,
+            "out_channels": 256,
+            "start_level": 1,
+            "type": "FPN"
+          },
+          "tanh": false,
+          "test_cfg": {
+            "max_per_img": 100,
+            "min_bbox_size": 0,
+            "nms": {
+              "iou_threshold": 0.3,
+              "type": "nms"
+            },
+            "nms_pre": 1000,
+            "score_thr": 0.05
+          },
+          "train_cfg": {
+            "allowed_border": -1,
+            "assigner": {
+              "topk": 9,
+              "type": "ATSSAssigner"
+            },
+            "debug": false,
+            "pos_weight": -1
+          },
+          "type": "GFLAF"
+        },
+        {
+          "attention_mode": "full",
+          "backbone": {
+            "depth": 50,
+            "dims_in": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "dims_lsk": [
+              32,
+              32,
+              64,
+              64
+            ],
+            "norm_cfg": {
+              "requires_grad": true,
+              "type": "BN"
+            },
+            "norm_eval": true,
+            "num_stages": 4,
+            "out_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pretrained": "pretrain_weights/resnet50-2stream.pth",
+            "style": "pytorch",
+            "type": "AMFusionResNet",
+            "zero_init_residual": false
+          },
+          "bbox_head": {
+            "anchor_generator": {
+              "octave_base_scale": 8,
+              "ratios": [
+                1.0
+              ],
+              "scales_per_octave": 1,
+              "strides": [
+                8,
+                16,
+                32,
+                64,
+                128
+              ],
+              "type": "AnchorGenerator"
+            },
+            "feat_channels": 256,
+            "in_channels": 256,
+            "loss_bbox": {
+              "loss_weight": 2.0,
+              "type": "GIoULoss"
+            },
+            "loss_cls": {
+              "beta": 2.0,
+              "loss_weight": 1.0,
+              "type": "QualityFocalLoss",
+              "use_sigmoid": true
+            },
+            "loss_dfl": {
+              "loss_weight": 0.25,
+              "type": "DistributionFocalLoss"
+            },
+            "num_classes": 3,
+            "reg_max": 16,
+            "stacked_convs": 4,
+            "type": "GFLHead"
+          },
+          "global_shift": {
+            "mode": "off"
+          },
+          "neck": {
+            "add_extra_convs": "on_output",
+            "in_channels": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "num_outs": 5,
+            "out_channels": 256,
+            "start_level": 1,
+            "type": "FPN"
+          },
+          "tanh": false,
+          "test_cfg": {
+            "max_per_img": 100,
+            "min_bbox_size": 0,
+            "nms": {
+              "iou_threshold": 0.3,
+              "type": "nms"
+            },
+            "nms_pre": 1000,
+            "score_thr": 0.05
+          },
+          "train_cfg": {
+            "allowed_border": -1,
+            "assigner": {
+              "topk": 9,
+              "type": "ATSSAssigner"
+            },
+            "debug": false,
+            "pos_weight": -1
+          },
+          "type": "GFLAF"
+        },
+        {
+          "attention_mode": "full",
+          "backbone": {
+            "depth": 50,
+            "dims_in": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "dims_lsk": [
+              32,
+              32,
+              64,
+              64
+            ],
+            "norm_cfg": {
+              "requires_grad": true,
+              "type": "BN"
+            },
+            "norm_eval": true,
+            "num_stages": 4,
+            "out_indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "pretrained": "pretrain_weights/resnet50-2stream.pth",
+            "style": "pytorch",
+            "type": "AMFusionResNet",
+            "zero_init_residual": false
+          },
+          "bbox_head": {
+            "anchor_generator": {
+              "octave_base_scale": 8,
+              "ratios": [
+                1.0
+              ],
+              "scales_per_octave": 1,
+              "strides": [
+                8,
+                16,
+                32,
+                64,
+                128
+              ],
+              "type": "AnchorGenerator"
+            },
+            "feat_channels": 256,
+            "in_channels": 256,
+            "loss_bbox": {
+              "loss_weight": 2.0,
+              "type": "GIoULoss"
+            },
+            "loss_cls": {
+              "beta": 2.0,
+              "loss_weight": 1.0,
+              "type": "QualityFocalLoss",
+              "use_sigmoid": true
+            },
+            "loss_dfl": {
+              "loss_weight": 0.25,
+              "type": "DistributionFocalLoss"
+            },
+            "num_classes": 3,
+            "reg_max": 16,
+            "stacked_convs": 4,
+            "type": "GFLHead"
+          },
+          "global_shift": {
+            "mode": "off"
+          },
+          "neck": {
+            "add_extra_convs": "on_output",
+            "in_channels": [
+              256,
+              512,
+              1024,
+              2048
+            ],
+            "num_outs": 5,
+            "out_channels": 256,
+            "start_level": 1,
+            "type": "FPN"
+          },
+          "tanh": false,
+          "test_cfg": {
+            "max_per_img": 100,
+            "min_bbox_size": 0,
+            "nms": {
+              "iou_threshold": 0.3,
+              "type": "nms"
+            },
+            "nms_pre": 1000,
+            "score_thr": 0.05
+          },
+          "train_cfg": {
+            "allowed_border": -1,
+            "assigner": {
+              "topk": 9,
+              "type": "ATSSAssigner"
+            },
+            "debug": false,
+            "pos_weight": -1
+          },
+          "type": "GFLAF"
+        }
+      ],
+      "momentum": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "optimizer_lr": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "optimizer_type": [
+        "SGD",
+        "SGD",
+        "SGD"
+      ],
+      "resume_from": [
+        null,
+        null,
+        null
+      ],
+      "runner_max_epochs": [
+        3,
+        3,
+        3
+      ],
+      "samples_per_gpu": [
+        8,
+        8,
+        8
+      ],
+      "seed": [
+        0,
+        0,
+        0
+      ],
+      "weight_decay": [
+        0.0001,
+        0.0001,
+        0.0001
+      ],
+      "workers_per_gpu": [
+        8,
+        8,
+        8
+      ]
+    },
+    "mismatches": [],
+    "protocol_equal_for_training": true,
+    "v1_config": "configs_local/exp_proxy_spdi_seed0.py",
+    "v2_config": "configs_local/exp_proxy_spdi_v2_seed0.py",
+    "v2_model_delta": {
+      "attention_mode": "full",
+      "global_shift": {
+        "mode": "off"
+      },
+      "p2_detail": {
+        "enabled": true,
+        "gate_channels": 1,
+        "init_mode": "zero_projection",
+        "zero_init": true
+      }
+    }
+  },
+  "resource": {
+    "amp": false,
+    "driver_peak_mib": "not_recorded_by_automated_sampler",
+    "driver_used_mib_observed_before_training": 21865,
+    "end_local": "2026-09-21T11:00:24",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_total_mib": 22528,
+    "gradient_accumulation": false,
+    "peak_allocated_mib_from_training_log": 17873,
+    "peak_reserved_mib": "not_recorded",
+    "start_local": "2026-09-21T10:06:46",
+    "wall_time_seconds": 3218
+  },
+  "spdi_v1_epoch3": {
+    "mAP25": 56.39,
+    "mAP50": 40.17,
+    "mAP75": 3.5,
+    "small": 27.95,
+    "tiny": 41.33,
+    "tiny1": 19.24,
+    "tiny2": 29.35,
+    "tiny3": 47.68
+  },
+  "status": "completed"
+}

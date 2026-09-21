@@ -1,0 +1,79 @@
+{
+  "base_missing_keys": [],
+  "base_unexpected_keys": [],
+  "checkpoint": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+  "features": [
+    {
+      "level": "P3",
+      "max_abs_diff": 0.0,
+      "shape": [
+        1,
+        256,
+        64,
+        80
+      ],
+      "torch_equal": true
+    },
+    {
+      "level": "P4",
+      "max_abs_diff": 0.0,
+      "shape": [
+        1,
+        256,
+        32,
+        40
+      ],
+      "torch_equal": true
+    },
+    {
+      "level": "P5",
+      "max_abs_diff": 0.0,
+      "shape": [
+        1,
+        256,
+        16,
+        20
+      ],
+      "torch_equal": true
+    },
+    {
+      "level": "P6",
+      "max_abs_diff": 0.0,
+      "shape": [
+        1,
+        256,
+        8,
+        10
+      ],
+      "torch_equal": true
+    },
+    {
+      "level": "P7",
+      "max_abs_diff": 0.0,
+      "shape": [
+        1,
+        256,
+        4,
+        5
+      ],
+      "torch_equal": true
+    }
+  ],
+  "identity_pass": true,
+  "v2_alpha": 1.0,
+  "v2_init_mode": "zero_projection",
+  "v2_missing_keys": [
+    "p2_detail_injection.alpha",
+    "p2_detail_injection.p2_fusion.weight",
+    "p2_detail_injection.p2_fusion.bias",
+    "p2_detail_injection.depthwise.weight",
+    "p2_detail_injection.depthwise.bias",
+    "p2_detail_injection.pointwise.weight",
+    "p2_detail_injection.pointwise.bias",
+    "p2_detail_injection.gate.weight",
+    "p2_detail_injection.gate.bias"
+  ],
+  "v2_pointwise_bias_abs_sum": 0.0,
+  "v2_pointwise_weight_abs_sum": 0.0,
+  "v2_unexpected_keys": []
+}
