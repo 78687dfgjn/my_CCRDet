@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "label": "p3p6",
+  "config": "configs_local/exp_proxy_p3p6_seed0.py",
+  "checkpoint": "/hy-tmp/CCRDet_assets/phase3g_warmstart_p3p6_seed0.pth",
+  "iterations_requested": 5,
+  "iterations_completed": 5,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "feature_shapes": {
+    "0": [
+      8,
+      256,
+      64,
+      80
+    ],
+    "1": [
+      8,
+      256,
+      32,
+      40
+    ],
+    "2": [
+      8,
+      256,
+      16,
+      20
+    ],
+    "3": [
+      8,
+      256,
+      8,
+      10
+    ]
+  },
+  "fusion_paths": [
+    {
+      "index": 0,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 1.488895058631897,
+      "log_vars": {
+        "loss_cls": 0.5850397348403931,
+        "loss_bbox": 0.7347232103347778,
+        "loss_dfl": 0.16913214325904846,
+        "loss": 1.488895058631897
+      },
+      "seconds": 2.1100361347198486,
+      "driver_used_mb": 20305
+    },
+    {
+      "iteration": 2,
+      "loss": 1.4870622158050537,
+      "log_vars": {
+        "loss_cls": 0.39688459038734436,
+        "loss_bbox": 0.8816266655921936,
+        "loss_dfl": 0.20855097472667694,
+        "loss": 1.4870622158050537
+      },
+      "seconds": 1.4126591682434082,
+      "driver_used_mb": 20309
+    },
+    {
+      "iteration": 3,
+      "loss": 1.4069329500198364,
+      "log_vars": {
+        "loss_cls": 0.39802229404449463,
+        "loss_bbox": 0.8366535902023315,
+        "loss_dfl": 0.17225706577301025,
+        "loss": 1.4069329500198364
+      },
+      "seconds": 1.4222595691680908,
+      "driver_used_mb": 20311
+    },
+    {
+      "iteration": 4,
+      "loss": 1.2479826211929321,
+      "log_vars": {
+        "loss_cls": 0.352014422416687,
+        "loss_bbox": 0.726577877998352,
+        "loss_dfl": 0.16939035058021545,
+        "loss": 1.2479826211929321
+      },
+      "seconds": 1.4223136901855469,
+      "driver_used_mb": 20311
+    },
+    {
+      "iteration": 5,
+      "loss": 1.1822023391723633,
+      "log_vars": {
+        "loss_cls": 0.25714245438575745,
+        "loss_bbox": 0.7569108605384827,
+        "loss_dfl": 0.1681489646434784,
+        "loss": 1.1822023391723633
+      },
+      "seconds": 1.4097435474395752,
+      "driver_used_mb": 20311
+    }
+  ],
+  "mean_iteration_seconds": 1.5554024219512939,
+  "peak_allocated_bytes": 18139526656,
+  "peak_reserved_bytes": 19748880384,
+  "peak_driver_used_mb": 20311,
+  "error": null
+}

@@ -1,0 +1,511 @@
+{
+  "status": "PASS",
+  "mode": "p2p7",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/work_dirs/baseline_seed_0/epoch_12.pth",
+  "candidate_checkpoint": "/hy-tmp/CCRDet_assets/phase3g_warmstart_p2p7_seed0.pth",
+  "checks": [
+    {
+      "source_key": "neck.lateral_convs.0.conv.bias",
+      "target_key": "neck.lateral_convs.1.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.lateral_convs.0.conv.weight",
+      "target_key": "neck.lateral_convs.1.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.lateral_convs.1.conv.bias",
+      "target_key": "neck.lateral_convs.2.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.lateral_convs.1.conv.weight",
+      "target_key": "neck.lateral_convs.2.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.lateral_convs.2.conv.bias",
+      "target_key": "neck.lateral_convs.3.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.lateral_convs.2.conv.weight",
+      "target_key": "neck.lateral_convs.3.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.0.conv.bias",
+      "target_key": "nect_t.lateral_convs.1.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.0.conv.weight",
+      "target_key": "nect_t.lateral_convs.1.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.1.conv.bias",
+      "target_key": "nect_t.lateral_convs.2.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.1.conv.weight",
+      "target_key": "nect_t.lateral_convs.2.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.2.conv.bias",
+      "target_key": "nect_t.lateral_convs.3.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.lateral_convs.2.conv.weight",
+      "target_key": "nect_t.lateral_convs.3.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.0.conv.bias",
+      "target_key": "neck.fpn_convs.1.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.0.conv.weight",
+      "target_key": "neck.fpn_convs.1.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.1.conv.bias",
+      "target_key": "neck.fpn_convs.2.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.1.conv.weight",
+      "target_key": "neck.fpn_convs.2.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.2.conv.bias",
+      "target_key": "neck.fpn_convs.3.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.2.conv.weight",
+      "target_key": "neck.fpn_convs.3.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.3.conv.bias",
+      "target_key": "neck.fpn_convs.4.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.3.conv.weight",
+      "target_key": "neck.fpn_convs.4.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.4.conv.bias",
+      "target_key": "neck.fpn_convs.5.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "neck.fpn_convs.4.conv.weight",
+      "target_key": "neck.fpn_convs.5.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.0.conv.bias",
+      "target_key": "nect_t.fpn_convs.1.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.0.conv.weight",
+      "target_key": "nect_t.fpn_convs.1.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.1.conv.bias",
+      "target_key": "nect_t.fpn_convs.2.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.1.conv.weight",
+      "target_key": "nect_t.fpn_convs.2.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.2.conv.bias",
+      "target_key": "nect_t.fpn_convs.3.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.2.conv.weight",
+      "target_key": "nect_t.fpn_convs.3.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.3.conv.bias",
+      "target_key": "nect_t.fpn_convs.4.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.3.conv.weight",
+      "target_key": "nect_t.fpn_convs.4.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.4.conv.bias",
+      "target_key": "nect_t.fpn_convs.5.conv.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "nect_t.fpn_convs.4.conv.weight",
+      "target_key": "nect_t.fpn_convs.5.conv.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.K_rgb.bias",
+      "target_key": "fuse.1.K_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.K_rgb.weight",
+      "target_key": "fuse.1.K_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.K_thermal.bias",
+      "target_key": "fuse.1.K_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.K_thermal.weight",
+      "target_key": "fuse.1.K_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv.0.bias",
+      "target_key": "fuse.1.Q_rgb.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv.0.weight",
+      "target_key": "fuse.1.Q_rgb.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv_beta.bias",
+      "target_key": "fuse.1.Q_rgb.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv_beta.weight",
+      "target_key": "fuse.1.Q_rgb.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv_gamma.bias",
+      "target_key": "fuse.1.Q_rgb.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_rgb.conv_gamma.weight",
+      "target_key": "fuse.1.Q_rgb.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv.0.bias",
+      "target_key": "fuse.1.Q_thermal.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv.0.weight",
+      "target_key": "fuse.1.Q_thermal.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv_beta.bias",
+      "target_key": "fuse.1.Q_thermal.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv_beta.weight",
+      "target_key": "fuse.1.Q_thermal.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv_gamma.bias",
+      "target_key": "fuse.1.Q_thermal.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.Q_thermal.conv_gamma.weight",
+      "target_key": "fuse.1.Q_thermal.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.V_rgb.bias",
+      "target_key": "fuse.1.V_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.V_rgb.weight",
+      "target_key": "fuse.1.V_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.V_thermal.bias",
+      "target_key": "fuse.1.V_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.0.V_thermal.weight",
+      "target_key": "fuse.1.V_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.K_rgb.bias",
+      "target_key": "fuse.2.K_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.K_rgb.weight",
+      "target_key": "fuse.2.K_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.K_thermal.bias",
+      "target_key": "fuse.2.K_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.K_thermal.weight",
+      "target_key": "fuse.2.K_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv.0.bias",
+      "target_key": "fuse.2.Q_rgb.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv.0.weight",
+      "target_key": "fuse.2.Q_rgb.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv_beta.bias",
+      "target_key": "fuse.2.Q_rgb.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv_beta.weight",
+      "target_key": "fuse.2.Q_rgb.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv_gamma.bias",
+      "target_key": "fuse.2.Q_rgb.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_rgb.conv_gamma.weight",
+      "target_key": "fuse.2.Q_rgb.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv.0.bias",
+      "target_key": "fuse.2.Q_thermal.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv.0.weight",
+      "target_key": "fuse.2.Q_thermal.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv_beta.bias",
+      "target_key": "fuse.2.Q_thermal.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv_beta.weight",
+      "target_key": "fuse.2.Q_thermal.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv_gamma.bias",
+      "target_key": "fuse.2.Q_thermal.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.Q_thermal.conv_gamma.weight",
+      "target_key": "fuse.2.Q_thermal.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.V_rgb.bias",
+      "target_key": "fuse.2.V_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.V_rgb.weight",
+      "target_key": "fuse.2.V_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.V_thermal.bias",
+      "target_key": "fuse.2.V_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.1.V_thermal.weight",
+      "target_key": "fuse.2.V_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.K_rgb.bias",
+      "target_key": "fuse.3.K_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.K_rgb.weight",
+      "target_key": "fuse.3.K_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.K_thermal.bias",
+      "target_key": "fuse.3.K_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.K_thermal.weight",
+      "target_key": "fuse.3.K_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv.0.bias",
+      "target_key": "fuse.3.Q_rgb.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv.0.weight",
+      "target_key": "fuse.3.Q_rgb.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv_beta.bias",
+      "target_key": "fuse.3.Q_rgb.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv_beta.weight",
+      "target_key": "fuse.3.Q_rgb.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv_gamma.bias",
+      "target_key": "fuse.3.Q_rgb.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_rgb.conv_gamma.weight",
+      "target_key": "fuse.3.Q_rgb.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv.0.bias",
+      "target_key": "fuse.3.Q_thermal.conv.0.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv.0.weight",
+      "target_key": "fuse.3.Q_thermal.conv.0.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv_beta.bias",
+      "target_key": "fuse.3.Q_thermal.conv_beta.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv_beta.weight",
+      "target_key": "fuse.3.Q_thermal.conv_beta.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv_gamma.bias",
+      "target_key": "fuse.3.Q_thermal.conv_gamma.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.Q_thermal.conv_gamma.weight",
+      "target_key": "fuse.3.Q_thermal.conv_gamma.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.V_rgb.bias",
+      "target_key": "fuse.3.V_rgb.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.V_rgb.weight",
+      "target_key": "fuse.3.V_rgb.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.V_thermal.bias",
+      "target_key": "fuse.3.V_thermal.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.2.V_thermal.weight",
+      "target_key": "fuse.3.V_thermal.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.3.conv1x1.bias",
+      "target_key": "fuse.4.conv1x1.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.3.conv1x1.weight",
+      "target_key": "fuse.4.conv1x1.weight",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.4.conv1x1.bias",
+      "target_key": "fuse.5.conv1x1.bias",
+      "torch_equal": true
+    },
+    {
+      "source_key": "fuse.4.conv1x1.weight",
+      "target_key": "fuse.5.conv1x1.weight",
+      "torch_equal": true
+    },
+    {
+      "fresh_target_level0_present": true,
+      "prefix": "neck.lateral_convs."
+    },
+    {
+      "fresh_target_level0_present": true,
+      "prefix": "nect_t.lateral_convs."
+    },
+    {
+      "fresh_target_level0_present": true,
+      "prefix": "neck.fpn_convs."
+    },
+    {
+      "fresh_target_level0_present": true,
+      "prefix": "nect_t.fpn_convs."
+    },
+    {
+      "fresh_target_level0_present": true,
+      "prefix": "fuse."
+    },
+    {
+      "P7_source_keys_retained": true
+    }
+  ]
+}

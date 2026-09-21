@@ -1,0 +1,110 @@
+{
+  "label": "P2-P7",
+  "factor": {
+    "P2": true,
+    "P7": true
+  },
+  "config": "configs_local/exp_proxy_p2p7_seed0.py",
+  "warmstart": "/hy-tmp/CCRDet_assets/phase3g_warmstart_p2p7_seed0.pth",
+  "metrics_by_epoch": {
+    "1": {
+      "mAP25": 0.5657,
+      "mAP50": 0.3491,
+      "mAP75": 0.0089,
+      "tiny": 0.3622,
+      "tiny1": 0.1845,
+      "tiny2": 0.2612,
+      "tiny3": 0.4288,
+      "small": 0.2469
+    },
+    "2": {
+      "mAP25": 0.572,
+      "mAP50": 0.368,
+      "mAP75": 0.0135,
+      "tiny": 0.382,
+      "tiny1": 0.2909,
+      "tiny2": 0.2791,
+      "tiny3": 0.4477,
+      "small": 0.2389
+    },
+    "3": {
+      "mAP25": 0.5744,
+      "mAP50": 0.4126,
+      "mAP75": 0.0311,
+      "tiny": 0.4281,
+      "tiny1": 0.3234,
+      "tiny2": 0.3293,
+      "tiny3": 0.4941,
+      "small": 0.2311
+    }
+  },
+  "train_loss_summary_by_epoch": {
+    "1": {
+      "loss_cls_mean": 0.24269833333333332,
+      "loss_cls_last": 0.20333,
+      "loss_bbox_mean": 0.7963225,
+      "loss_bbox_last": 0.69398,
+      "loss_dfl_mean": 0.26321249999999996,
+      "loss_dfl_last": 0.23118,
+      "loss_mean": 1.3022333333333334,
+      "loss_last": 1.12849,
+      "lr_mean": 0.000625,
+      "lr_last": 0.001
+    },
+    "2": {
+      "loss_cls_mean": 0.19768047619047624,
+      "loss_cls_last": 0.19278,
+      "loss_bbox_mean": 0.6787757142857144,
+      "loss_bbox_last": 0.65677,
+      "loss_dfl_mean": 0.22498714285714286,
+      "loss_dfl_last": 0.21931,
+      "loss_mean": 1.101444285714286,
+      "loss_last": 1.06886,
+      "lr_mean": 0.0010000000000000005,
+      "lr_last": 0.001
+    },
+    "3": {
+      "loss_cls_mean": 0.19186166666666662,
+      "loss_cls_last": 0.18896,
+      "loss_bbox_mean": 0.6592758333333334,
+      "loss_bbox_last": 0.66452,
+      "loss_dfl_mean": 0.21870999999999996,
+      "loss_dfl_last": 0.22022,
+      "loss_mean": 1.06985,
+      "loss_last": 1.0737,
+      "lr_mean": 0.0010000000000000002,
+      "lr_last": 0.001
+    }
+  },
+  "best_epoch": 3,
+  "best_metrics": {
+    "mAP25": 0.5744,
+    "mAP50": 0.4126,
+    "mAP75": 0.0311,
+    "tiny": 0.4281,
+    "tiny1": 0.3234,
+    "tiny2": 0.3293,
+    "tiny3": 0.4941,
+    "small": 0.2311
+  },
+  "epoch3_metrics": {
+    "mAP25": 0.5744,
+    "mAP50": 0.4126,
+    "mAP75": 0.0311,
+    "tiny": 0.4281,
+    "tiny1": 0.3234,
+    "tiny2": 0.3293,
+    "tiny3": 0.4941,
+    "small": 0.2311
+  },
+  "log_paths": [
+    "/hy-tmp/CCRDet_assets/work_dirs/phase3g_proxy_p2p7_seed0/20260921_152632.log.json",
+    "/hy-tmp/CCRDet_assets/work_dirs/phase3g_proxy_p2p7_seed0/20260921_172840.log.json"
+  ],
+  "log_time": {
+    "first_log_timestamp": "2026-09-21 15:26:32",
+    "last_log_timestamp": "2026-09-21 18:21:42",
+    "wall_seconds": 10510.0
+  },
+  "recovery_note": "Initial SSH-attached attempt stopped at epoch2 iteration 450/606 without OOM; completed run resumed from epoch_1.pth with optimizer state and completed epochs 2-3."
+}

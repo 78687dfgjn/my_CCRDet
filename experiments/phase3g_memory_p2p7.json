@@ -1,0 +1,1262 @@
+{
+  "status": "PASS",
+  "label": "p2p7",
+  "config": "configs_local/exp_proxy_p2p7_seed0.py",
+  "checkpoint": "/hy-tmp/CCRDet_assets/phase3g_warmstart_p2p7_seed0.pth",
+  "iterations_requested": 20,
+  "iterations_completed": 20,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "feature_shapes": {
+    "0": [
+      8,
+      256,
+      128,
+      160
+    ],
+    "1": [
+      8,
+      256,
+      64,
+      80
+    ],
+    "2": [
+      8,
+      256,
+      32,
+      40
+    ],
+    "3": [
+      8,
+      256,
+      16,
+      20
+    ],
+    "4": [
+      8,
+      256,
+      8,
+      10
+    ],
+    "5": [
+      8,
+      256,
+      4,
+      5
+    ]
+  },
+  "fusion_paths": [
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    },
+    {
+      "index": 0,
+      "class": "Fusion_CAT",
+      "spatial": [
+        128,
+        160
+      ]
+    },
+    {
+      "index": 1,
+      "class": "Fusion",
+      "spatial": [
+        64,
+        80
+      ]
+    },
+    {
+      "index": 2,
+      "class": "Fusion",
+      "spatial": [
+        32,
+        40
+      ]
+    },
+    {
+      "index": 3,
+      "class": "Fusion",
+      "spatial": [
+        16,
+        20
+      ]
+    },
+    {
+      "index": 4,
+      "class": "Fusion_CAT",
+      "spatial": [
+        8,
+        10
+      ]
+    },
+    {
+      "index": 5,
+      "class": "Fusion_CAT",
+      "spatial": [
+        4,
+        5
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 2.4664480686187744,
+      "log_vars": {
+        "loss_cls": 0.07651965320110321,
+        "loss_bbox": 1.784988284111023,
+        "loss_dfl": 0.6049402356147766,
+        "loss": 2.4664480686187744
+      },
+      "seconds": 2.7912871837615967,
+      "driver_used_mb": 19457
+    },
+    {
+      "iteration": 2,
+      "loss": 2.650461196899414,
+      "log_vars": {
+        "loss_cls": 0.08904867619276047,
+        "loss_bbox": 1.7987438440322876,
+        "loss_dfl": 0.7626687288284302,
+        "loss": 2.650461196899414
+      },
+      "seconds": 2.240670919418335,
+      "driver_used_mb": 20833
+    },
+    {
+      "iteration": 3,
+      "loss": 2.2616937160491943,
+      "log_vars": {
+        "loss_cls": 0.15845143795013428,
+        "loss_bbox": 1.6347492933273315,
+        "loss_dfl": 0.4684930145740509,
+        "loss": 2.2616937160491943
+      },
+      "seconds": 2.1835269927978516,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 4,
+      "loss": 2.1086435317993164,
+      "log_vars": {
+        "loss_cls": 0.19304175674915314,
+        "loss_bbox": 1.4618107080459595,
+        "loss_dfl": 0.453791081905365,
+        "loss": 2.1086435317993164
+      },
+      "seconds": 2.2022335529327393,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 5,
+      "loss": 2.186522960662842,
+      "log_vars": {
+        "loss_cls": 0.3886398673057556,
+        "loss_bbox": 1.407617449760437,
+        "loss_dfl": 0.3902658224105835,
+        "loss": 2.186522960662842
+      },
+      "seconds": 2.1895668506622314,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 6,
+      "loss": 2.0013840198516846,
+      "log_vars": {
+        "loss_cls": 0.41179561614990234,
+        "loss_bbox": 1.2245022058486938,
+        "loss_dfl": 0.3650861382484436,
+        "loss": 2.0013840198516846
+      },
+      "seconds": 2.195796251296997,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 7,
+      "loss": 2.0912349224090576,
+      "log_vars": {
+        "loss_cls": 0.4667690694332123,
+        "loss_bbox": 1.2797846794128418,
+        "loss_dfl": 0.34468114376068115,
+        "loss": 2.0912349224090576
+      },
+      "seconds": 2.1971473693847656,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 8,
+      "loss": 2.0372910499572754,
+      "log_vars": {
+        "loss_cls": 0.4788629412651062,
+        "loss_bbox": 1.2177786827087402,
+        "loss_dfl": 0.34064939618110657,
+        "loss": 2.0372910499572754
+      },
+      "seconds": 2.1861886978149414,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 9,
+      "loss": 1.9680508375167847,
+      "log_vars": {
+        "loss_cls": 0.6077986359596252,
+        "loss_bbox": 1.0602445602416992,
+        "loss_dfl": 0.300007700920105,
+        "loss": 1.9680508375167847
+      },
+      "seconds": 2.1994001865386963,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 10,
+      "loss": 1.7565011978149414,
+      "log_vars": {
+        "loss_cls": 0.4872988760471344,
+        "loss_bbox": 0.989136815071106,
+        "loss_dfl": 0.2800655961036682,
+        "loss": 1.7565011978149414
+      },
+      "seconds": 2.188673973083496,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 11,
+      "loss": 1.801553726196289,
+      "log_vars": {
+        "loss_cls": 0.42634904384613037,
+        "loss_bbox": 1.0582844018936157,
+        "loss_dfl": 0.31692028045654297,
+        "loss": 1.801553726196289
+      },
+      "seconds": 2.2015650272369385,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 12,
+      "loss": 1.6910605430603027,
+      "log_vars": {
+        "loss_cls": 0.3780369758605957,
+        "loss_bbox": 0.9977661371231079,
+        "loss_dfl": 0.31525737047195435,
+        "loss": 1.6910605430603027
+      },
+      "seconds": 2.218667507171631,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 13,
+      "loss": 1.6663520336151123,
+      "log_vars": {
+        "loss_cls": 0.37923553586006165,
+        "loss_bbox": 0.9946237206459045,
+        "loss_dfl": 0.2924928069114685,
+        "loss": 1.6663520336151123
+      },
+      "seconds": 2.2157065868377686,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 14,
+      "loss": 1.692079782485962,
+      "log_vars": {
+        "loss_cls": 0.42809760570526123,
+        "loss_bbox": 0.973136842250824,
+        "loss_dfl": 0.29084545373916626,
+        "loss": 1.692079782485962
+      },
+      "seconds": 2.1904754638671875,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 15,
+      "loss": 1.616262674331665,
+      "log_vars": {
+        "loss_cls": 0.3390505015850067,
+        "loss_bbox": 0.993680477142334,
+        "loss_dfl": 0.28353169560432434,
+        "loss": 1.616262674331665
+      },
+      "seconds": 2.2024660110473633,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 16,
+      "loss": 1.5409554243087769,
+      "log_vars": {
+        "loss_cls": 0.32952386140823364,
+        "loss_bbox": 0.9326550960540771,
+        "loss_dfl": 0.2787765562534332,
+        "loss": 1.5409554243087769
+      },
+      "seconds": 2.2016470432281494,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 17,
+      "loss": 1.7438268661499023,
+      "log_vars": {
+        "loss_cls": 0.40884774923324585,
+        "loss_bbox": 0.9821364879608154,
+        "loss_dfl": 0.35284262895584106,
+        "loss": 1.7438268661499023
+      },
+      "seconds": 2.203705072402954,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 18,
+      "loss": 1.6880182027816772,
+      "log_vars": {
+        "loss_cls": 0.35656240582466125,
+        "loss_bbox": 1.0159920454025269,
+        "loss_dfl": 0.3154638111591339,
+        "loss": 1.6880182027816772
+      },
+      "seconds": 2.2181589603424072,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 19,
+      "loss": 1.702671766281128,
+      "log_vars": {
+        "loss_cls": 0.48098692297935486,
+        "loss_bbox": 0.9361055493354797,
+        "loss_dfl": 0.2855793833732605,
+        "loss": 1.702671766281128
+      },
+      "seconds": 2.1917760372161865,
+      "driver_used_mb": 21635
+    },
+    {
+      "iteration": 20,
+      "loss": 1.5625624656677246,
+      "log_vars": {
+        "loss_cls": 0.3175117075443268,
+        "loss_bbox": 0.9482507109642029,
+        "loss_dfl": 0.29680004715919495,
+        "loss": 1.5625624656677246
+      },
+      "seconds": 2.2179782390594482,
+      "driver_used_mb": 21635
+    }
+  ],
+  "mean_iteration_seconds": 2.231831896305084,
+  "peak_allocated_bytes": 19887381504,
+  "peak_reserved_bytes": 21548236800,
+  "peak_driver_used_mb": 21635,
+  "error": null
+}

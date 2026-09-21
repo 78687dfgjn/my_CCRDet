@@ -1,0 +1,108 @@
+{
+  "label": "P3-P6",
+  "factor": {
+    "P2": false,
+    "P7": false
+  },
+  "config": "configs_local/exp_proxy_p3p6_seed0.py",
+  "warmstart": "/hy-tmp/CCRDet_assets/phase3g_warmstart_p3p6_seed0.pth",
+  "metrics_by_epoch": {
+    "1": {
+      "mAP25": 0.567,
+      "mAP50": 0.3835,
+      "mAP75": 0.0273,
+      "tiny": 0.4009,
+      "tiny1": 0.1886,
+      "tiny2": 0.277,
+      "tiny3": 0.4681,
+      "small": 0.2441
+    },
+    "2": {
+      "mAP25": 0.5582,
+      "mAP50": 0.3808,
+      "mAP75": 0.0303,
+      "tiny": 0.3955,
+      "tiny1": 0.192,
+      "tiny2": 0.2699,
+      "tiny3": 0.4629,
+      "small": 0.2582
+    },
+    "3": {
+      "mAP25": 0.5659,
+      "mAP50": 0.4031,
+      "mAP75": 0.0353,
+      "tiny": 0.4156,
+      "tiny1": 0.1369,
+      "tiny2": 0.2923,
+      "tiny3": 0.4802,
+      "small": 0.2731
+    }
+  },
+  "train_loss_summary_by_epoch": {
+    "1": {
+      "loss_cls_mean": 0.17141583333333332,
+      "loss_cls_last": 0.17191,
+      "loss_bbox_mean": 0.5826800000000001,
+      "loss_bbox_last": 0.57261,
+      "loss_dfl_mean": 0.16082166666666667,
+      "loss_dfl_last": 0.15938,
+      "loss_mean": 0.9149175,
+      "loss_last": 0.90391,
+      "lr_mean": 0.000625,
+      "lr_last": 0.001
+    },
+    "2": {
+      "loss_cls_mean": 0.1698316666666667,
+      "loss_cls_last": 0.16913,
+      "loss_bbox_mean": 0.5772491666666667,
+      "loss_bbox_last": 0.5922,
+      "loss_dfl_mean": 0.16036999999999998,
+      "loss_dfl_last": 0.16177,
+      "loss_mean": 0.90745,
+      "loss_last": 0.9231,
+      "lr_mean": 0.0010000000000000002,
+      "lr_last": 0.001
+    },
+    "3": {
+      "loss_cls_mean": 0.16524333333333333,
+      "loss_cls_last": 0.16467,
+      "loss_bbox_mean": 0.56479,
+      "loss_bbox_last": 0.56691,
+      "loss_dfl_mean": 0.15916750000000005,
+      "loss_dfl_last": 0.1597,
+      "loss_mean": 0.8891999999999999,
+      "loss_last": 0.89128,
+      "lr_mean": 0.0010000000000000002,
+      "lr_last": 0.001
+    }
+  },
+  "best_epoch": 3,
+  "best_metrics": {
+    "mAP25": 0.5659,
+    "mAP50": 0.4031,
+    "mAP75": 0.0353,
+    "tiny": 0.4156,
+    "tiny1": 0.1369,
+    "tiny2": 0.2923,
+    "tiny3": 0.4802,
+    "small": 0.2731
+  },
+  "epoch3_metrics": {
+    "mAP25": 0.5659,
+    "mAP50": 0.4031,
+    "mAP75": 0.0353,
+    "tiny": 0.4156,
+    "tiny1": 0.1369,
+    "tiny2": 0.2923,
+    "tiny3": 0.4802,
+    "small": 0.2731
+  },
+  "log_paths": [
+    "/hy-tmp/CCRDet_assets/work_dirs/phase3g_proxy_p3p6_seed0/20260921_143220.log.json"
+  ],
+  "log_time": {
+    "first_log_timestamp": "2026-09-21 14:32:20",
+    "last_log_timestamp": "2026-09-21 15:25:23",
+    "wall_seconds": 3183.0
+  }
+}

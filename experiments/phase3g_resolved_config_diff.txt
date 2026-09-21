@@ -1,0 +1,31 @@
+Phase 3G resolved-config semantic diff
+
+Control: configs_local/exp_proxy_control_p3p7_seed0.py
+C: configs_local/exp_proxy_p3p6_seed0.py
+D: configs_local/exp_proxy_p2p7_seed0.py
+
+[Protocol fields; equality against control]
+optimizer: C_equal=True D_equal=True
+optimizer_config: C_equal=True D_equal=True
+lr_config: C_equal=True D_equal=True
+runner: C_equal=True D_equal=True
+data.samples_per_gpu: C_equal=True D_equal=True
+data.workers_per_gpu: C_equal=True D_equal=True
+evaluation: C_equal=True D_equal=True
+seed: C_equal=True D_equal=True
+deterministic: C_equal=True D_equal=True
+train_cfg: C_equal=True D_equal=True
+test_cfg: C_equal=True D_equal=True
+loss_cls: C_equal=True D_equal=True
+loss_bbox: C_equal=True D_equal=True
+loss_dfl: C_equal=True D_equal=True
+
+[Architecture-only differences]
+C neck.start_level 1 -> 1; num_outs 5 -> 4
+C strides [8, 16, 32, 64, 128] -> [8, 16, 32, 64]
+C fusion_types ['fusion', 'fusion', 'fusion', 'fusion_cat', 'fusion_cat'] -> ['fusion', 'fusion', 'fusion', 'fusion_cat']
+D neck.start_level 1 -> 0; num_outs 5 -> 6
+D strides [8, 16, 32, 64, 128] -> [4, 8, 16, 32, 64, 128]
+D fusion_types ['fusion', 'fusion', 'fusion', 'fusion_cat', 'fusion_cat'] -> ['fusion_cat', 'fusion', 'fusion', 'fusion', 'fusion_cat', 'fusion_cat']
+C/D attention_mode=full; global_shift=off; p2_detail=disabled; p2_alignment=disabled
+All other differences are work_dir/load_from or listed pyramid fields.

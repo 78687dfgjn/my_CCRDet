@@ -117,3 +117,7 @@ not support claiming learned local residual alignment is effective.
 Proxy wall time was approximately 4,772 seconds (79.5 minutes). Peak allocated
 was 20,732,361,216 bytes; peak reserved was 21,701,328,896 bytes; peak driver
 usage was 22,173 MiB. Checkpoints remain outside Git.
+
+## Phase 3G status update
+
+Phase 3G freezes Phase 3F. CGMA_ALIGNMENT_CLAIM = NOT ESTABLISHED: the train-only ZNCC winner was the search-boundary corner (-2,+2), frozen calibration degraded mAP50 strongly, and learned P2 residual alignment had no positive diagnostic signal. The 44.40 proxy remains a retraining observation under train-derived fixed translation plus residual branch, not a validated geometric correction.

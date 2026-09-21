@@ -1,0 +1,189 @@
+{
+  "protocol": {
+    "seed": 0,
+    "deterministic": true,
+    "batch_size": 8,
+    "input_resolution": [
+      512,
+      640
+    ],
+    "optimizer": "SGD",
+    "lr": 0.001,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "max_epochs": 3,
+    "amp": false,
+    "gradient_accumulation": false,
+    "global_shift": "off",
+    "spdi": "disabled",
+    "p2_alignment": "disabled",
+    "pair_thermal_calibration": "disabled",
+    "attention": "full"
+  },
+  "cells": {
+    "P3-P7": {
+      "P2": false,
+      "P7": true,
+      "best_epoch": 3,
+      "best_metrics": {
+        "mAP25": 0.5635,
+        "mAP50": 0.4001,
+        "mAP75": 0.0346,
+        "tiny": 0.413,
+        "tiny1": 0.1356,
+        "tiny2": 0.2911,
+        "tiny3": 0.476,
+        "small": 0.2814
+      },
+      "epoch3_metrics": {
+        "mAP25": 0.5635,
+        "mAP50": 0.4001,
+        "mAP75": 0.0346,
+        "tiny": 0.413,
+        "tiny1": 0.1356,
+        "tiny2": 0.2911,
+        "tiny3": 0.476,
+        "small": 0.2814
+      },
+      "source": "Phase 3B paired control"
+    },
+    "P3-P6": {
+      "P2": false,
+      "P7": false,
+      "best_epoch": 3,
+      "best_metrics": {
+        "mAP25": 0.5659,
+        "mAP50": 0.4031,
+        "mAP75": 0.0353,
+        "tiny": 0.4156,
+        "tiny1": 0.1369,
+        "tiny2": 0.2923,
+        "tiny3": 0.4802,
+        "small": 0.2731
+      },
+      "epoch3_metrics": {
+        "mAP25": 0.5659,
+        "mAP50": 0.4031,
+        "mAP75": 0.0353,
+        "tiny": 0.4156,
+        "tiny1": 0.1369,
+        "tiny2": 0.2923,
+        "tiny3": 0.4802,
+        "small": 0.2731
+      },
+      "source": "Phase 3G new proxy"
+    },
+    "P2-P7": {
+      "P2": true,
+      "P7": true,
+      "best_epoch": 3,
+      "best_metrics": {
+        "mAP25": 0.5744,
+        "mAP50": 0.4126,
+        "mAP75": 0.0311,
+        "tiny": 0.4281,
+        "tiny1": 0.3234,
+        "tiny2": 0.3293,
+        "tiny3": 0.4941,
+        "small": 0.2311
+      },
+      "epoch3_metrics": {
+        "mAP25": 0.5744,
+        "mAP50": 0.4126,
+        "mAP75": 0.0311,
+        "tiny": 0.4281,
+        "tiny1": 0.3234,
+        "tiny2": 0.3293,
+        "tiny3": 0.4941,
+        "small": 0.2311
+      },
+      "source": "Phase 3G new proxy"
+    },
+    "P2-P6": {
+      "P2": true,
+      "P7": false,
+      "best_epoch": 3,
+      "best_metrics": {
+        "mAP25": 0.5715,
+        "mAP50": 0.4158,
+        "mAP75": 0.0329,
+        "tiny": 0.4291,
+        "tiny1": 0.3222,
+        "tiny2": 0.3108,
+        "tiny3": 0.4924,
+        "small": 0.254
+      },
+      "epoch3_metrics": {
+        "mAP25": 0.5715,
+        "mAP50": 0.4158,
+        "mAP75": 0.0329,
+        "tiny": 0.4291,
+        "tiny1": 0.3222,
+        "tiny2": 0.3108,
+        "tiny3": 0.4924,
+        "small": 0.254
+      },
+      "source": "Phase 3B paired Lite-P2 proxy"
+    }
+  },
+  "contrasts_percentage_points": {
+    "P2 effect with P7 (P2-P7 minus P3-P7)": {
+      "mAP25": 1.090000000000002,
+      "mAP50": 1.250000000000001,
+      "mAP75": -0.35,
+      "tiny": 1.5100000000000002,
+      "tiny1": 18.78,
+      "tiny2": 3.819999999999996,
+      "tiny3": 1.8100000000000005,
+      "small": -5.0299999999999985
+    },
+    "P2 effect without P7 (P2-P6 minus P3-P6)": {
+      "mAP25": 0.5600000000000049,
+      "mAP50": 1.269999999999999,
+      "mAP75": -0.23999999999999994,
+      "tiny": 1.3499999999999956,
+      "tiny1": 18.529999999999998,
+      "tiny2": 1.8500000000000016,
+      "tiny3": 1.2199999999999989,
+      "small": -1.9100000000000006
+    },
+    "P7 effect without P2 (P3-P7 minus P3-P6)": {
+      "mAP25": -0.23999999999999577,
+      "mAP50": -0.30000000000000027,
+      "mAP75": -0.06999999999999992,
+      "tiny": -0.26000000000000467,
+      "tiny1": -0.12999999999999956,
+      "tiny2": -0.11999999999999789,
+      "tiny3": -0.4200000000000037,
+      "small": 0.8299999999999974
+    },
+    "P7 effect with P2 (P2-P7 minus P2-P6)": {
+      "mAP25": 0.29000000000000137,
+      "mAP50": -0.31999999999999806,
+      "mAP75": -0.17999999999999994,
+      "tiny": -0.10000000000000009,
+      "tiny1": 0.12000000000000344,
+      "tiny2": 1.849999999999996,
+      "tiny3": 0.16999999999999793,
+      "small": -2.2900000000000005
+    }
+  },
+  "interaction_percentage_points": {
+    "mAP25": 0.5299999999999971,
+    "mAP50": -0.019999999999997797,
+    "mAP75": -0.11000000000000004,
+    "tiny": 0.16000000000000458,
+    "tiny1": 0.25000000000000355,
+    "tiny2": 1.9699999999999942,
+    "tiny3": 0.5900000000000016,
+    "small": -3.119999999999998
+  },
+  "P2_MECHANISM": "SUPPORTED",
+  "BEST_PROXY_TOPOLOGY": "P2-P6",
+  "PHASE3F_CGMA_ALIGNMENT_CLAIM": "NOT ESTABLISHED",
+  "phase3f_reason": [
+    "ZNCC winner (-2,+2) was a search-boundary corner",
+    "frozen calibration degraded mAP50 strongly",
+    "learned P2 residual alignment had no positive diagnostic signal"
+  ]
+}
