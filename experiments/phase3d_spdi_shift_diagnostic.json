@@ -1,0 +1,35 @@
+{
+  "checkpoint": "/root/CCRDet/work_dirs/phase3d_proxy_spdi_seed0/epoch_3.pth",
+  "protocol": "inference-only, official evaluator, same config and checkpoint",
+  "off": {
+    "mAP25": 56.38999999999999,
+    "mAP50_all": 40.17,
+    "mAP75": 3.5000000000000004,
+    "mAP50_tiny": 41.33,
+    "mAP50_tiny1": 19.24,
+    "mAP50_tiny2": 29.349999999999998,
+    "mAP50_tiny3": 47.68,
+    "mAP50_small": 27.950000000000003
+  },
+  "fixed_dx_-1_dy_0": {
+    "mAP25": 56.38999999999999,
+    "mAP50_all": 41.97,
+    "mAP75": 4.760000000000001,
+    "mAP50_tiny": 43.28,
+    "mAP50_tiny1": 12.72,
+    "mAP50_tiny2": 31.44,
+    "mAP50_tiny3": 48.8,
+    "mAP50_small": 27.85
+  },
+  "delta_fixed_minus_off": {
+    "mAP25": 0.0,
+    "mAP50_all": 1.8,
+    "mAP75": 1.26,
+    "mAP50_tiny": 1.95,
+    "mAP50_tiny1": -6.52,
+    "mAP50_tiny2": 2.09,
+    "mAP50_tiny3": 1.12,
+    "mAP50_small": -0.1
+  },
+  "not_trained": true
+}

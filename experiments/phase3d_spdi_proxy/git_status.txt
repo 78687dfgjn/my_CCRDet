@@ -1,0 +1,514 @@
+ M mmdet/__pycache__/__init__.cpython-38.pyc
+ M mmdet/__pycache__/version.cpython-38.pyc
+ M mmdet/apis/__pycache__/__init__.cpython-38.pyc
+ M mmdet/apis/__pycache__/inference.cpython-38.pyc
+ M mmdet/apis/__pycache__/test.cpython-38.pyc
+ M mmdet/apis/__pycache__/train.cpython-38.pyc
+ M mmdet/core/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/anchor/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/anchor/__pycache__/anchor_generator.cpython-38.pyc
+ M mmdet/core/anchor/__pycache__/builder.cpython-38.pyc
+ M mmdet/core/anchor/__pycache__/point_generator.cpython-38.pyc
+ M mmdet/core/anchor/__pycache__/utils.cpython-38.pyc
+ M mmdet/core/bbox/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/__pycache__/builder.cpython-38.pyc
+ M mmdet/core/bbox/__pycache__/transforms.cpython-38.pyc
+ M mmdet/core/bbox/__pycache__/transforms_rbbox.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/approx_max_iou_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/ascend_assign_result.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/ascend_max_iou_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/assign_result.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/atss_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/base_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/center_region_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/grid_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/hierarchical_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/hungarian_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/mask_hungarian_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/max_iou_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/point_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/qls_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/region_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/sim_ota_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/task_aligned_assigner.cpython-38.pyc
+ M mmdet/core/bbox/assigners/__pycache__/uniform_assigner.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/base_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/bucketing_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/delta_xywh_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/distance_point_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/legacy_delta_xywh_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/pseudo_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/tblr_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/coder/__pycache__/yolo_bbox_coder.cpython-38.pyc
+ M mmdet/core/bbox/iou_calculators/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/iou_calculators/__pycache__/builder.cpython-38.pyc
+ M mmdet/core/bbox/iou_calculators/__pycache__/iou2d_calculator.cpython-38.pyc
+ M mmdet/core/bbox/iou_calculators/__pycache__/metric_calculator.cpython-38.pyc
+ M mmdet/core/bbox/match_costs/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/match_costs/__pycache__/builder.cpython-38.pyc
+ M mmdet/core/bbox/match_costs/__pycache__/match_cost.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/base_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/combined_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/instance_balanced_pos_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/iou_balanced_neg_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/mask_pseudo_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/mask_sampling_result.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/ohem_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/pseudo_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/random_sampler.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/sampling_result.cpython-38.pyc
+ M mmdet/core/bbox/samplers/__pycache__/score_hlr_sampler.cpython-38.pyc
+ M mmdet/core/data_structures/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/data_structures/__pycache__/general_data.cpython-38.pyc
+ M mmdet/core/data_structures/__pycache__/instance_data.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/bbox_overlaps.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/class_names.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/eval_hooks.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/mean_ap.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/panoptic_utils.cpython-38.pyc
+ M mmdet/core/evaluation/__pycache__/recall.cpython-38.pyc
+ M mmdet/core/hook/__init__.py
+ M mmdet/core/hook/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/checkloss_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/ema.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/memory_profiler_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/set_epoch_info_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/sync_norm_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/sync_random_size_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/wandblogger_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/yolox_lrupdater_hook.cpython-38.pyc
+ M mmdet/core/hook/__pycache__/yolox_mode_switch_hook.cpython-38.pyc
+ M mmdet/core/mask/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/mask/__pycache__/mask_target.cpython-38.pyc
+ M mmdet/core/mask/__pycache__/structures.cpython-38.pyc
+ M mmdet/core/mask/__pycache__/utils.cpython-38.pyc
+ M mmdet/core/optimizers/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/optimizers/__pycache__/builder.cpython-38.pyc
+ M mmdet/core/optimizers/__pycache__/layer_decay_optimizer_constructor.cpython-38.pyc
+ M mmdet/core/post_processing/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/post_processing/__pycache__/bbox_nms.cpython-38.pyc
+ M mmdet/core/post_processing/__pycache__/matrix_nms.cpython-38.pyc
+ M mmdet/core/post_processing/__pycache__/merge_augs.cpython-38.pyc
+ M mmdet/core/post_processing/__pycache__/merge_augs_rotate.cpython-38.pyc
+ M mmdet/core/utils/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/utils/__pycache__/dist_utils.cpython-38.pyc
+ M mmdet/core/utils/__pycache__/misc.cpython-38.pyc
+ M mmdet/core/visualization/__pycache__/__init__.cpython-38.pyc
+ M mmdet/core/visualization/__pycache__/image.cpython-38.pyc
+ M mmdet/core/visualization/__pycache__/palette.cpython-38.pyc
+ M mmdet/datasets/__pycache__/__init__.cpython-38.pyc
+ M mmdet/datasets/__pycache__/builder.cpython-38.pyc
+ M mmdet/datasets/__pycache__/cityscapes.cpython-38.pyc
+ M mmdet/datasets/__pycache__/coco.cpython-38.pyc
+ M mmdet/datasets/__pycache__/coco_occluded.cpython-38.pyc
+ M mmdet/datasets/__pycache__/coco_panoptic.cpython-38.pyc
+ M mmdet/datasets/__pycache__/custom.cpython-38.pyc
+ M mmdet/datasets/__pycache__/dataset_wrappers.cpython-38.pyc
+ M mmdet/datasets/__pycache__/deepfashion.cpython-38.pyc
+ M mmdet/datasets/__pycache__/droneperson.cpython-38.pyc
+ M mmdet/datasets/__pycache__/dronevehicle.cpython-38.pyc
+ M mmdet/datasets/__pycache__/lvis.cpython-38.pyc
+ M mmdet/datasets/__pycache__/objects365.cpython-38.pyc
+ M mmdet/datasets/__pycache__/openimages.cpython-38.pyc
+ M mmdet/datasets/__pycache__/utils.cpython-38.pyc
+ M mmdet/datasets/__pycache__/vedai.cpython-38.pyc
+ M mmdet/datasets/__pycache__/voc.cpython-38.pyc
+ M mmdet/datasets/__pycache__/vtuav.cpython-38.pyc
+ M mmdet/datasets/__pycache__/wider_face.cpython-38.pyc
+ M mmdet/datasets/__pycache__/xml_style.cpython-38.pyc
+ M mmdet/datasets/api_wrappers/__pycache__/__init__.cpython-38.pyc
+ M mmdet/datasets/api_wrappers/__pycache__/coco_api.cpython-38.pyc
+ M mmdet/datasets/api_wrappers/__pycache__/panoptic_evaluation.cpython-38.pyc
+ M mmdet/datasets/evaluation/coco/__pycache__/cocoeval.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/__init__.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/auto_augment.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/compose.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/formatting.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/instaboost.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/loading.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/multispectral_transforms.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/test_time_aug.cpython-38.pyc
+ M mmdet/datasets/pipelines/__pycache__/transforms.cpython-38.pyc
+ M mmdet/datasets/samplers/__pycache__/__init__.cpython-38.pyc
+ M mmdet/datasets/samplers/__pycache__/class_aware_sampler.cpython-38.pyc
+ M mmdet/datasets/samplers/__pycache__/distributed_sampler.cpython-38.pyc
+ M mmdet/datasets/samplers/__pycache__/group_sampler.cpython-38.pyc
+ M mmdet/datasets/samplers/__pycache__/infinite_sampler.cpython-38.pyc
+ M mmdet/models/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/__pycache__/builder.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/a_af.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/csp_darknet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/darknet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/detectors_resnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/detectors_resnext.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/efficientnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/hourglass.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/hrnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/mobilenet_v2.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/pvt.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/regnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/res2net.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/resnest.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/resnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/resnext.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/ssd_vgg.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/swin.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/trident_resnet.cpython-38.pyc
+ M mmdet/models/backbones/__pycache__/ts_resnet.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/anchor_free_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/anchor_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ascend_anchor_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ascend_retina_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ascend_ssd_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/atss_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/autoassign_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/base_dense_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/base_mask_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/cascade_rpn_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/centernet_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/centripetal_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/corner_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ddod_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/deformable_detr_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/dense_test_mixins.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/detr_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/embedding_rpn_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/fcos_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/fovea_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/free_anchor_retina_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/fsaf_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ga_retina_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ga_rpn_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/gfl_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/guided_anchor_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/lad_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ld_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/mask2former_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/maskformer_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/nasfcos_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/paa_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/pisa_retinanet_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/pisa_ssd_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/reppoints_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/retina_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/retina_sepbn_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/rpn_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/sabl_retina_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/solo_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/solov2_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/ssd_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/tood_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/vfnet_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/yolact_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/yolo_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/yolof_head.cpython-38.pyc
+ M mmdet/models/dense_heads/__pycache__/yolox_head.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/afdet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/atss.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/autoassign.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/base.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/cascade_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/centernet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/cornernet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/ddod.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/deformable_detr.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/detr.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/fast_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/faster_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/fcos.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/fovea.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/fsaf.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/gfl.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/grid_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/htc.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/kd_one_stage.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/lad.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/mask2former.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/mask_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/mask_scoring_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/maskformer.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/nasfcos.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/paa.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/panoptic_fpn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/panoptic_two_stage_segmentor.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/point_rend.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/queryinst.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/reppoints_detector.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/retinanet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/rpn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/scnet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/single_stage.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/single_stage_instance_seg.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/solo.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/solov2.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/sparse_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/tood.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/trident_faster_rcnn.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/two_stage.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/vfnet.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/yolact.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/yolo.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/yolof.cpython-38.pyc
+ M mmdet/models/detectors/__pycache__/yolox.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/accuracy.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/ae_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/balanced_l1_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/cross_entropy_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/dice_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/focal_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/gaussian_focal_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/gfocal_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/ghm_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/iou_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/kd_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/mse_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/pisa_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/seesaw_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/smooth_l1_loss.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/utils.cpython-38.pyc
+ M mmdet/models/losses/__pycache__/varifocal_loss.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/bfp.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/channel_mapper.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/ct_resnet_neck.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/dilated_encoder.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/dyhead.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/fpg.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/fpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/fpn_carafe.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/hrfpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/nas_fpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/nasfcos_fpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/pafpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/rfp.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/ssd_neck.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/ssfpn.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/yolo_neck.cpython-38.pyc
+ M mmdet/models/necks/__pycache__/yolox_pafpn.cpython-38.pyc
+ M mmdet/models/plugins/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/plugins/__pycache__/dropblock.cpython-38.pyc
+ M mmdet/models/plugins/__pycache__/msdeformattn_pixel_decoder.cpython-38.pyc
+ M mmdet/models/plugins/__pycache__/pixel_decoder.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/base_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/cascade_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/double_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/dynamic_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/grid_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/htc_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/mask_scoring_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/pisa_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/point_rend_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/scnet_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/sparse_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/standard_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/test_mixins.cpython-38.pyc
+ M mmdet/models/roi_heads/__pycache__/trident_roi_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/bbox_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/convfc_bbox_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/dii_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/double_bbox_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/sabl_head.cpython-38.pyc
+ M mmdet/models/roi_heads/bbox_heads/__pycache__/scnet_bbox_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/coarse_mask_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/dynamic_mask_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/fcn_mask_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/feature_relay_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/fused_semantic_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/global_context_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/grid_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/htc_mask_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/mask_point_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/maskiou_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/scnet_mask_head.cpython-38.pyc
+ M mmdet/models/roi_heads/mask_heads/__pycache__/scnet_semantic_head.cpython-38.pyc
+ M mmdet/models/roi_heads/roi_extractors/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/roi_heads/roi_extractors/__pycache__/base_roi_extractor.cpython-38.pyc
+ M mmdet/models/roi_heads/roi_extractors/__pycache__/generic_roi_extractor.cpython-38.pyc
+ M mmdet/models/roi_heads/roi_extractors/__pycache__/single_level_roi_extractor.cpython-38.pyc
+ M mmdet/models/roi_heads/shared_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/roi_heads/shared_heads/__pycache__/res_layer.cpython-38.pyc
+ M mmdet/models/seg_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/seg_heads/__pycache__/base_semantic_head.cpython-38.pyc
+ M mmdet/models/seg_heads/__pycache__/panoptic_fpn_head.cpython-38.pyc
+ M mmdet/models/seg_heads/panoptic_fusion_heads/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/seg_heads/panoptic_fusion_heads/__pycache__/base_panoptic_fusion_head.cpython-38.pyc
+ M mmdet/models/seg_heads/panoptic_fusion_heads/__pycache__/heuristic_fusion_head.cpython-38.pyc
+ M mmdet/models/seg_heads/panoptic_fusion_heads/__pycache__/maskformer_fusion_head.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/__init__.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/brick_wrappers.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/builder.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/ckpt_convert.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/conv_module.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/conv_upsample.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/conv_ws.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/csp_layer.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/gaussian_target.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/inverted_residual.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/make_divisible.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/misc.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/norm.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/normed_predictor.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/panoptic_gt_processing.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/point_sample.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/positional_encoding.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/res_layer.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/se_layer.cpython-38.pyc
+ M mmdet/models/utils/__pycache__/transformer.cpython-38.pyc
+ M mmdet/ops/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/dcn/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/dcn/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/dcn/functions/__pycache__/deform_conv.cpython-38.pyc
+ M mmdet/ops/dcn/functions/__pycache__/deform_pool.cpython-38.pyc
+ M mmdet/ops/dcn/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/dcn/modules/__pycache__/deform_conv.cpython-38.pyc
+ M mmdet/ops/dcn/modules/__pycache__/deform_pool.cpython-38.pyc
+ M mmdet/ops/gcb/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/gcb/__pycache__/context_block.cpython-38.pyc
+ M mmdet/ops/masked_conv/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/masked_conv/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/masked_conv/functions/__pycache__/masked_conv.cpython-38.pyc
+ M mmdet/ops/masked_conv/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/masked_conv/modules/__pycache__/masked_conv.cpython-38.pyc
+ M mmdet/ops/nms/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/nms/__pycache__/nms_wrapper.cpython-38.pyc
+ M mmdet/ops/nms/__pycache__/rnms_wrapper.cpython-38.pyc
+ M mmdet/ops/nms/__pycache__/wasserstein_nms.cpython-38.pyc
+ M mmdet/ops/psroi_align_rotated/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/psroi_align_rotated/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/psroi_align_rotated/functions/__pycache__/psroi_align_rotated.cpython-38.pyc
+ M mmdet/ops/psroi_align_rotated/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/psroi_align_rotated/modules/__pycache__/psroi_align_rotated.cpython-38.pyc
+ M mmdet/ops/roi_align/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align/functions/__pycache__/roi_align.cpython-38.pyc
+ M mmdet/ops/roi_align/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align/modules/__pycache__/roi_align.cpython-38.pyc
+ M mmdet/ops/roi_align_rotated/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align_rotated/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align_rotated/functions/__pycache__/roi_align_rotated.cpython-38.pyc
+ M mmdet/ops/roi_align_rotated/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_align_rotated/modules/__pycache__/roi_align_rotated.cpython-38.pyc
+ M mmdet/ops/roi_pool/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_pool/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_pool/functions/__pycache__/roi_pool.cpython-38.pyc
+ M mmdet/ops/roi_pool/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/roi_pool/modules/__pycache__/roi_pool.cpython-38.pyc
+ M mmdet/ops/sigmoid_focal_loss/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/sigmoid_focal_loss/functions/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/sigmoid_focal_loss/functions/__pycache__/sigmoid_focal_loss.cpython-38.pyc
+ M mmdet/ops/sigmoid_focal_loss/modules/__pycache__/__init__.cpython-38.pyc
+ M mmdet/ops/sigmoid_focal_loss/modules/__pycache__/sigmoid_focal_loss.cpython-38.pyc
+ M mmdet/utils/__pycache__/__init__.cpython-38.pyc
+ M mmdet/utils/__pycache__/ascend_util.cpython-38.pyc
+ M mmdet/utils/__pycache__/collect_env.cpython-38.pyc
+ M mmdet/utils/__pycache__/compat_config.cpython-38.pyc
+ M mmdet/utils/__pycache__/contextmanagers.cpython-38.pyc
+ M mmdet/utils/__pycache__/logger.cpython-38.pyc
+ M mmdet/utils/__pycache__/memory.cpython-38.pyc
+ M mmdet/utils/__pycache__/misc.cpython-38.pyc
+ M mmdet/utils/__pycache__/replace_cfg_vals.cpython-38.pyc
+ M mmdet/utils/__pycache__/rfnext.cpython-38.pyc
+ M mmdet/utils/__pycache__/setup_env.cpython-38.pyc
+ M mmdet/utils/__pycache__/split_batch.cpython-38.pyc
+ M mmdet/utils/__pycache__/util_distribution.cpython-38.pyc
+ M mmdet/utils/__pycache__/util_mixins.cpython-38.pyc
+ D pretrain_weights/.gitkeep
+ M tools/__pycache__/feature_analyze.cpython-38.pyc
+ D weights/.gitkeep
+?? .ipynb_checkpoints/
+?? RGBTDronePerson.zip
+?? configs_local/__pycache__/
+?? configs_local/exp_proxy_spdi_seed0.py
+?? docs/.ipynb_checkpoints/
+?? docs/BASELINE_AUDIT.md
+?? docs/CHECKPOINT_CONFIG_DIFF.md
+?? docs/CHECKPOINT_FORENSICS.md
+?? docs/DATASET_AUDIT_PHASE1.md
+?? docs/FEATURE_ANALYZE_AUDIT_PHASE1.md
+?? docs/FULL_BASELINE_REPRODUCTION.md
+?? docs/HISTORICAL_ASSET_INVENTORY.md
+?? docs/HISTORICAL_EVIDENCE_AUDIT.md
+?? docs/LOCAL_CONFIG_DIFF.md
+?? docs/METRIC_PROVENANCE_AUDIT.md
+?? docs/PHASE1_GATE_REPORT.md
+?? docs/RESEARCH_DIRECTION_REEVALUATION.md
+?? docs/RUNTIME_PROVENANCE.md
+?? docs/checkpoint_rgbt_config.py
+?? docs/checkpoint_rgbt_meta.json
+?? experiments/__pycache__/
+?? experiments/aggregate_baseline_stats.py
+?? experiments/baseline_queue.pid
+?? experiments/baseline_seed_0/
+?? experiments/baseline_seed_queue.log
+?? experiments/dataset_stats.json
+?? experiments/full_seed_1001937037/
+?? experiments/historical_audit/
+?? experiments/metric_provenance.json
+?? experiments/official_checkpoint/
+?? experiments/phase3a_global_fixed_inference/
+?? experiments/phase3a_global_fixed_seed0/
+?? experiments/phase3a_global_p2p6_seed0/
+?? experiments/phase3a_p2p6_seed0/
+?? experiments/phase3b_proxy_control/
+?? experiments/phase3b_proxy_lite/
+?? experiments/phase3c_full_lite_p2p6_seed0/config_resolved.py
+?? experiments/phase3c_full_lite_p2p6_seed0/git_status.txt
+?? experiments/phase3c_full_lite_p2p6_seed0/resource_monitor.csv
+?? experiments/phase3c_full_lite_p2p6_seed0/resource_monitor.nohup.log
+?? experiments/phase3c_full_lite_p2p6_seed0/resource_monitor.pid
+?? experiments/phase3c_full_lite_p2p6_seed0/train.log
+?? experiments/phase3c_litep2_shift_fixed_m1/
+?? experiments/phase3c_litep2_shift_off/
+?? experiments/phase3d_initialization_audit.json
+?? experiments/phase3d_resolved_config_diff.txt
+?? experiments/phase3d_spdi_proxy/
+?? experiments/phase3d_spdi_resolved_config.py
+?? experiments/run_stat_seed.py
+?? experiments/smoke_test/
+?? experiments/train_mmdet28_compat.py
+?? mmdet.egg-info/
+?? mmdet/.mim/
+?? mmdet/core/hook/__pycache__/spdi_gradient_hook.cpython-38.pyc
+?? mmdet/core/hook/spdi_gradient_hook.py
+?? mmdet/models/detectors/__pycache__/afdet.cpython-311.pyc
+?? mmdet/models/detectors/afdet.py.orig
+?? mmdet/models/detectors/afdet.py.rej
+?? mmdet/models/utils/__init__.py.orig
+?? mmdet/models/utils/__pycache__/global_shift.cpython-38.pyc
+?? mmdet/models/utils/__pycache__/p2_detail_injection.cpython-38.pyc
+?? pretrain_weights
+?? resnet50-2stream.zip
+?? results
+?? setup.cfg
+?? setup.py
+?? sub_train_thermal.json
+?? sub_train_visible.json
+?? tests/__pycache__/
+?? tools/__pycache__/analyze_ccrdet_failures.cpython-38.pyc
+?? tools/__pycache__/check_phase3a_semantic_warmstart.cpython-311.pyc
+?? tools/__pycache__/check_phase3a_semantic_warmstart.cpython-38.pyc
+?? tools/__pycache__/make_phase3a_warmstart.cpython-311.pyc
+?? tools/__pycache__/make_phase3a_warmstart.cpython-38.pyc
+?? tools/__pycache__/phase3b_batch8_smoke.cpython-311.pyc
+?? tools/__pycache__/phase3b_batch8_smoke.cpython-38.pyc
+?? tools/__pycache__/phase3c_preflight.cpython-38.pyc
+?? tools/analyze_ccrdet_failures.py
+?? tools/feature_analyze.py
+?? train
+?? train_thermal.json
+?? val
+?? val_thermal.json
+?? weight_rgbt.zip
+?? weights
+?? work_dirs

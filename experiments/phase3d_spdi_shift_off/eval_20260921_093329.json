@@ -1,0 +1,1 @@
+{"config": "configs_local/exp_proxy_spdi_seed0.py", "metric": {"bbox_mAP_75": 0.035, "bbox_mAP_25": 0.5639, "bbox_mAP_50": 0.4017, "bbox_mAP_50_tiny": 0.4133, "bbox_mAP_50_tiny1": 0.1924, "bbox_mAP_50_tiny2": 0.2935, "bbox_mAP_50_tiny3": 0.4768, "bbox_mAP_50_small": 0.2795, "bbox_mAP_copypaste": "0.5639 0.5527 0.4549 0.4286 0.6112 0.7768 0.6685 0.4017"}}

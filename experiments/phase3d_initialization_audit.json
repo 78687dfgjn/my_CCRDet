@@ -1,0 +1,101 @@
+{
+  "config": {
+    "path": "/root/CCRDet/configs_local/exp_proxy_spdi_seed0.py",
+    "seed": 0,
+    "deterministic": true,
+    "load_from": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "resume_from": null,
+    "optimizer_lr": 0.001,
+    "runner_max_epochs": 3,
+    "samples_per_gpu": 8,
+    "workers_per_gpu": 8,
+    "input_size": [
+      640,
+      512
+    ]
+  },
+  "control_config": "/root/CCRDet/work_dirs/phase3b_proxy_control_p3p7_seed0/exp_proxy_control_p3p7_seed0.py",
+  "protocol_diff_count": 0,
+  "protocol_diffs": [],
+  "checkpoint": {
+    "path": "/root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth",
+    "sha256": "18c009657ab2e6f437f857b5a7730b9ec98343931614f73f7ef7fdbac69a8d41"
+  },
+  "state_dict_audit": {
+    "missing_keys": [
+      "p2_detail_injection.alpha",
+      "p2_detail_injection.p2_fusion.weight",
+      "p2_detail_injection.p2_fusion.bias",
+      "p2_detail_injection.depthwise.weight",
+      "p2_detail_injection.depthwise.bias",
+      "p2_detail_injection.pointwise.weight",
+      "p2_detail_injection.pointwise.bias",
+      "p2_detail_injection.gate.weight",
+      "p2_detail_injection.gate.bias"
+    ],
+    "unexpected_keys": [],
+    "allowed_missing_prefix": "p2_detail_injection.",
+    "missing_only_spdi": true,
+    "source_spdi_keys": [],
+    "candidate_spdi_keys": [
+      "p2_detail_injection.alpha",
+      "p2_detail_injection.depthwise.bias",
+      "p2_detail_injection.depthwise.weight",
+      "p2_detail_injection.gate.bias",
+      "p2_detail_injection.gate.weight",
+      "p2_detail_injection.p2_fusion.bias",
+      "p2_detail_injection.p2_fusion.weight",
+      "p2_detail_injection.pointwise.bias",
+      "p2_detail_injection.pointwise.weight"
+    ]
+  },
+  "architecture": {
+    "p2_detail_enabled": true,
+    "fusion_module_types": [
+      "Fusion",
+      "Fusion",
+      "Fusion",
+      "Fusion_CAT",
+      "Fusion_CAT"
+    ],
+    "fusion_attention_modes": [
+      "full",
+      "full",
+      "full",
+      null,
+      null
+    ],
+    "fusion_types_config": [
+      "fusion",
+      "fusion",
+      "fusion",
+      "fusion_cat",
+      "fusion_cat"
+    ],
+    "fpn_start_level": 1,
+    "fpn_num_outs": 5,
+    "bbox_strides": [
+      8,
+      16,
+      32,
+      64,
+      128
+    ],
+    "global_shift": {
+      "mode": "off"
+    },
+    "spdi_state_keys_count": 9
+  },
+  "parameter_counts": {
+    "total": 72017940,
+    "trainable": 72017940,
+    "spdi": 200194
+  },
+  "formal_training_from_baseline_checkpoint": false,
+  "semantic_warmstart_used": false,
+  "audit_pass": true,
+  "protocol_diffs_allowed_equivalents": [
+    "model.attention_mode=full (detector default)",
+    "model.global_shift.mode=off (detector default)"
+  ]
+}

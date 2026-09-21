@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python tools/test.py --config configs_local/exp_proxy_spdi_seed0.py --checkpoint work_dirs/phase3d_proxy_spdi_seed0/epoch_3.pth --eval bbox --out experiments/phase3d_spdi_shift_off/results.pkl --work-dir experiments/phase3d_spdi_shift_off --cfg-options model.global_shift.mode=off

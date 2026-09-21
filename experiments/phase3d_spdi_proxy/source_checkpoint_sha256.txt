@@ -1,0 +1,1 @@
+18c009657ab2e6f437f857b5a7730b9ec98343931614f73f7ef7fdbac69a8d41  /root/CCRDet/work_dirs/baseline_seed_0/epoch_12.pth

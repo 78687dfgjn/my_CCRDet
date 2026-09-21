@@ -1,0 +1,1 @@
+No training-protocol differences. model.attention_mode=full and model.global_shift.mode=off are explicit forms of detector defaults; SPDI is the only enabled model addition.

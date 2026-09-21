@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python experiments/train_mmdet28_compat.py --config configs_local/exp_proxy_spdi_seed0.py --seed 0 --deterministic True

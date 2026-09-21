@@ -1,0 +1,142 @@
+{
+  "experiment": "phase3d_spdi_paired_proxy",
+  "iteration_points": [
+    1,
+    2,
+    5,
+    10,
+    20,
+    50,
+    100
+  ],
+  "records": [
+    {
+      "all_finite": true,
+      "alpha": 4.015608331964238e-11,
+      "alpha_grad": -4.015608283225447e-05,
+      "depthwise_grad_norm": 0.0,
+      "epoch": 1,
+      "gate_grad_norm": 0.0,
+      "iteration": 1,
+      "label": "iter_1",
+      "p2_fusion_grad_norm": 0.0,
+      "pointwise_grad_norm": 0.0
+    },
+    {
+      "all_finite": true,
+      "alpha": 5.061949526208309e-09,
+      "alpha_grad": -0.0016389074735343456,
+      "depthwise_grad_norm": 1.7834213652308945e-13,
+      "epoch": 1,
+      "gate_grad_norm": 3.4625739233316855e-13,
+      "iteration": 2,
+      "label": "iter_2",
+      "p2_fusion_grad_norm": 9.28210199674373e-13,
+      "pointwise_grad_norm": 1.0159290943223542e-12
+    },
+    {
+      "all_finite": true,
+      "alpha": 3.217938626676187e-08,
+      "alpha_grad": 0.0007914087036624551,
+      "depthwise_grad_norm": 1.1190126603111139e-10,
+      "epoch": 1,
+      "gate_grad_norm": 1.9754860247633843e-10,
+      "iteration": 5,
+      "label": "iter_5",
+      "p2_fusion_grad_norm": 5.491356813713821e-10,
+      "pointwise_grad_norm": 6.427069432213273e-10
+    },
+    {
+      "all_finite": true,
+      "alpha": 1.3686907607279863e-07,
+      "alpha_grad": -0.0005064932047389448,
+      "depthwise_grad_norm": 4.6415277177302983e-10,
+      "epoch": 1,
+      "gate_grad_norm": 6.525553430947184e-10,
+      "iteration": 10,
+      "label": "iter_10",
+      "p2_fusion_grad_norm": 2.336025373139705e-09,
+      "pointwise_grad_norm": 2.8655604555893888e-09
+    },
+    {
+      "all_finite": true,
+      "alpha": 5.228665145295963e-07,
+      "alpha_grad": -0.00019292812794446945,
+      "depthwise_grad_norm": 2.552547728740251e-09,
+      "epoch": 1,
+      "gate_grad_norm": 5.344037212751118e-09,
+      "iteration": 20,
+      "label": "iter_20",
+      "p2_fusion_grad_norm": 1.1813368949731284e-08,
+      "pointwise_grad_norm": 1.3951138022605392e-08
+    },
+    {
+      "all_finite": true,
+      "alpha": -5.128063094161917e-07,
+      "alpha_grad": -0.0001948862336575985,
+      "depthwise_grad_norm": 2.1784007930847338e-09,
+      "epoch": 1,
+      "gate_grad_norm": 4.924006091755473e-09,
+      "iteration": 50,
+      "label": "iter_50",
+      "p2_fusion_grad_norm": 1.094180479555007e-08,
+      "pointwise_grad_norm": 1.2250832348570384e-08
+    },
+    {
+      "all_finite": true,
+      "alpha": 8.17610361991683e-06,
+      "alpha_grad": -0.0005761603824794292,
+      "depthwise_grad_norm": 3.900775880083529e-08,
+      "epoch": 1,
+      "gate_grad_norm": 7.792769451953063e-08,
+      "iteration": 100,
+      "label": "iter_100",
+      "p2_fusion_grad_norm": 1.8891937259013503e-07,
+      "pointwise_grad_norm": 2.236602085758932e-07
+    },
+    {
+      "all_finite": true,
+      "alpha": -0.00010831323743332177,
+      "alpha_grad": 0.0005335199530236423,
+      "depthwise_grad_norm": 4.756413716222596e-07,
+      "epoch": 1,
+      "gate_grad_norm": 9.71687654782727e-07,
+      "iteration": 607,
+      "label": "epoch_1_end",
+      "p2_fusion_grad_norm": 2.3106042590370635e-06,
+      "pointwise_grad_norm": 2.7866369691764703e-06
+    },
+    {
+      "all_finite": true,
+      "alpha": -7.293807811947772e-06,
+      "alpha_grad": -0.00024484930327162147,
+      "depthwise_grad_norm": 2.983440694492856e-08,
+      "epoch": 2,
+      "gate_grad_norm": 4.7208015274691206e-08,
+      "iteration": 1213,
+      "label": "epoch_2_end",
+      "p2_fusion_grad_norm": 1.3660978481766506e-07,
+      "pointwise_grad_norm": 1.6276629821732058e-07
+    },
+    {
+      "all_finite": true,
+      "alpha": 9.268583380617201e-05,
+      "alpha_grad": -0.0003430382930673659,
+      "depthwise_grad_norm": 5.143547241459601e-07,
+      "epoch": 3,
+      "gate_grad_norm": 9.500400324213842e-07,
+      "iteration": 1819,
+      "label": "epoch_3_end",
+      "p2_fusion_grad_norm": 2.4195433070417494e-06,
+      "pointwise_grad_norm": 2.7854334803123493e-06
+    }
+  ],
+  "metadata": {
+    "alpha_initial": 0.0,
+    "architecture_frozen": true,
+    "all_records_finite": true,
+    "alpha_left_zero": true,
+    "branch_gradient_nonzero_after_iter_1": true,
+    "interpretation": "Gradient trace is analysis-only; no loss or model operation was added."
+  }
+}
