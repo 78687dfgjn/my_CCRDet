@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "data_split": "train",
+  "annotation_file": "train_thermal.json",
+  "image_count": 4900,
+  "gt_count": 54973,
+  "p2_anchor_side_requested": 16.0,
+  "strides": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "ratios": [
+    1.0
+  ],
+  "octave_base_scale": 8,
+  "scales_per_octave": 1,
+  "actual_base_anchor_widths": [
+    [
+      16.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "actual_base_anchor_heights": [
+    [
+      16.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "num_base_priors": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "feature_shapes_by_padded_image_shape": {
+    "(512, 640)": 4841
+  },
+  "atss": {
+    "topk": 9,
+    "threshold": "mean(candidate IoUs)+unbiased std(candidate IoUs)",
+    "center_inside_rule": ">0.01",
+    "conflict_rule": "highest IoU among positive candidate assignments"
+  },
+  "group_statistics": {
+    "all": {
+      "count": 54973,
+      "mean_positive_count": 5.860877157877503,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.005220744729230713,
+      "positive_fraction_by_level": {
+        "P2": 0.9981315372916602,
+        "P3": 0.0018684627083397996,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.4637681245803833,
+      "median_atss_threshold": 0.22788497805595398,
+      "median_best_positive_iou": 0.4637681245803833,
+      "mean_best_candidate_iou": 0.466490992913793,
+      "mean_best_positive_iou": 0.46580610669334915,
+      "mean_positive_center_distance": 3.672257389520734
+    },
+    "tiny": {
+      "count": 54084,
+      "mean_positive_count": 5.806929960801716,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.00530656016566822,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.45985400676727295,
+      "median_atss_threshold": 0.22695352137088776,
+      "median_best_positive_iou": 0.45985400676727295,
+      "mean_best_candidate_iou": 0.46625349512776276,
+      "mean_best_positive_iou": 0.4655573511628849,
+      "mean_positive_center_distance": 3.6544276865503913
+    },
+    "tiny1": {
+      "count": 4943,
+      "mean_positive_count": 2.253489783532268,
+      "median_positive_count": 2.0,
+      "zero_positive_rate": 0.05765729314181671,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.2109375,
+      "median_atss_threshold": 0.11459637433290482,
+      "median_best_positive_iou": 0.203125,
+      "mean_best_candidate_iou": 0.19459004459618895,
+      "mean_best_positive_iou": 0.18708604546770644,
+      "mean_positive_center_distance": 2.232588529104456
+    },
+    "tiny2": {
+      "count": 30257,
+      "mean_positive_count": 5.089202498595366,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.0001652510162937502,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.40625,
+      "median_atss_threshold": 0.20355194807052612,
+      "median_best_positive_iou": 0.40625,
+      "mean_best_candidate_iou": 0.40315297601406747,
+      "mean_best_positive_iou": 0.40311226998945693,
+      "mean_positive_center_distance": 3.511098716063144
+    },
+    "tiny3": {
+      "count": 20526,
+      "mean_positive_count": 7.727516320763909,
+      "median_positive_count": 8.0,
+      "zero_positive_rate": 0.0,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.617977499961853,
+      "median_atss_threshold": 0.28428125381469727,
+      "median_best_positive_iou": 0.617977499961853,
+      "mean_best_candidate_iou": 0.6259465385883579,
+      "mean_best_positive_iou": 0.6259465385883579,
+      "mean_positive_center_distance": 4.214506721531665
+    },
+    "small": {
+      "count": 868,
+      "mean_positive_count": 9.03110599078341,
+      "median_positive_count": 9.0,
+      "zero_positive_rate": 0.0,
+      "positive_fraction_by_level": {
+        "P2": 0.9830335501977293,
+        "P3": 0.0169664498022707,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.5120000243186951,
+      "median_atss_threshold": 0.2909274101257324,
+      "median_best_positive_iou": 0.5120000243186951,
+      "mean_best_candidate_iou": 0.4917932654546428,
+      "mean_best_positive_iou": 0.4917932654546428,
+      "mean_positive_center_distance": 4.526932852057
+    }
+  }
+}

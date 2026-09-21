@@ -1,0 +1,186 @@
+{
+  "status": "PASS",
+  "data_split": "train",
+  "annotation_file": "train_thermal.json",
+  "image_count": 4900,
+  "gt_count": 54973,
+  "p2_anchor_side_requested": 32.0,
+  "strides": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "ratios": [
+    1.0
+  ],
+  "octave_base_scale": 8,
+  "scales_per_octave": 1,
+  "actual_base_anchor_widths": [
+    [
+      32.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "actual_base_anchor_heights": [
+    [
+      32.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "num_base_priors": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "feature_shapes_by_padded_image_shape": {
+    "(512, 640)": 4841
+  },
+  "atss": {
+    "topk": 9,
+    "threshold": "mean(candidate IoUs)+unbiased std(candidate IoUs)",
+    "center_inside_rule": ">0.01",
+    "conflict_rule": "highest IoU among positive candidate assignments"
+  },
+  "group_statistics": {
+    "all": {
+      "count": 54973,
+      "mean_positive_count": 5.87632110308697,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.005220744729230713,
+      "positive_fraction_by_level": {
+        "P2": 0.9996656750423324,
+        "P3": 0.00033432495766765003,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.123046875,
+      "median_atss_threshold": 0.0797315463423729,
+      "median_best_positive_iou": 0.123046875,
+      "mean_best_candidate_iou": 0.13958815286448004,
+      "mean_best_positive_iou": 0.13941622897684428,
+      "mean_positive_center_distance": 3.675758137615911
+    },
+    "tiny": {
+      "count": 54084,
+      "mean_positive_count": 5.825160860883071,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.00530656016566822,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.123046875,
+      "median_atss_threshold": 0.0797315463423729,
+      "median_best_positive_iou": 0.123046875,
+      "mean_best_candidate_iou": 0.13359237437175525,
+      "mean_best_positive_iou": 0.13341762450349479,
+      "mean_positive_center_distance": 3.661190783780719
+    },
+    "tiny1": {
+      "count": 4943,
+      "mean_positive_count": 2.252882864657091,
+      "median_positive_count": 2.0,
+      "zero_positive_rate": 0.05765729314181671,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.052734375,
+      "median_atss_threshold": 0.034170664846897125,
+      "median_best_positive_iou": 0.05078125,
+      "mean_best_candidate_iou": 0.04866355026848109,
+      "mean_best_positive_iou": 0.04677917779730974,
+      "mean_positive_center_distance": 2.23375139637633
+    },
+    "tiny2": {
+      "count": 30257,
+      "mean_positive_count": 5.088210992497604,
+      "median_positive_count": 6.0,
+      "zero_positive_rate": 0.0001652510162937502,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.1025390625,
+      "median_atss_threshold": 0.06644295901060104,
+      "median_best_positive_iou": 0.1025390625,
+      "mean_best_candidate_iou": 0.10353017356062642,
+      "mean_best_positive_iou": 0.10351945806503864,
+      "mean_positive_center_distance": 3.5124303561325942
+    },
+    "tiny3": {
+      "count": 20526,
+      "mean_positive_count": 7.778329923024457,
+      "median_positive_count": 9.0,
+      "zero_positive_rate": 0.0,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.1826171875,
+      "median_atss_threshold": 0.11833176016807556,
+      "median_best_positive_iou": 0.1826171875,
+      "mean_best_candidate_iou": 0.19819850849411844,
+      "mean_best_positive_iou": 0.19819850849411844,
+      "mean_positive_center_distance": 4.230447039792303
+    },
+    "small": {
+      "count": 868,
+      "mean_positive_count": 8.960829493087557,
+      "median_positive_count": 9.0,
+      "zero_positive_rate": 0.0,
+      "positive_fraction_by_level": {
+        "P2": 1.0,
+        "P3": 0.0,
+        "P4": 0.0,
+        "P5": 0.0,
+        "P6": 0.0
+      },
+      "median_best_candidate_iou": 0.45497672259807587,
+      "median_atss_threshold": 0.2879502475261688,
+      "median_best_positive_iou": 0.45497672259807587,
+      "mean_best_candidate_iou": 0.4886160218564596,
+      "mean_best_positive_iou": 0.4886160218564596,
+      "mean_positive_center_distance": 4.510383165798627
+    }
+  }
+}

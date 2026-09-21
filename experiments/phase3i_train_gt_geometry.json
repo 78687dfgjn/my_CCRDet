@@ -1,0 +1,99 @@
+{
+  "data_split": "train",
+  "image_count": 4900,
+  "pair_count": 4900,
+  "gt_count": 54973,
+  "statistics": {
+    "width": {
+      "p10": 6.0,
+      "p25": 7.0,
+      "p50": 9.0,
+      "p75": 11.0,
+      "p90": 14.0,
+      "p95": 16.0,
+      "p98": 20.0
+    },
+    "height": {
+      "p10": 10.0,
+      "p25": 12.0,
+      "p50": 14.0,
+      "p75": 16.0,
+      "p90": 18.0,
+      "p95": 20.0,
+      "p98": 23.0
+    },
+    "sqrt_area": {
+      "p10": 8.12403840463596,
+      "p25": 9.486832980505138,
+      "p50": 11.224972160321824,
+      "p75": 13.038404810405298,
+      "p90": 15.427248620541512,
+      "p95": 16.97056274847714,
+      "p98": 19.493588689617926
+    },
+    "max_side": {
+      "p10": 10.0,
+      "p25": 12.0,
+      "p50": 14.0,
+      "p75": 16.0,
+      "p90": 19.0,
+      "p95": 21.0,
+      "p98": 24.0
+    },
+    "min_side": {
+      "p10": 6.0,
+      "p25": 7.0,
+      "p50": 9.0,
+      "p75": 11.0,
+      "p90": 13.0,
+      "p95": 15.0,
+      "p98": 17.0
+    },
+    "aspect_ratio": {
+      "p10": 1.1,
+      "p25": 1.2666666666666666,
+      "p50": 1.5454545454545454,
+      "p75": 1.8571428571428572,
+      "p90": 2.1666666666666665,
+      "p95": 2.4,
+      "p98": 2.75
+    },
+    "area": {
+      "p10": 66.0,
+      "p25": 90.0,
+      "p50": 126.0,
+      "p75": 170.0,
+      "p90": 238.0,
+      "p95": 288.0,
+      "p98": 380.0
+    }
+  },
+  "evaluator_size_bins": {
+    "tiny": {
+      "lower_area": 1.0,
+      "upper_area": 400.0,
+      "boundary_inclusive": true
+    },
+    "tiny1": {
+      "lower_area": 1.0,
+      "upper_area": 64.0,
+      "boundary_inclusive": true
+    },
+    "tiny2": {
+      "lower_area": 64.0,
+      "upper_area": 144.0,
+      "boundary_inclusive": true
+    },
+    "tiny3": {
+      "lower_area": 144.0,
+      "upper_area": 400.0,
+      "boundary_inclusive": true
+    },
+    "small": {
+      "lower_area": 400.0,
+      "upper_area": 1024.0,
+      "boundary_inclusive": true
+    }
+  },
+  "evaluator_source": "mmdet/datasets/evaluation/coco/cocoeval.py Params.setDetParams: area filter ignores only < lower or > upper."
+}

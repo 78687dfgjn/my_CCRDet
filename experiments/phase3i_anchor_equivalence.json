@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "current_p2_side": 32,
+  "candidate_p2_side": 16,
+  "base_anchor_widths_current": [
+    [
+      32.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "base_anchor_widths_candidate": [
+    [
+      16.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "base_anchor_heights_current": [
+    [
+      32.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "base_anchor_heights_candidate": [
+    [
+      16.0
+    ],
+    [
+      64.0
+    ],
+    [
+      128.0
+    ],
+    [
+      256.0
+    ],
+    [
+      512.0
+    ]
+  ],
+  "num_base_priors_current": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "num_base_priors_candidate": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "base_anchor_tensor_equal_by_level": {
+    "P2": false,
+    "P3": true,
+    "P4": true,
+    "P5": true,
+    "P6": true
+  },
+  "grid_prior_tensor_equal_by_level": {
+    "P2": false,
+    "P3": true,
+    "P4": true,
+    "P5": true,
+    "P6": true
+  },
+  "anchor_center_tensor_equal_by_level": {
+    "P2": true,
+    "P3": true,
+    "P4": true,
+    "P5": true,
+    "P6": true
+  },
+  "p2_centers_unchanged": true,
+  "head_tensor_shapes_unchanged": true
+}

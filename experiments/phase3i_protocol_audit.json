@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "source_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "control_config": "configs_local/exp_proxy_lite_p2p6_seed0.py",
+  "candidate_config": "configs_local/exp_proxy_litep2_p2anchor16_seed0.py",
+  "load_missing_keys": [],
+  "load_unexpected_keys": [],
+  "protocol_equal": {
+    "data": true,
+    "optimizer": true,
+    "optimizer_config": true,
+    "lr_config": true,
+    "runner": true,
+    "evaluation": true,
+    "seed": true,
+    "deterministic": true,
+    "train_cfg": true,
+    "test_cfg": true
+  },
+  "allowed_architecture_difference": {
+    "anchor_generator.base_sizes": {
+      "control": "[4,8,16,32,64] (actual current anchors 32,64,128,256,512)",
+      "candidate": [
+        2,
+        8,
+        16,
+        32,
+        64
+      ]
+    },
+    "num_base_priors_unchanged": true
+  },
+  "formal_training_from_baseline_checkpoint": false,
+  "semantic_warmstart_used": true
+}

@@ -1,0 +1,125 @@
+{
+  "status": "PASS",
+  "config": "configs_local/exp_proxy_litep2_p2anchor16_seed0.py",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "iterations_requested": 5,
+  "iterations_completed": 5,
+  "batch_size": 8,
+  "input_resolution": [
+    512,
+    640
+  ],
+  "amp": false,
+  "gradient_accumulation": false,
+  "feature_shapes": {
+    "P2": [
+      8,
+      256,
+      128,
+      160
+    ],
+    "P3": [
+      8,
+      256,
+      64,
+      80
+    ],
+    "P4": [
+      8,
+      256,
+      32,
+      40
+    ],
+    "P5": [
+      8,
+      256,
+      16,
+      20
+    ],
+    "P6": [
+      8,
+      256,
+      8,
+      10
+    ]
+  },
+  "metrics": [
+    {
+      "iteration": 1,
+      "loss": 2.323739528656006,
+      "log_vars": {
+        "loss_cls": 0.06454718112945557,
+        "loss_bbox": 1.6968796253204346,
+        "loss_dfl": 0.5623127818107605,
+        "loss": 2.323739528656006
+      },
+      "iteration_seconds": 2.8578898906707764,
+      "driver_used_mb": 19463,
+      "allocated_bytes": 905742336,
+      "reserved_bytes": 18859687936
+    },
+    {
+      "iteration": 2,
+      "loss": 1.449878215789795,
+      "log_vars": {
+        "loss_cls": 0.05706949159502983,
+        "loss_bbox": 1.0112107992172241,
+        "loss_dfl": 0.3815978765487671,
+        "loss": 1.449878215789795
+      },
+      "iteration_seconds": 2.231077194213867,
+      "driver_used_mb": 20067,
+      "allocated_bytes": 898664448,
+      "reserved_bytes": 19493027840
+    },
+    {
+      "iteration": 3,
+      "loss": 2.260282039642334,
+      "log_vars": {
+        "loss_cls": 0.0911560133099556,
+        "loss_bbox": 1.672888994216919,
+        "loss_dfl": 0.4962371587753296,
+        "loss": 2.260282039642334
+      },
+      "iteration_seconds": 2.1824023723602295,
+      "driver_used_mb": 20821,
+      "allocated_bytes": 905742336,
+      "reserved_bytes": 20283654144
+    },
+    {
+      "iteration": 4,
+      "loss": 2.230794906616211,
+      "log_vars": {
+        "loss_cls": 0.09098991751670837,
+        "loss_bbox": 1.6209725141525269,
+        "loss_dfl": 0.5188325643539429,
+        "loss": 2.230794906616211
+      },
+      "iteration_seconds": 2.1517467498779297,
+      "driver_used_mb": 21621,
+      "allocated_bytes": 902596608,
+      "reserved_bytes": 21122514944
+    },
+    {
+      "iteration": 5,
+      "loss": 2.1344425678253174,
+      "log_vars": {
+        "loss_cls": 0.17904584109783173,
+        "loss_bbox": 1.5022374391555786,
+        "loss_dfl": 0.45315924286842346,
+        "loss": 2.1344425678253174
+      },
+      "iteration_seconds": 2.171807050704956,
+      "driver_used_mb": 21621,
+      "allocated_bytes": 902596608,
+      "reserved_bytes": 21122514944
+    }
+  ],
+  "mean_iteration_seconds": 2.3189846515655517,
+  "peak_allocated_bytes": 19867910656,
+  "peak_reserved_bytes": 21533556736,
+  "peak_driver_used_mb": 21621,
+  "error": null
+}
