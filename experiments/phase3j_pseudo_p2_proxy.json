@@ -1,0 +1,117 @@
+{
+  "status": "COMPLETED",
+  "experiment": "Phase 3J pseudo-P2 topdown-only 3-epoch proxy",
+  "config": "configs_local/exp_proxy_pseudo_p2_topdown_seed0.py",
+  "checkpoint_dir": "/hy-tmp/CCRDet_assets/work_dirs/phase3j_proxy_pseudo_p2_topdown_seed0",
+  "protocol_audit": "experiments/phase3j_protocol_audit.json",
+  "warmstart_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "epochs": [
+    {
+      "epoch": 1,
+      "mAP25": 55.83,
+      "mAP50": 34.08,
+      "mAP75": 0.94,
+      "tiny": 35.31,
+      "tiny1": 22.36,
+      "tiny2": 25.65,
+      "tiny3": 41.58,
+      "small": 24.72
+    },
+    {
+      "epoch": 2,
+      "mAP25": 56.75,
+      "mAP50": 39.75,
+      "mAP75": 2.63,
+      "tiny": 41.52,
+      "tiny1": 23.8,
+      "tiny2": 29.83,
+      "tiny3": 48.4,
+      "small": 21.95
+    },
+    {
+      "epoch": 3,
+      "mAP25": 57.22,
+      "mAP50": 41.58,
+      "mAP75": 3.26,
+      "tiny": 43.04,
+      "tiny1": 31.35,
+      "tiny2": 30.59,
+      "tiny3": 49.31,
+      "small": 24.4
+    }
+  ],
+  "training_metrics": [
+    {
+      "epoch": 1,
+      "iterations_logged": 12,
+      "loss_cls_mean": 0.24247,
+      "loss_cls_last": 0.20578,
+      "loss_bbox_mean": 0.792011,
+      "loss_bbox_last": 0.6941,
+      "loss_dfl_mean": 0.260042,
+      "loss_dfl_last": 0.23154,
+      "loss_mean": 1.294523,
+      "loss_last": 1.13142,
+      "lr_last": 0.001
+    },
+    {
+      "epoch": 2,
+      "iterations_logged": 12,
+      "loss_cls_mean": 0.199304,
+      "loss_cls_last": 0.19611,
+      "loss_bbox_mean": 0.681143,
+      "loss_bbox_last": 0.68111,
+      "loss_dfl_mean": 0.225489,
+      "loss_dfl_last": 0.22456,
+      "loss_mean": 1.105935,
+      "loss_last": 1.10177,
+      "lr_last": 0.001
+    },
+    {
+      "epoch": 3,
+      "iterations_logged": 12,
+      "loss_cls_mean": 0.193739,
+      "loss_cls_last": 0.19349,
+      "loss_bbox_mean": 0.662272,
+      "loss_bbox_last": 0.6576,
+      "loss_dfl_mean": 0.219268,
+      "loss_dfl_last": 0.21804,
+      "loss_mean": 1.075277,
+      "loss_last": 1.06913,
+      "lr_last": 0.001
+    }
+  ],
+  "best_mAP50_epoch": 3,
+  "best_metrics": {
+    "epoch": 3,
+    "mAP25": 57.22,
+    "mAP50": 41.58,
+    "mAP75": 3.26,
+    "tiny": 43.04,
+    "tiny1": 31.35,
+    "tiny2": 30.59,
+    "tiny3": 49.31,
+    "small": 24.4
+  },
+  "epoch3_metrics": {
+    "epoch": 3,
+    "mAP25": 57.22,
+    "mAP50": 41.58,
+    "mAP75": 3.26,
+    "tiny": 43.04,
+    "tiny1": 31.35,
+    "tiny2": 30.59,
+    "tiny3": 49.31,
+    "small": 24.4
+  },
+  "training_wall_time_seconds": 4802.727,
+  "resource": {
+    "smoke_iterations": null,
+    "peak_allocated_bytes": 19867397120,
+    "peak_reserved_bytes": 21533556736,
+    "peak_driver_used_mib": null,
+    "mean_iteration_seconds": 2.3279933452606203
+  },
+  "training_started": "2026-09-21T23:28:05.623+08:00",
+  "training_finished": "2026-09-22T00:48:08.350+08:00"
+}

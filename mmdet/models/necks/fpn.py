@@ -72,6 +72,7 @@ class FPN(BaseModule):
                  norm_cfg=None,
                  act_cfg=None,
                  upsample_cfg=dict(mode='nearest'),
+                 p2_lateral_mode='normal',
                  init_cfg=dict(
                      type='Xavier', layer='Conv2d', distribution='uniform')):
         super(FPN, self).__init__(init_cfg)
@@ -84,6 +85,15 @@ class FPN(BaseModule):
         self.no_norm_on_lateral = no_norm_on_lateral
         self.fp16_enabled = False
         self.upsample_cfg = upsample_cfg.copy()
+        self.p2_lateral_mode = str(p2_lateral_mode).lower()
+        if self.p2_lateral_mode not in ('normal', 'topdown_only'):
+            raise ValueError(
+                'p2_lateral_mode must be normal or topdown_only, got {}'.format(
+                    p2_lateral_mode))
+        if self.p2_lateral_mode == 'topdown_only' and start_level != 0:
+            raise ValueError(
+                'topdown_only P2 mode requires start_level=0, got {}'.format(
+                    start_level))
 
         if end_level == -1 or end_level == self.num_ins - 1:
             self.backbone_end_level = self.num_ins
@@ -160,6 +170,11 @@ class FPN(BaseModule):
         ]
 
         # build top-down path
+        # Phase 3J mechanism probe: retain the C2 lateral module and its
+        # state_dict key, but exclude its contribution from P2 composition.
+        # The normal mode is byte-for-byte unchanged.
+        if self.p2_lateral_mode == 'topdown_only':
+            laterals[0] = laterals[0].new_zeros(laterals[0].shape)
         used_backbone_levels = len(laterals)
         for i in range(used_backbone_levels - 1, 0, -1):
             # In some cases, fixing `scale factor` (e.g. 2) is preferred, but

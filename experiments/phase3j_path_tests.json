@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "source_checkpoint_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "strict_state_dict": {
+    "normal_missing_keys": [],
+    "normal_unexpected_keys": [],
+    "topdown_missing_keys": [],
+    "topdown_unexpected_keys": [],
+    "normal_model_state_key_count": 834,
+    "topdown_model_state_key_count": 834
+  },
+  "feature_path": {
+    "normal_mode": "C2 lateral + top-down",
+    "topdown_only_mode": "zero C2 lateral + top-down",
+    "p3_p6_torch_equal": true,
+    "p2_normal_shape": [
+      1,
+      256,
+      128,
+      160
+    ],
+    "p2_topdown_shape": [
+      1,
+      256,
+      128,
+      160
+    ],
+    "detection_level_count": 5,
+    "normal_manual_p2_equal": true,
+    "topdown_manual_p2_equal": true,
+    "p2_normal_equals_topdown": false
+  },
+  "c2_exclusion": {
+    "topdown_only_unchanged_after_c2_replacement": true,
+    "normal_p2_changes_after_c2_replacement": true,
+    "all_topdown_outputs_equal_after_c2_replacement": true
+  },
+  "gradient_path": {
+    "c2_lateral_parameter_max_grads": [
+      null,
+      null
+    ],
+    "c2_lateral_zero_or_none": true,
+    "p3_p6_path_gradients_finite": true,
+    "non_c2_gradient_max_values": [
+      3650.09130859375,
+      93471.6171875,
+      9404.7509765625,
+      94018.0234375,
+      20896.3671875,
+      94050.5078125,
+      12604.634765625,
+      20480.0,
+      3152.803466796875,
+      5120.0,
+      864.51220703125,
+      1280.0,
+      444.10345458984375,
+      572.57861328125,
+      168.24559020996094,
+      80.0
+    ]
+  },
+  "config": {
+    "normal_p2_lateral_mode": "normal",
+    "topdown_p2_lateral_mode": "topdown_only",
+    "start_level": 0,
+    "num_outs": 5
+  }
+}

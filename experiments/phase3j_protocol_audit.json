@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "candidate_config": "configs_local/exp_proxy_pseudo_p2_topdown_seed0.py",
+  "source_checkpoint": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+  "source_checkpoint_sha256": "cf5c6e4e548b354c1d3dfdb4895508177aafd0e7498e2cfca342c9c951aec092",
+  "protocol": {
+    "seed": 0,
+    "deterministic": true,
+    "samples_per_gpu": 8,
+    "workers_per_gpu": 8,
+    "optimizer": "SGD",
+    "lr": 0.001,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "max_epochs": 3,
+    "evaluation_interval": 1,
+    "amp": false,
+    "gradient_accumulation": false,
+    "global_shift": "off",
+    "p2_detail_enabled": false,
+    "p2_alignment_enabled": false,
+    "fusion_types": [
+      "fusion_cat",
+      "fusion",
+      "fusion",
+      "fusion",
+      "fusion_cat"
+    ],
+    "neck_start_level": 0,
+    "neck_num_outs": 5,
+    "p2_lateral_mode": "topdown_only",
+    "head_strides": [
+      4,
+      8,
+      16,
+      32,
+      64
+    ],
+    "anchor_base_sizes": null,
+    "anchor_octave_base_scale": 8,
+    "atss_topk": 9,
+    "load_from": "/hy-tmp/CCRDet_assets/phase3a_semantic_warmstart_seed0.pth",
+    "resume_from": null
+  },
+  "reference_verification": {
+    "phase3g_p3p6_artifact": "experiments/phase3g_p3p6_proxy.json",
+    "phase3b_lite_p2_artifact": "experiments/phase3b_paired_proxy.json",
+    "no_p2_metrics_pp": {
+      "mAP25": 56.59,
+      "mAP50": 40.31,
+      "mAP75": 3.53,
+      "tiny": 41.56,
+      "tiny1": 13.69,
+      "tiny2": 29.23,
+      "tiny3": 48.02,
+      "small": 27.31
+    },
+    "true_p2_metrics_pp": {
+      "mAP25": 57.15,
+      "mAP50": 41.58,
+      "mAP75": 3.29,
+      "tiny": 42.91,
+      "tiny1": 32.22,
+      "tiny2": 31.08,
+      "tiny3": 49.24,
+      "small": 25.4
+    },
+    "expected_no_p2_match": true,
+    "expected_true_p2_match": true
+  },
+  "allowed_difference": "FPN neck p2_lateral_mode normal -> topdown_only"
+}
